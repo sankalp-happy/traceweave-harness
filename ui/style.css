@@ -121,7 +121,7 @@ caption { text-align: left; font: 600 17px/1.35 var(--serif); margin-bottom: var
 caption .muted { font: 400 14px var(--sans); }
 thead th {
   border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 8px 10px;
-  text-align: right; font-variant: small-caps; letter-spacing: .03em; font-weight: 700; white-space: nowrap;
+  text-align: right; font-variant: small-caps; letter-spacing: .03em; font-weight: 700; vertical-align: bottom;
 }
 thead th:first-child, td:first-child { text-align: left; }
 td { padding: 9px 10px; text-align: right; vertical-align: baseline; }
@@ -130,6 +130,7 @@ tbody tr + tr td { border-top: 1px solid #eef1f4; }
 tr.pooled td { background: var(--mist); font-weight: 700; }
 td.t { font-family: var(--mono); font-size: 13.5px; }
 td.l, th.l { text-align: left; }
+td.nw { white-space: nowrap; }
 .footnotes { list-style: none; margin: var(--s2) 0 0; padding: 0; font-size: 13px; color: var(--ink-2); display: grid; gap: 2px; }
 sup { font-size: .7em; line-height: 0; margin-left: 1px; }
 thead sup { font-variant: normal; letter-spacing: 0; }

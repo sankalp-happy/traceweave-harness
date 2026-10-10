@@ -154,9 +154,9 @@ def run_live(task_id: str) -> dict:
     bundle, task = find_task(task_id)
     root = sandbox.root(bundle.repo)
     if not (root / ".git").exists():
-        raise LookupError(f"{bundle.name} is not on this machine: run python3 tw.py fetch {bundle.name}")
+        raise LookupError(f"The code for {bundle.name} is not on this computer. Run python3 tw.py fetch {bundle.name}, then try again.")
     if not RUN_LOCK.acquire(blocking=False):
-        raise RuntimeError("another live run is still in progress")
+        raise RuntimeError("Another run is still going. Try again when it finishes.")
     try:
         base = sandbox.baseline(bundle.repo)
         out = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S"), "model": MODEL}
