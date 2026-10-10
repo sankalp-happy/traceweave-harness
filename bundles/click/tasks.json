@@ -1,0 +1,3876 @@
+{
+ "repo": "click",
+ "sha": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+ "generated_utc": "2026-10-10T11:29:46Z",
+ "validated": true,
+ "tasks": [
+  {
+   "id": "click:_FixupStream.seekable",
+   "target": "src/click/_compat.py::_FixupStream.seekable",
+   "name": "seekable",
+   "new_name": "seekable_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/_compat.py::_NonClosingTextIOWrapper.__init__"
+   ],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     143
+    ],
+    [
+     "src/click/_compat.py",
+     144
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:_find_binary_reader",
+   "target": "src/click/_compat.py::_find_binary_reader",
+   "name": "_find_binary_reader",
+   "new_name": "_find_binary_reader_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     176
+    ],
+    [
+     "src/click/_compat.py",
+     298
+    ],
+    [
+     "src/click/_compat.py",
+     320
+    ],
+    [
+     "src/click/testing.py",
+     18
+    ],
+    [
+     "src/click/testing.py",
+     216
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_find_binary_writer",
+   "target": "src/click/_compat.py::_find_binary_writer",
+   "name": "_find_binary_writer",
+   "new_name": "_find_binary_writer_v2",
+   "arm": "placebo",
+   "static_callers": 4,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     194
+    ],
+    [
+     "src/click/_compat.py",
+     314
+    ],
+    [
+     "src/click/_compat.py",
+     327
+    ],
+    [
+     "src/click/_compat.py",
+     334
+    ],
+    [
+     "src/click/utils.py",
+     15
+    ],
+    [
+     "src/click/utils.py",
+     333
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_force_correct_text_reader",
+   "target": "src/click/_compat.py::_force_correct_text_reader",
+   "name": "_force_correct_text_reader",
+   "new_name": "_force_correct_text_reader_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     287
+    ],
+    [
+     "src/click/_compat.py",
+     344
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_force_correct_text_stream",
+   "target": "src/click/_compat.py::_force_correct_text_stream",
+   "name": "_force_correct_text_stream",
+   "new_name": "_force_correct_text_stream_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     241
+    ],
+    [
+     "src/click/_compat.py",
+     293
+    ],
+    [
+     "src/click/_compat.py",
+     309
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_force_correct_text_writer",
+   "target": "src/click/_compat.py::_force_correct_text_writer",
+   "name": "_force_correct_text_writer",
+   "new_name": "_force_correct_text_writer_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     303
+    ],
+    [
+     "src/click/_compat.py",
+     351
+    ],
+    [
+     "src/click/_compat.py",
+     358
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_binary_reader",
+   "target": "src/click/_compat.py::_is_binary_reader",
+   "name": "_is_binary_reader",
+   "new_name": "_is_binary_reader_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     154
+    ],
+    [
+     "src/click/_compat.py",
+     181
+    ],
+    [
+     "src/click/_compat.py",
+     188
+    ],
+    [
+     "src/click/_compat.py",
+     297
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_binary_writer",
+   "target": "src/click/_compat.py::_is_binary_writer",
+   "name": "_is_binary_writer",
+   "new_name": "_is_binary_writer_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     163
+    ],
+    [
+     "src/click/_compat.py",
+     199
+    ],
+    [
+     "src/click/_compat.py",
+     206
+    ],
+    [
+     "src/click/_compat.py",
+     313
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_compat_stream_attr",
+   "target": "src/click/_compat.py::_is_compat_stream_attr",
+   "name": "_is_compat_stream_attr",
+   "new_name": "_is_compat_stream_attr_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     221
+    ],
+    [
+     "src/click/_compat.py",
+     236
+    ],
+    [
+     "src/click/_compat.py",
+     238
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_compatible_text_stream",
+   "target": "src/click/_compat.py::_is_compatible_text_stream",
+   "name": "_is_compatible_text_stream",
+   "new_name": "_is_compatible_text_stream_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     230
+    ],
+    [
+     "src/click/_compat.py",
+     256
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_make_text_stream",
+   "target": "src/click/_compat.py::_make_text_stream",
+   "name": "_make_text_stream",
+   "new_name": "_make_text_stream_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     22
+    ],
+    [
+     "src/click/_compat.py",
+     278
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_stream_is_misconfigured",
+   "target": "src/click/_compat.py::_stream_is_misconfigured",
+   "name": "_stream_is_misconfigured",
+   "new_name": "_stream_is_misconfigured_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     212
+    ],
+    [
+     "src/click/_compat.py",
+     257
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_wrap_io_open",
+   "target": "src/click/_compat.py::_wrap_io_open",
+   "name": "_wrap_io_open",
+   "new_name": "_wrap_io_open_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     361
+    ],
+    [
+     "src/click/_compat.py",
+     397
+    ],
+    [
+     "src/click/_compat.py",
+     450
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_best_encoding",
+   "target": "src/click/_compat.py::get_best_encoding",
+   "name": "get_best_encoding",
+   "new_name": "get_best_encoding_v2",
+   "arm": "placebo",
+   "static_callers": 6,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     30
+    ],
+    [
+     "src/click/_compat.py",
+     51
+    ],
+    [
+     "src/click/_termui_impl.py",
+     25
+    ],
+    [
+     "src/click/_termui_impl.py",
+     540
+    ],
+    [
+     "src/click/_termui_impl.py",
+     620
+    ],
+    [
+     "src/click/_termui_impl.py",
+     648
+    ],
+    [
+     "src/click/_termui_impl.py",
+     939
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_binary_stdin",
+   "target": "src/click/_compat.py::get_binary_stdin",
+   "name": "get_binary_stdin",
+   "new_name": "get_binary_stdin_v2",
+   "arm": "treatment",
+   "static_callers": 1,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [
+    "src/click/utils.py::_get_binary_stream"
+   ],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     319
+    ],
+    [
+     "src/click/_compat.py",
+     392
+    ],
+    [
+     "src/click/_compat.py",
+     581
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_binary_stdout",
+   "target": "src/click/_compat.py::get_binary_stdout",
+   "name": "get_binary_stdout",
+   "new_name": "get_binary_stdout_v2",
+   "arm": "treatment",
+   "static_callers": 1,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [
+    "src/click/utils.py::_get_binary_stream"
+   ],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     326
+    ],
+    [
+     "src/click/_compat.py",
+     389
+    ],
+    [
+     "src/click/_compat.py",
+     582
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_text_stderr",
+   "target": "src/click/_compat.py::get_text_stderr",
+   "name": "get_text_stderr",
+   "new_name": "get_text_stderr_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     354
+    ],
+    [
+     "src/click/_compat.py",
+     577
+    ],
+    [
+     "src/click/_compat.py",
+     589
+    ],
+    [
+     "src/click/exceptions.py",
+     8
+    ],
+    [
+     "src/click/exceptions.py",
+     59
+    ],
+    [
+     "src/click/exceptions.py",
+     89
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_text_stdin",
+   "target": "src/click/_compat.py::get_text_stdin",
+   "name": "get_text_stdin",
+   "new_name": "get_text_stdin_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     340
+    ],
+    [
+     "src/click/_compat.py",
+     393
+    ],
+    [
+     "src/click/_compat.py",
+     575
+    ],
+    [
+     "src/click/_compat.py",
+     587
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_text_stdout",
+   "target": "src/click/_compat.py::get_text_stdout",
+   "name": "get_text_stdout",
+   "new_name": "get_text_stdout_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     347
+    ],
+    [
+     "src/click/_compat.py",
+     390
+    ],
+    [
+     "src/click/_compat.py",
+     576
+    ],
+    [
+     "src/click/_compat.py",
+     588
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:is_ascii_encoding",
+   "target": "src/click/_compat.py::is_ascii_encoding",
+   "name": "is_ascii_encoding",
+   "new_name": "is_ascii_encoding_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     43
+    ],
+    [
+     "src/click/_compat.py",
+     54
+    ],
+    [
+     "src/click/_compat.py",
+     218
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:open_stream",
+   "target": "src/click/_compat.py::open_stream",
+   "name": "open_stream",
+   "new_name": "open_stream_v2",
+   "arm": "placebo",
+   "static_callers": 4,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_compat.py",
+     374
+    ],
+    [
+     "src/click/types.py",
+     16
+    ],
+    [
+     "src/click/types.py",
+     995
+    ],
+    [
+     "src/click/utils.py",
+     17
+    ],
+    [
+     "src/click/utils.py",
+     147
+    ],
+    [
+     "src/click/utils.py",
+     173
+    ],
+    [
+     "src/click/utils.py",
+     434
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Editor.get_editor",
+   "target": "src/click/_termui_impl.py::Editor.get_editor",
+   "name": "get_editor",
+   "new_name": "get_editor_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_termui_impl.py",
+     669
+    ],
+    [
+     "src/click/_termui_impl.py",
+     691
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ProgressBar.finish",
+   "target": "src/click/_termui_impl.py::ProgressBar.finish",
+   "name": "finish",
+   "new_name": "finish_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_termui_impl.py",
+     350
+    ],
+    [
+     "src/click/_termui_impl.py",
+     385
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ProgressBar.make_step",
+   "target": "src/click/_termui_impl.py::ProgressBar.make_step",
+   "name": "make_step",
+   "new_name": "make_step_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_termui_impl.py",
+     302
+    ],
+    [
+     "src/click/_termui_impl.py",
+     346
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ProgressBar.render_finish",
+   "target": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "name": "render_finish",
+   "new_name": "render_finish_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_termui_impl.py",
+     140
+    ],
+    [
+     "src/click/_termui_impl.py",
+     156
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ProgressBar.render_progress",
+   "target": "src/click/_termui_impl.py::ProgressBar.render_progress",
+   "name": "render_progress",
+   "new_name": "render_progress_v2",
+   "arm": "placebo",
+   "static_callers": 4,
+   "runtime_callers": 4,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_termui_impl.py",
+     131
+    ],
+    [
+     "src/click/_termui_impl.py",
+     145
+    ],
+    [
+     "src/click/_termui_impl.py",
+     256
+    ],
+    [
+     "src/click/_termui_impl.py",
+     347
+    ],
+    [
+     "src/click/_termui_impl.py",
+     380
+    ],
+    [
+     "src/click/_termui_impl.py",
+     386
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_has_binary_buffer",
+   "target": "src/click/_termui_impl.py::_has_binary_buffer",
+   "name": "_has_binary_buffer",
+   "new_name": "_has_binary_buffer_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_termui_impl.py",
+     41
+    ],
+    [
+     "src/click/_termui_impl.py",
+     447
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:TextWrapper._wrap_chunks",
+   "target": "src/click/_textwrap.py::TextWrapper._wrap_chunks",
+   "name": "_wrap_chunks",
+   "new_name": "_wrap_chunks_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/formatting.py::wrap_text"
+   ],
+   "reference_lines": [
+    [
+     "src/click/_textwrap.py",
+     66
+    ],
+    [
+     "src/click/_textwrap.py",
+     69
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": false,
+    "definition_only_fails": true
+   },
+   "valid": false
+  },
+  {
+   "id": "click:TextWrapper.extra_indent",
+   "target": "src/click/_textwrap.py::TextWrapper.extra_indent",
+   "name": "extra_indent",
+   "new_name": "extra_indent_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_textwrap.py",
+     165
+    ],
+    [
+     "src/click/formatting.py",
+     101
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:TextWrapper.indent_only",
+   "target": "src/click/_textwrap.py::TextWrapper.indent_only",
+   "name": "indent_only",
+   "new_name": "indent_only_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/_textwrap.py",
+     177
+    ],
+    [
+     "src/click/formatting.py",
+     103
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command._main_shell_completion",
+   "target": "src/click/core.py::Command._main_shell_completion",
+   "name": "_main_shell_completion",
+   "new_name": "_main_shell_completion_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1540
+    ],
+    [
+     "src/click/core.py",
+     1590
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.format_arguments",
+   "target": "src/click/core.py::Command.format_arguments",
+   "name": "format_arguments",
+   "new_name": "format_arguments_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1260
+    ],
+    [
+     "src/click/core.py",
+     1266
+    ],
+    [
+     "src/click/core.py",
+     1300
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.format_epilog",
+   "target": "src/click/core.py::Command.format_epilog",
+   "name": "format_epilog",
+   "new_name": "format_epilog_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1262
+    ],
+    [
+     "src/click/core.py",
+     1268
+    ],
+    [
+     "src/click/core.py",
+     1312
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.format_help_text",
+   "target": "src/click/core.py::Command.format_help_text",
+   "name": "format_help_text",
+   "new_name": "format_help_text_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1259
+    ],
+    [
+     "src/click/core.py",
+     1265
+    ],
+    [
+     "src/click/core.py",
+     1270
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.format_usage",
+   "target": "src/click/core.py::Command.format_usage",
+   "name": "format_usage",
+   "new_name": "format_usage_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1096
+    ],
+    [
+     "src/click/core.py",
+     1099
+    ],
+    [
+     "src/click/core.py",
+     1158
+    ],
+    [
+     "src/click/core.py",
+     1258
+    ],
+    [
+     "src/click/core.py",
+     1264
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.get_help_option_names",
+   "target": "src/click/core.py::Command.get_help_option_names",
+   "name": "get_help_option_names",
+   "new_name": "get_help_option_names_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1177
+    ],
+    [
+     "src/click/core.py",
+     1198
+    ],
+    [
+     "src/click/exceptions.py",
+     96
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.get_params",
+   "target": "src/click/core.py::Command.get_params",
+   "name": "get_params",
+   "new_name": "get_params_v2",
+   "arm": "placebo",
+   "static_callers": 9,
+   "runtime_callers": 9,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     727
+    ],
+    [
+     "src/click/core.py",
+     1082
+    ],
+    [
+     "src/click/core.py",
+     1102
+    ],
+    [
+     "src/click/core.py",
+     1172
+    ],
+    [
+     "src/click/core.py",
+     1222
+    ],
+    [
+     "src/click/core.py",
+     1291
+    ],
+    [
+     "src/click/core.py",
+     1303
+    ],
+    [
+     "src/click/core.py",
+     1365
+    ],
+    [
+     "src/click/core.py",
+     1427
+    ],
+    [
+     "src/click/shell_completion.py",
+     785
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.get_short_help_str",
+   "target": "src/click/core.py::Command.get_short_help_str",
+   "name": "get_short_help_str",
+   "new_name": "get_short_help_str_v2",
+   "arm": "treatment",
+   "static_callers": 2,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [
+    "src/click/core.py::Group.format_commands"
+   ],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1235
+    ],
+    [
+     "src/click/core.py",
+     1450
+    ],
+    [
+     "src/click/core.py",
+     1970
+    ],
+    [
+     "src/click/core.py",
+     2098
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.make_parser",
+   "target": "src/click/core.py::Command.make_parser",
+   "name": "make_parser",
+   "new_name": "make_parser_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1219
+    ],
+    [
+     "src/click/core.py",
+     1362
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context._close_with_exception_info",
+   "target": "src/click/core.py::Context._close_with_exception_info",
+   "name": "_close_with_exception_info",
+   "new_name": "_close_with_exception_info_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     563
+    ],
+    [
+     "src/click/core.py",
+     694
+    ],
+    [
+     "src/click/core.py",
+     696
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context._default_map_has",
+   "target": "src/click/core.py::Context._default_map_has",
+   "name": "_default_map_has",
+   "new_name": "_default_map_has_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     761
+    ],
+    [
+     "src/click/core.py",
+     795
+    ],
+    [
+     "src/click/core.py",
+     2463
+    ],
+    [
+     "src/click/core.py",
+     2505
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context._make_sub_context",
+   "target": "src/click/core.py::Context._make_sub_context",
+   "name": "_make_sub_context",
+   "new_name": "_make_sub_context_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     841
+    ],
+    [
+     "src/click/core.py",
+     887
+    ],
+    [
+     "src/click/core.py",
+     1766
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.command_path",
+   "target": "src/click/core.py::Context.command_path",
+   "name": "command_path",
+   "new_name": "command_path_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [
+    "src/click/core.py::Command.format_usage",
+    "src/click/core.py::Context.command_path",
+    "src/click/exceptions.py::UsageError.show"
+   ],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     715
+    ],
+    [
+     "src/click/core.py",
+     724
+    ],
+    [
+     "src/click/core.py",
+     1164
+    ],
+    [
+     "src/click/exceptions.py",
+     100
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.ensure_object",
+   "target": "src/click/core.py::Context.ensure_object",
+   "name": "ensure_object",
+   "new_name": "ensure_object_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     752
+    ],
+    [
+     "src/click/decorators.py",
+     82
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.find_object",
+   "target": "src/click/core.py::Context.find_object",
+   "name": "find_object",
+   "new_name": "find_object_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     740
+    ],
+    [
+     "src/click/core.py",
+     753
+    ],
+    [
+     "src/click/core.py",
+     756
+    ],
+    [
+     "src/click/decorators.py",
+     66
+    ],
+    [
+     "src/click/decorators.py",
+     84
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.find_root",
+   "target": "src/click/core.py::Context.find_root",
+   "name": "find_root",
+   "new_name": "find_root_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     733
+    ],
+    [
+     "src/click/decorators.py",
+     510
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.make_formatter",
+   "target": "src/click/core.py::Context.make_formatter",
+   "name": "make_formatter",
+   "new_name": "make_formatter_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     307
+    ],
+    [
+     "src/click/core.py",
+     634
+    ],
+    [
+     "src/click/core.py",
+     1098
+    ],
+    [
+     "src/click/core.py",
+     1231
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.set_parameter_source",
+   "target": "src/click/core.py::Context.set_parameter_source",
+   "name": "set_parameter_source",
+   "new_name": "set_parameter_source_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     931
+    ],
+    [
+     "src/click/core.py",
+     2751
+    ],
+    [
+     "src/click/core.py",
+     2803
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Group.format_commands",
+   "target": "src/click/core.py::Group.format_commands",
+   "name": "format_commands",
+   "new_name": "format_commands_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1947
+    ],
+    [
+     "src/click/core.py",
+     1949
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Group.invoke._process_result",
+   "target": "src/click/core.py::Group.invoke._process_result",
+   "name": "_process_result",
+   "new_name": "_process_result_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1992
+    ],
+    [
+     "src/click/core.py",
+     2004
+    ],
+    [
+     "src/click/core.py",
+     2025
+    ],
+    [
+     "src/click/core.py",
+     2057
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option._infer_flag_kind",
+   "target": "src/click/core.py::Option._infer_flag_kind",
+   "name": "_infer_flag_kind",
+   "new_name": "_infer_flag_kind_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2972
+    ],
+    [
+     "src/click/core.py",
+     2995
+    ],
+    [
+     "src/click/core.py",
+     3047
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option._pick_type",
+   "target": "src/click/core.py::Option._pick_type",
+   "name": "_pick_type",
+   "new_name": "_pick_type_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3001
+    ],
+    [
+     "src/click/core.py",
+     3080
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option._resolve_lazy_default",
+   "target": "src/click/core.py::Option._resolve_lazy_default",
+   "name": "_resolve_lazy_default",
+   "new_name": "_resolve_lazy_default_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3006
+    ],
+    [
+     "src/click/core.py",
+     3119
+    ],
+    [
+     "src/click/core.py",
+     3178
+    ],
+    [
+     "src/click/core.py",
+     3198
+    ],
+    [
+     "src/click/core.py",
+     3212
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option._validate",
+   "target": "src/click/core.py::Option._validate",
+   "name": "_validate",
+   "new_name": "_validate_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3023
+    ],
+    [
+     "src/click/core.py",
+     3143
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option.flag_activation_value",
+   "target": "src/click/core.py::Option.flag_activation_value",
+   "name": "flag_activation_value",
+   "new_name": "flag_activation_value_v2",
+   "arm": "treatment",
+   "static_callers": 1,
+   "runtime_callers": 4,
+   "dynamic_only_callers": [
+    "src/click/core.py::Option._resolve_lazy_default",
+    "src/click/core.py::Option.add_to_parser",
+    "src/click/core.py::Option.consume_value",
+    "src/click/core.py::Option.to_info_dict"
+   ],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3006
+    ],
+    [
+     "src/click/core.py",
+     3035
+    ],
+    [
+     "src/click/core.py",
+     3137
+    ],
+    [
+     "src/click/core.py",
+     3140
+    ],
+    [
+     "src/click/core.py",
+     3182
+    ],
+    [
+     "src/click/core.py",
+     3317
+    ],
+    [
+     "src/click/core.py",
+     3320
+    ],
+    [
+     "src/click/core.py",
+     3606
+    ],
+    [
+     "src/click/core.py",
+     3620
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option.get_help_record._write_opts",
+   "target": "src/click/core.py::Option.get_help_record._write_opts",
+   "name": "_write_opts",
+   "new_name": "_write_opts_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3337
+    ],
+    [
+     "src/click/core.py",
+     3350
+    ],
+    [
+     "src/click/core.py",
+     3353
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Option.prompt_for_value",
+   "target": "src/click/core.py::Option.prompt_for_value",
+   "name": "prompt_for_value",
+   "new_name": "prompt_for_value_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3460
+    ],
+    [
+     "src/click/core.py",
+     3602
+    ],
+    [
+     "src/click/core.py",
+     3633
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Parameter._hide_unset",
+   "target": "src/click/core.py::Parameter._hide_unset",
+   "name": "_hide_unset",
+   "new_name": "_hide_unset_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2367
+    ],
+    [
+     "src/click/core.py",
+     2395
+    ],
+    [
+     "src/click/core.py",
+     3178
+    ],
+    [
+     "src/click/core.py",
+     3501
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Parameter.type_cast_value.check_iter",
+   "target": "src/click/core.py::Parameter.type_cast_value.check_iter",
+   "name": "check_iter",
+   "new_name": "check_iter_v2",
+   "arm": "placebo",
+   "static_callers": 4,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2532
+    ],
+    [
+     "src/click/core.py",
+     2553
+    ],
+    [
+     "src/click/core.py",
+     2558
+    ],
+    [
+     "src/click/core.py",
+     2574
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Parameter.value_is_missing",
+   "target": "src/click/core.py::Parameter.value_is_missing",
+   "name": "value_is_missing",
+   "new_name": "value_is_missing_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2578
+    ],
+    [
+     "src/click/core.py",
+     2600
+    ],
+    [
+     "src/click/core.py",
+     2620
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_check_iter",
+   "target": "src/click/core.py::_check_iter",
+   "name": "_check_iter",
+   "new_name": "_check_iter_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2170
+    ],
+    [
+     "src/click/core.py",
+     2534
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_check_nested_chain",
+   "target": "src/click/core.py::_check_nested_chain",
+   "name": "_check_nested_chain",
+   "new_name": "_check_nested_chain_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     82
+    ],
+    [
+     "src/click/core.py",
+     1781
+    ],
+    [
+     "src/click/core.py",
+     2155
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_complete_visible_commands",
+   "target": "src/click/core.py::_complete_visible_commands",
+   "name": "_complete_visible_commands",
+   "new_name": "_complete_visible_commands_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     63
+    ],
+    [
+     "src/click/core.py",
+     1451
+    ],
+    [
+     "src/click/core.py",
+     2099
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_format_deprecated_label",
+   "target": "src/click/core.py::_format_deprecated_label",
+   "name": "_format_deprecated_label",
+   "new_name": "_format_deprecated_label_v2",
+   "arm": "placebo",
+   "static_callers": 4,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     102
+    ],
+    [
+     "src/click/core.py",
+     1247
+    ],
+    [
+     "src/click/core.py",
+     1279
+    ],
+    [
+     "src/click/core.py",
+     2985
+    ],
+    [
+     "src/click/core.py",
+     3697
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_format_deprecated_suffix",
+   "target": "src/click/core.py::_format_deprecated_suffix",
+   "name": "_format_deprecated_suffix",
+   "new_name": "_format_deprecated_suffix_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     110
+    ],
+    [
+     "src/click/core.py",
+     1403
+    ],
+    [
+     "src/click/core.py",
+     2765
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:augment_usage_errors",
+   "target": "src/click/core.py::augment_usage_errors",
+   "name": "augment_usage_errors",
+   "new_name": "augment_usage_errors_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     124
+    ],
+    [
+     "src/click/core.py",
+     909
+    ],
+    [
+     "src/click/core.py",
+     2745
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:batch",
+   "target": "src/click/core.py::batch",
+   "name": "batch",
+   "new_name": "batch_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     119
+    ],
+    [
+     "src/click/core.py",
+     3576
+    ],
+    [
+     "src/click/termui.py",
+     974
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:iter_params_for_processing.sort_key",
+   "target": "src/click/core.py::iter_params_for_processing.sort_key",
+   "name": "sort_key",
+   "new_name": "sort_key_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/core.py::iter_params_for_processing"
+   ],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     158
+    ],
+    [
+     "src/click/core.py",
+     166
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_param_memo",
+   "target": "src/click/decorators.py::_param_memo",
+   "name": "_param_memo",
+   "new_name": "_param_memo_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/decorators.py",
+     314
+    ],
+    [
+     "src/click/decorators.py",
+     346
+    ],
+    [
+     "src/click/decorators.py",
+     374
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:custom_version_option.show_version",
+   "target": "src/click/decorators.py::custom_version_option.show_version",
+   "name": "show_version",
+   "new_name": "show_version_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/core.py::Parameter.process_value"
+   ],
+   "reference_lines": [
+    [
+     "src/click/decorators.py",
+     585
+    ],
+    [
+     "src/click/decorators.py",
+     599
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:help_option.show_help",
+   "target": "src/click/decorators.py::help_option.show_help",
+   "name": "show_help",
+   "new_name": "show_help_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/core.py::Parameter.process_value"
+   ],
+   "reference_lines": [
+    [
+     "src/click/decorators.py",
+     612
+    ],
+    [
+     "src/click/decorators.py",
+     625
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_format_possibilities",
+   "target": "src/click/exceptions.py::_format_possibilities",
+   "name": "_format_possibilities",
+   "new_name": "_format_possibilities_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/exceptions.py",
+     26
+    ],
+    [
+     "src/click/exceptions.py",
+     265
+    ],
+    [
+     "src/click/exceptions.py",
+     301
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_join_param_hints",
+   "target": "src/click/exceptions.py::_join_param_hints",
+   "name": "_join_param_hints",
+   "new_name": "_join_param_hints_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/exceptions.py",
+     19
+    ],
+    [
+     "src/click/exceptions.py",
+     155
+    ],
+    [
+     "src/click/exceptions.py",
+     192
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:HelpFormatter.write_dl",
+   "target": "src/click/formatting.py::HelpFormatter.write_dl",
+   "name": "write_dl",
+   "new_name": "write_dl_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1298
+    ],
+    [
+     "src/click/core.py",
+     1310
+    ],
+    [
+     "src/click/core.py",
+     1975
+    ],
+    [
+     "src/click/formatting.py",
+     229
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:HelpFormatter.write_paragraph",
+   "target": "src/click/formatting.py::HelpFormatter.write_paragraph",
+   "name": "write_paragraph",
+   "new_name": "write_paragraph_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     1283
+    ],
+    [
+     "src/click/core.py",
+     1316
+    ],
+    [
+     "src/click/formatting.py",
+     208
+    ],
+    [
+     "src/click/formatting.py",
+     280
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:iter_rows",
+   "target": "src/click/formatting.py::iter_rows",
+   "name": "iter_rows",
+   "new_name": "iter_rows_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/formatting.py",
+     24
+    ],
+    [
+     "src/click/formatting.py",
+     250
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:join_options",
+   "target": "src/click/formatting.py::join_options",
+   "name": "join_options",
+   "new_name": "join_options_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     35
+    ],
+    [
+     "src/click/core.py",
+     3340
+    ],
+    [
+     "src/click/formatting.py",
+     302
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:measure_table",
+   "target": "src/click/formatting.py::measure_table",
+   "name": "measure_table",
+   "new_name": "measure_table_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/formatting.py",
+     14
+    ],
+    [
+     "src/click/formatting.py",
+     244
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:wrap_text._flush_par",
+   "target": "src/click/formatting.py::wrap_text._flush_par",
+   "name": "_flush_par",
+   "new_name": "_flush_par_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/formatting.py",
+     78
+    ],
+    [
+     "src/click/formatting.py",
+     89
+    ],
+    [
+     "src/click/formatting.py",
+     97
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:pop_context",
+   "target": "src/click/globals.py::pop_context",
+   "name": "pop_context",
+   "new_name": "pop_context_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     36
+    ],
+    [
+     "src/click/core.py",
+     564
+    ],
+    [
+     "src/click/globals.py",
+     49
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:push_context",
+   "target": "src/click/globals.py::push_context",
+   "name": "push_context",
+   "new_name": "push_context_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     37
+    ],
+    [
+     "src/click/core.py",
+     551
+    ],
+    [
+     "src/click/globals.py",
+     44
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:resolve_color_default",
+   "target": "src/click/globals.py::resolve_color_default",
+   "name": "resolve_color_default",
+   "new_name": "resolve_color_default_v2",
+   "arm": "placebo",
+   "static_callers": 5,
+   "runtime_callers": 5,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/exceptions.py",
+     9
+    ],
+    [
+     "src/click/exceptions.py",
+     48
+    ],
+    [
+     "src/click/globals.py",
+     54
+    ],
+    [
+     "src/click/termui.py",
+     19
+    ],
+    [
+     "src/click/termui.py",
+     98
+    ],
+    [
+     "src/click/termui.py",
+     361
+    ],
+    [
+     "src/click/termui.py",
+     580
+    ],
+    [
+     "src/click/utils.py",
+     22
+    ],
+    [
+     "src/click/utils.py",
+     342
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_Option.takes_value",
+   "target": "src/click/parser.py::_Option.takes_value",
+   "name": "takes_value",
+   "new_name": "takes_value_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [
+    "src/click/parser.py::_OptionParser._match_long_opt",
+    "src/click/parser.py::_OptionParser._match_short_opt"
+   ],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     166
+    ],
+    [
+     "src/click/parser.py",
+     370
+    ],
+    [
+     "src/click/parser.py",
+     406
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser._get_value_from_state",
+   "target": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "name": "_get_value_from_state",
+   "new_name": "_get_value_from_state_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     378
+    ],
+    [
+     "src/click/parser.py",
+     413
+    ],
+    [
+     "src/click/parser.py",
+     430
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser._match_long_opt",
+   "target": "src/click/parser.py::_OptionParser._match_long_opt",
+   "name": "_match_long_opt",
+   "new_name": "_match_long_opt_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     363
+    ],
+    [
+     "src/click/parser.py",
+     485
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser._match_short_opt",
+   "target": "src/click/parser.py::_OptionParser._match_short_opt",
+   "name": "_match_short_opt",
+   "new_name": "_match_short_opt_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     390
+    ],
+    [
+     "src/click/parser.py",
+     494
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser._process_args_for_args",
+   "target": "src/click/parser.py::_OptionParser._process_args_for_args",
+   "name": "_process_args_for_args",
+   "new_name": "_process_args_for_args_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     310
+    ],
+    [
+     "src/click/parser.py",
+     316
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser._process_args_for_options",
+   "target": "src/click/parser.py::_OptionParser._process_args_for_options",
+   "name": "_process_args_for_options",
+   "new_name": "_process_args_for_options_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     309
+    ],
+    [
+     "src/click/parser.py",
+     327
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser._process_opts",
+   "target": "src/click/parser.py::_OptionParser._process_opts",
+   "name": "_process_opts",
+   "new_name": "_process_opts_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     336
+    ],
+    [
+     "src/click/parser.py",
+     470
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_OptionParser.add_argument",
+   "target": "src/click/parser.py::_OptionParser.add_argument",
+   "name": "add_argument",
+   "new_name": "add_argument_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3768
+    ],
+    [
+     "src/click/parser.py",
+     290
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_unpack_args",
+   "target": "src/click/parser.py::_unpack_args",
+   "name": "_unpack_args",
+   "new_name": "_unpack_args_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     51
+    ],
+    [
+     "src/click/parser.py",
+     317
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_unpack_args._fetch",
+   "target": "src/click/parser.py::_unpack_args._fetch",
+   "name": "_fetch",
+   "new_name": "_fetch_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/parser.py",
+     68
+    ],
+    [
+     "src/click/parser.py",
+     84
+    ],
+    [
+     "src/click/parser.py",
+     86
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ShellComplete.func_name",
+   "target": "src/click/shell_completion.py::ShellComplete.func_name",
+   "name": "func_name",
+   "new_name": "func_name_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/shell_completion.py::ShellComplete.source_vars"
+   ],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     320
+    ],
+    [
+     "src/click/shell_completion.py",
+     334
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ShellComplete.source_vars",
+   "target": "src/click/shell_completion.py::ShellComplete.source_vars",
+   "name": "source_vars",
+   "new_name": "source_vars_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     327
+    ],
+    [
+     "src/click/shell_completion.py",
+     343
+    ],
+    [
+     "src/click/shell_completion.py",
+     345
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_incomplete_argument",
+   "target": "src/click/shell_completion.py::_is_incomplete_argument",
+   "name": "_is_incomplete_argument",
+   "new_name": "_is_incomplete_argument_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     639
+    ],
+    [
+     "src/click/shell_completion.py",
+     796
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_incomplete_option",
+   "target": "src/click/shell_completion.py::_is_incomplete_option",
+   "name": "_is_incomplete_option",
+   "new_name": "_is_incomplete_option_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     671
+    ],
+    [
+     "src/click/shell_completion.py",
+     790
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_resolve_context",
+   "target": "src/click/shell_completion.py::_resolve_context",
+   "name": "_resolve_context",
+   "new_name": "_resolve_context_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     364
+    ],
+    [
+     "src/click/shell_completion.py",
+     696
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_resolve_incomplete",
+   "target": "src/click/shell_completion.py::_resolve_incomplete",
+   "name": "_resolve_incomplete",
+   "new_name": "_resolve_incomplete_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     365
+    ],
+    [
+     "src/click/shell_completion.py",
+     757
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_start_of_option",
+   "target": "src/click/shell_completion.py::_start_of_option",
+   "name": "_start_of_option",
+   "new_name": "_start_of_option_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     662
+    ],
+    [
+     "src/click/shell_completion.py",
+     689
+    ],
+    [
+     "src/click/shell_completion.py",
+     774
+    ],
+    [
+     "src/click/shell_completion.py",
+     782
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:get_completion_class",
+   "target": "src/click/shell_completion.py::get_completion_class",
+   "name": "get_completion_class",
+   "new_name": "get_completion_class_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/shell_completion.py",
+     39
+    ],
+    [
+     "src/click/shell_completion.py",
+     586
+    ],
+    [
+     "src/click/shell_completion.py",
+     588
+    ],
+    [
+     "src/click/shell_completion.py",
+     590
+    ],
+    [
+     "src/click/shell_completion.py",
+     592
+    ],
+    [
+     "src/click/shell_completion.py",
+     593
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_build_prompt",
+   "target": "src/click/termui.py::_build_prompt",
+   "name": "_build_prompt",
+   "new_name": "_build_prompt_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/termui.py",
+     107
+    ],
+    [
+     "src/click/termui.py",
+     249
+    ],
+    [
+     "src/click/termui.py",
+     257
+    ],
+    [
+     "src/click/termui.py",
+     320
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_format_default",
+   "target": "src/click/termui.py::_format_default",
+   "name": "_format_default",
+   "new_name": "_format_default_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/termui.py",
+     123
+    ],
+    [
+     "src/click/termui.py",
+     127
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_interpret_color",
+   "target": "src/click/termui.py::_interpret_color",
+   "name": "_interpret_color",
+   "new_name": "_interpret_color_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/termui.py",
+     615
+    ],
+    [
+     "src/click/termui.py",
+     740
+    ],
+    [
+     "src/click/termui.py",
+     743
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_mask_hidden_input",
+   "target": "src/click/termui.py::_mask_hidden_input",
+   "name": "_mask_hidden_input",
+   "new_name": "_mask_hidden_input_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/termui.py",
+     60
+    ],
+    [
+     "src/click/termui.py",
+     273
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_readline_prompt",
+   "target": "src/click/termui.py::_readline_prompt",
+   "name": "_readline_prompt",
+   "new_name": "_readline_prompt_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/termui.py",
+     84
+    ],
+    [
+     "src/click/termui.py",
+     237
+    ],
+    [
+     "src/click/termui.py",
+     329
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:prompt.prompt_func",
+   "target": "src/click/termui.py::prompt.prompt_func",
+   "name": "prompt_func",
+   "new_name": "prompt_func_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/termui.py",
+     234
+    ],
+    [
+     "src/click/termui.py",
+     261
+    ],
+    [
+     "src/click/termui.py",
+     279
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:CliRunner.get_default_prog_name",
+   "target": "src/click/testing.py::CliRunner.get_default_prog_name",
+   "name": "get_default_prog_name",
+   "new_name": "get_default_prog_name_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     382
+    ],
+    [
+     "src/click/testing.py",
+     684
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:CliRunner.isolation._patched_pdb_init",
+   "target": "src/click/testing.py::CliRunner.isolation._patched_pdb_init",
+   "name": "_patched_pdb_init",
+   "new_name": "_patched_pdb_init_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/core.py::Context.invoke"
+   ],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     525
+    ],
+    [
+     "src/click/testing.py",
+     562
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:CliRunner.isolation.hidden_input",
+   "target": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "name": "hidden_input",
+   "new_name": "hidden_input_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/termui.py::_readline_prompt"
+   ],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     486
+    ],
+    [
+     "src/click/testing.py",
+     520
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:CliRunner.isolation.visible_input",
+   "target": "src/click/testing.py::CliRunner.isolation.visible_input",
+   "name": "visible_input",
+   "new_name": "visible_input_v2",
+   "arm": "treatment",
+   "static_callers": 0,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "src/click/termui.py::_readline_prompt"
+   ],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     475
+    ],
+    [
+     "src/click/testing.py",
+     519
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:CliRunner.make_env",
+   "target": "src/click/testing.py::CliRunner.make_env",
+   "name": "make_env",
+   "new_name": "make_env_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     389
+    ],
+    [
+     "src/click/testing.py",
+     441
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:EchoingStdin._echo",
+   "target": "src/click/testing.py::EchoingStdin._echo",
+   "name": "_echo",
+   "new_name": "_echo_v2",
+   "arm": "placebo",
+   "static_callers": 5,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     45
+    ],
+    [
+     "src/click/testing.py",
+     52
+    ],
+    [
+     "src/click/testing.py",
+     55
+    ],
+    [
+     "src/click/testing.py",
+     58
+    ],
+    [
+     "src/click/testing.py",
+     61
+    ],
+    [
+     "src/click/testing.py",
+     64
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_pause_echo",
+   "target": "src/click/testing.py::_pause_echo",
+   "name": "_pause_echo",
+   "new_name": "_pause_echo_v2",
+   "arm": "treatment",
+   "static_callers": 1,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [
+    "src/click/termui.py::_readline_prompt",
+    "src/click/termui.py::getchar"
+   ],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     71
+    ],
+    [
+     "src/click/testing.py",
+     474
+    ],
+    [
+     "src/click/testing.py",
+     485
+    ],
+    [
+     "src/click/testing.py",
+     494
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:make_input_stream",
+   "target": "src/click/testing.py::make_input_stream",
+   "name": "make_input_stream",
+   "new_name": "make_input_stream_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/testing.py",
+     211
+    ],
+    [
+     "src/click/testing.py",
+     432
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:BoolParamType.str_to_bool",
+   "target": "src/click/types.py::BoolParamType.str_to_bool",
+   "name": "str_to_bool",
+   "new_name": "str_to_bool_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3566
+    ],
+    [
+     "src/click/types.py",
+     833
+    ],
+    [
+     "src/click/types.py",
+     845
+    ],
+    [
+     "src/click/types.py",
+     862
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Choice._normalized_mapping",
+   "target": "src/click/types.py::Choice._normalized_mapping",
+   "name": "_normalized_mapping",
+   "new_name": "_normalized_mapping_v2",
+   "arm": "placebo",
+   "static_callers": 4,
+   "runtime_callers": 4,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     377
+    ],
+    [
+     "src/click/types.py",
+     423
+    ],
+    [
+     "src/click/types.py",
+     440
+    ],
+    [
+     "src/click/types.py",
+     452
+    ],
+    [
+     "src/click/types.py",
+     474
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Choice.normalize_choice",
+   "target": "src/click/types.py::Choice.normalize_choice",
+   "name": "normalize_choice",
+   "new_name": "normalize_choice_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     339
+    ],
+    [
+     "src/click/types.py",
+     356
+    ],
+    [
+     "src/click/types.py",
+     384
+    ],
+    [
+     "src/click/types.py",
+     388
+    ],
+    [
+     "src/click/types.py",
+     395
+    ],
+    [
+     "src/click/types.py",
+     451
+    ],
+    [
+     "src/click/types.py",
+     497
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:DateTime._try_to_convert_date",
+   "target": "src/click/types.py::DateTime._try_to_convert_date",
+   "name": "_try_to_convert_date",
+   "new_name": "_try_to_convert_date_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     549
+    ],
+    [
+     "src/click/types.py",
+     562
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:File.resolve_lazy_flag",
+   "target": "src/click/types.py::File.resolve_lazy_flag",
+   "name": "resolve_lazy_flag",
+   "new_name": "resolve_lazy_flag_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     964
+    ],
+    [
+     "src/click/types.py",
+     983
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ParamType.split_envvar_value",
+   "target": "src/click/types.py::ParamType.split_envvar_value",
+   "name": "split_envvar_value",
+   "new_name": "split_envvar_value_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2512
+    ],
+    [
+     "src/click/core.py",
+     2719
+    ],
+    [
+     "src/click/core.py",
+     3574
+    ],
+    [
+     "src/click/types.py",
+     194
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Path.coerce_path_result",
+   "target": "src/click/types.py::Path.coerce_path_result",
+   "name": "coerce_path_result",
+   "new_name": "coerce_path_result_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     1133
+    ],
+    [
+     "src/click/types.py",
+     1165
+    ],
+    [
+     "src/click/types.py",
+     1218
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_NumberRangeBase._describe_range",
+   "target": "src/click/types.py::_NumberRangeBase._describe_range",
+   "name": "_describe_range",
+   "new_name": "_describe_range_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     3450
+    ],
+    [
+     "src/click/types.py",
+     680
+    ],
+    [
+     "src/click/types.py",
+     706
+    ],
+    [
+     "src/click/types.py",
+     722
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_guess_type",
+   "target": "src/click/types.py::_guess_type",
+   "name": "_guess_type",
+   "new_name": "_guess_type_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     1296
+    ],
+    [
+     "src/click/types.py",
+     1348
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_is_file_like",
+   "target": "src/click/types.py::_is_file_like",
+   "name": "_is_file_like",
+   "new_name": "_is_file_like_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     979
+    ],
+    [
+     "src/click/types.py",
+     1035
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:convert_type",
+   "target": "src/click/types.py::convert_type",
+   "name": "convert_type",
+   "new_name": "convert_type_v2",
+   "arm": "placebo",
+   "static_callers": 5,
+   "runtime_callers": 5,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     2324
+    ],
+    [
+     "src/click/core.py",
+     3107
+    ],
+    [
+     "src/click/termui.py",
+     21
+    ],
+    [
+     "src/click/termui.py",
+     247
+    ],
+    [
+     "src/click/types.py",
+     418
+    ],
+    [
+     "src/click/types.py",
+     1258
+    ],
+    [
+     "src/click/types.py",
+     1315
+    ],
+    [
+     "src/click/types.py",
+     1323
+    ],
+    [
+     "src/click/types.py",
+     1332
+    ],
+    [
+     "src/click/types.py",
+     1334
+    ],
+    [
+     "src/click/types.py",
+     1338
+    ],
+    [
+     "src/click/types.py",
+     1341
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_LazyFile.close_intelligently",
+   "target": "src/click/utils.py::_LazyFile.close_intelligently",
+   "name": "close_intelligently",
+   "new_name": "close_intelligently_v2",
+   "arm": "treatment",
+   "static_callers": 1,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [
+    "src/click/core.py::Context._close_with_exception_info"
+   ],
+   "reference_lines": [
+    [
+     "src/click/types.py",
+     991
+    ],
+    [
+     "src/click/utils.py",
+     188
+    ],
+    [
+     "src/click/utils.py",
+     204
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:make_str",
+   "target": "src/click/utils.py::make_str",
+   "name": "make_str",
+   "new_name": "make_str_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "src/click/core.py",
+     48
+    ],
+    [
+     "src/click/core.py",
+     2062
+    ],
+    [
+     "src/click/utils.py",
+     52
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  }
+ ]
+}

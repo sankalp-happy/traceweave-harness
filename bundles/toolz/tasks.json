@@ -1,0 +1,431 @@
+{
+ "repo": "toolz",
+ "sha": "568c2b8393973cd172a466546c9d95779c452438",
+ "generated_utc": "2026-10-10T11:49:14Z",
+ "validated": true,
+ "tasks": [
+  {
+   "id": "toolz:check_arity",
+   "target": "toolz/_signatures.py::check_arity",
+   "name": "check_arity",
+   "new_name": "check_arity_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     716
+    ],
+    [
+     "toolz/_signatures.py",
+     727
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:check_keywords",
+   "target": "toolz/_signatures.py::check_keywords",
+   "name": "check_keywords",
+   "new_name": "check_keywords_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     752
+    ],
+    [
+     "toolz/_signatures.py",
+     763
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:check_partial",
+   "target": "toolz/_signatures.py::check_partial",
+   "name": "check_partial",
+   "new_name": "check_partial_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     695
+    ],
+    [
+     "toolz/_signatures.py",
+     713
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:check_required_args",
+   "target": "toolz/_signatures.py::check_required_args",
+   "name": "check_required_args",
+   "new_name": "check_required_args_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     771
+    ],
+    [
+     "toolz/_signatures.py",
+     780
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:check_varargs",
+   "target": "toolz/_signatures.py::check_varargs",
+   "name": "check_varargs",
+   "new_name": "check_varargs_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     735
+    ],
+    [
+     "toolz/_signatures.py",
+     744
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:get_exclude_keywords",
+   "target": "toolz/_signatures.py::get_exclude_keywords",
+   "name": "get_exclude_keywords",
+   "new_name": "get_exclude_keywords_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     605
+    ],
+    [
+     "toolz/_signatures.py",
+     654
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:num_pos_args",
+   "target": "toolz/_signatures.py::num_pos_args",
+   "name": "num_pos_args",
+   "new_name": "num_pos_args_v2",
+   "arm": "placebo",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     598
+    ],
+    [
+     "toolz/_signatures.py",
+     652
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:signature_or_spec",
+   "target": "toolz/_signatures.py::signature_or_spec",
+   "name": "signature_or_spec",
+   "new_name": "signature_or_spec_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/_signatures.py",
+     617
+    ],
+    [
+     "toolz/_signatures.py",
+     648
+    ],
+    [
+     "toolz/_signatures.py",
+     651
+    ],
+    [
+     "toolz/functoolz.py",
+     316
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:_get_factory",
+   "target": "toolz/dicttoolz.py::_get_factory",
+   "name": "_get_factory",
+   "new_name": "_get_factory_v2",
+   "arm": "placebo",
+   "static_callers": 3,
+   "runtime_callers": 3,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/dicttoolz.py",
+     11
+    ],
+    [
+     "toolz/dicttoolz.py",
+     35
+    ],
+    [
+     "toolz/dicttoolz.py",
+     60
+    ],
+    [
+     "toolz/dicttoolz.py",
+     214
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:Compose.__doc__.composed_doc",
+   "target": "toolz/functoolz.py::Compose.__doc__.composed_doc",
+   "name": "composed_doc",
+   "new_name": "composed_doc_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/functoolz.py",
+     500
+    ],
+    [
+     "toolz/functoolz.py",
+     507
+    ],
+    [
+     "toolz/functoolz.py",
+     512
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:thread_first.evalform_front",
+   "target": "toolz/functoolz.py::thread_first.evalform_front",
+   "name": "evalform_front",
+   "new_name": "evalform_front_v2",
+   "arm": "treatment",
+   "static_callers": 1,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "toolz/functoolz.py::thread_first"
+   ],
+   "reference_lines": [
+    [
+     "toolz/functoolz.py",
+     70
+    ],
+    [
+     "toolz/functoolz.py",
+     77
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:thread_last.evalform_back",
+   "target": "toolz/functoolz.py::thread_last.evalform_back",
+   "name": "evalform_back",
+   "new_name": "evalform_back_v2",
+   "arm": "treatment",
+   "static_callers": 4,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [
+    "toolz/functoolz.py::thread_last"
+   ],
+   "reference_lines": [
+    [
+     "toolz/functoolz.py",
+     109
+    ],
+    [
+     "toolz/functoolz.py",
+     116
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:_get",
+   "target": "toolz/itertoolz.py::_get",
+   "name": "_get",
+   "new_name": "_get_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 2,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/itertoolz.py",
+     407
+    ],
+    [
+     "toolz/itertoolz.py",
+     459
+    ],
+    [
+     "toolz/itertoolz.py",
+     794
+    ],
+    [
+     "toolz/itertoolz.py",
+     796
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:_merge_sorted_binary",
+   "target": "toolz/itertoolz.py::_merge_sorted_binary",
+   "name": "_merge_sorted_binary",
+   "new_name": "_merge_sorted_binary_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/itertoolz.py",
+     130
+    ],
+    [
+     "toolz/itertoolz.py",
+     135
+    ],
+    [
+     "toolz/itertoolz.py",
+     141
+    ],
+    [
+     "toolz/itertoolz.py",
+     146
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "toolz:_merge_sorted_binary_key",
+   "target": "toolz/itertoolz.py::_merge_sorted_binary_key",
+   "name": "_merge_sorted_binary_key",
+   "new_name": "_merge_sorted_binary_key_v2",
+   "arm": "placebo",
+   "static_callers": 2,
+   "runtime_callers": 1,
+   "dynamic_only_callers": [],
+   "reference_lines": [
+    [
+     "toolz/itertoolz.py",
+     132
+    ],
+    [
+     "toolz/itertoolz.py",
+     175
+    ],
+    [
+     "toolz/itertoolz.py",
+     181
+    ],
+    [
+     "toolz/itertoolz.py",
+     186
+    ]
+   ],
+   "validation": {
+    "complete_rename_passes": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  }
+ ]
+}

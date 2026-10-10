@@ -1,0 +1,9 @@
+{
+  "name": "toolz",
+  "url": "https://github.com/pytoolz/toolz",
+  "sha": "568c2b8393973cd172a466546c9d95779c452438",
+  "licence": "BSD-3-Clause",
+  "src_root": ".",
+  "package": "toolz",
+  "tests": "toolz/tests"
+}

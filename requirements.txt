@@ -1,0 +1,6 @@
+# Running the harness: the bundled repos' test suites need only pytest.
+pytest>=8
+
+# Only for --model claude:<id>. oracle and replay runs work without it.
+# 1.13.0 is the version the adapter was checked against (fallbacks="default").
+anthropic>=1.13.0
