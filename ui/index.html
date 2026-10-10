@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TraceWeave harness</title>
+<link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="mast">
+  <a class="name" href="#/report">TraceWeave harness</a>
+  <nav aria-label="Sections">
+    <a href="#/report" data-nav="report">Report</a>
+    <a href="#/tasks" data-nav="tasks">Tasks</a>
+    <a href="#/method" data-nav="method">Method</a>
+  </nav>
+  <p class="status" id="status"></p>
+</header>
+<main id="view" tabindex="-1"><p class="loading">Loading recorded results…</p></main>
+<script src="app.js"></script>
+</body>
+</html>

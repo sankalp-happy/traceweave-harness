@@ -102,7 +102,30 @@ shows in `model_meta.served_by` and can be excluded.
 
 `python3 tw.py prompt <task> static|fused` prints the exact prompt an arm receives.
 
-### On the expo screen
+### The results page
+
+```bash
+python3 tw.py ui        # http://127.0.0.1:8765/  (stdlib server, works offline)
+```
+
+Three views, all read from `bundles/` and `results/`:
+
+- **Report:** the CONSORT allocation and the outcome tables.
+- **Tasks:** a filterable roster of every task.
+- **Method:** design, predictions and limits.
+
+Opening a task shows its two arms side by side:
+
+- the runtime-only callers and the lines that made each call;
+- the excerpts each arm was shown, with lines only the fused arm saw tinted;
+- the lines naming the function that each arm never saw;
+- each arm's edits, its test-suite verdict, and its exact prompt.
+
+**Re-run both arms now** re-applies the oracle and runs the suite live. The live
+result is added under the recorded one; it never replaces it. Task views need
+`tw.py fetch <repo>` first, and the report does not.
+
+### In the terminal
 
 `show` puts one task's two arms side by side: the runtime-only caller and the
 line it calls from, which reference lines each arm could not see, and what the
@@ -240,4 +263,5 @@ python3 tw.py fetch <repo> && python3 tw.py tasks <repo> --validate
 | `models.py` | `oracle`, `claude:`, `replay:` |
 | `sandbox.py` | pinned checkout, reset, edit application, the test-suite oracle |
 | `build_bundle.py` | TraceWeave-Core outputs → `bundles/<repo>/graph.json` |
+| `server.py`, `ui/` | `tw.py ui`: the results page and its JSON API (stdlib only, fonts self-hosted) |
 | `tests/test_harness.py` | prompt invariance across arms, task arms, edit safety, verdict, the sign test |

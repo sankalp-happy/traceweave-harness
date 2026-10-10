@@ -100,8 +100,12 @@ def run_tests(repo: dict) -> dict:
         counts["errors" if kind.startswith("error") else kind] = int(n)
     bad = sorted({ln.split(" ", 1)[1].split(" - ")[0] for ln in out.splitlines()
                   if ln.startswith(("FAILED ", "ERROR "))})
-    return {"rc": rc, **{k: counts.get(k, 0) for k in ("passed", "failed", "errors")},
-            "bad": bad, "seconds": round(time.monotonic() - t0, 2)}
+    result = {"rc": rc, **{k: counts.get(k, 0) for k in ("passed", "failed", "errors")},
+              "bad": bad, "seconds": round(time.monotonic() - t0, 2)}
+    if rc not in (0, 1):  # the suite never ran: keep pytest's own last word on why
+        lines = [ln for ln in (out + proc.stderr if rc != -1 else "").splitlines() if ln.strip()]
+        result["note"] = lines[-1][:300] if lines else ("timed out" if rc == -1 else "")
+    return result
 
 
 def baseline(repo: dict, refresh: bool = False) -> dict:

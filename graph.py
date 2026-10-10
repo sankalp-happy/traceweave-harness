@@ -100,7 +100,7 @@ def reference_lines(root: Path, repo: dict, name: str) -> list[tuple[str, int]]:
     return out
 
 
-def candidates(bundle: Bundle, root: Path) -> list[dict]:
+def candidates(bundle: Bundle, root: Path) -> tuple[list[dict], dict[str, int]]:
     """Rename targets with a well-defined answer, before any test is run.
 
     Filters, all independent of which arm will see what:
@@ -112,6 +112,9 @@ def candidates(bundle: Bundle, root: Path) -> list[dict]:
         oracle, so a correct rename must not require editing a test
       * at least one in-package caller ran under the suite (R non-empty), or a
         broken rename could pass simply because nothing exercises it
+
+    Also returns why each target with a runtime-only caller was excluded: the
+    attrition behind the treatment arm, reported rather than hidden.
     """
     repo = bundle.repo
     counts: dict[str, int] = {}
@@ -121,31 +124,45 @@ def candidates(bundle: Bundle, root: Path) -> list[dict]:
                           for p in (root / repo["tests"]).rglob("*.py"))
     package_text = "\n".join(p.read_text() for p in package_files(root, repo))
 
-    out = []
-    for key, n in sorted(bundle.nodes.items()):
+    def exclusion(key: str, n: dict) -> str | None:
         name = short(n["qualname"])
-        if (n["kind"] not in ("function", "method") or not name.isidentifier()
-                or re.fullmatch(r"__\w+__", name) or "<overload" in n["qualname"]
-                or counts[name] != 1 or len(name) < 4):
-            continue
-        if word(name).search(test_text) or not bundle.runtime_in.get(key):
-            continue
-        new = f"{name}_v2"
-        if word(new).search(package_text):
-            continue
+        if n["kind"] not in ("function", "method"):
+            return f"not a function or method ({n['kind']})"
+        if not name.isidentifier() or "<overload" in n["qualname"]:
+            return "overload stub or numbered redefinition"
+        if re.fullmatch(r"__\w+__", name):
+            return "dunder method"
+        if counts[name] != 1:
+            return "name shared with another function (override family)"
+        if len(name) < 4:
+            return "name under four characters"
+        if word(name).search(test_text):
+            return "name appears in the test suite"
+        if not bundle.runtime_in.get(key):
+            return "no in-package caller ran under the suite"
+        if word(f"{name}_v2").search(package_text):
+            return "new name already in use"
+        return None
+
+    out, attrition = [], {}
+    for key, n in sorted(bundle.nodes.items()):
         d = bundle.dynamic_only(key)
+        reason = exclusion(key, n)
+        if d:
+            attrition[reason or "eligible"] = attrition.get(reason or "eligible", 0) + 1
         s = bundle.static_in.get(key, set())
-        if not d and not s:
+        if reason or (not d and not s):
             continue
+        name = short(n["qualname"])
         out.append({
             "id": f"{bundle.name}:{n['qualname']}",
             "target": key,
             "name": name,
-            "new_name": new,
+            "new_name": f"{name}_v2",
             "arm": "treatment" if d else "placebo",
             "static_callers": len(s),
             "runtime_callers": len(bundle.runtime_in[key]),
             "dynamic_only_callers": sorted(d),
             "reference_lines": reference_lines(root, repo, name),
         })
-    return out
+    return out, attrition

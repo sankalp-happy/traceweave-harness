@@ -8,6 +8,7 @@
     python3 tw.py report results/*.jsonl           the results table
     python3 tw.py show click:Context._make_sub_context [--results FILE]   one task, both arms
     python3 tw.py prompt click:<qualname> static   the exact prompt an arm receives
+    python3 tw.py ui                               the results page on http://127.0.0.1:8765/
 """
 from __future__ import annotations
 
@@ -76,7 +77,7 @@ def cmd_tasks(args) -> int:
     and without looking at which arm sees what."""
     bundle = Bundle(args.repo)
     root = sandbox.fetch(bundle.repo)
-    tasks = candidates(bundle, root)
+    tasks, attrition = candidates(bundle, root)
     # Validation depends only on the checkout and the symbol's name, never on the
     # graph, so results survive a bundle rebuild and are reused rather than re-run.
     old = bundle.dir / "tasks.json"
@@ -96,8 +97,10 @@ def cmd_tasks(args) -> int:
                                "definition_only_fails": not only_def["pass"]}
             print(f"[{i}/{len(tasks)}] {t['id']:60s} {t['arm']:9s} "
                   f"{'valid' if t['valid'] else 'dropped'}", flush=True)
+    treatment = [t for t in tasks if t["arm"] == "treatment"]
+    attrition["dropped by validation"] = sum(not t.get("valid", True) for t in treatment)
     payload = {"repo": bundle.name, "sha": bundle.repo["sha"], "generated_utc": now(),
-               "validated": args.validate, "tasks": tasks}
+               "validated": args.validate, "attrition": attrition, "tasks": tasks}
     (bundle.dir / "tasks.json").write_text(json.dumps(payload, indent=1) + "\n")
     kept = [t for t in tasks if t.get("valid", True)]
     for arm in ("treatment", "placebo"):
@@ -233,6 +236,12 @@ def cmd_prompt(args) -> int:
     return 0
 
 
+def cmd_ui(args) -> int:
+    import server
+    server.serve(args.port)
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -251,6 +260,7 @@ def main() -> int:
     p.add_argument("--budget", type=int, default=context.BUDGET_TOKENS); p.set_defaults(fn=cmd_show)
     p = sub.add_parser("prompt"); p.add_argument("task"); p.add_argument("condition", choices=CONDITIONS)
     p.add_argument("--budget", type=int, default=context.BUDGET_TOKENS); p.set_defaults(fn=cmd_prompt)
+    p = sub.add_parser("ui"); p.add_argument("--port", type=int, default=8765); p.set_defaults(fn=cmd_ui)
     args = ap.parse_args()
     return args.fn(args)
 

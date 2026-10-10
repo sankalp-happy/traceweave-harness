@@ -83,3 +83,15 @@ def test_verdict_needs_same_passes_and_no_new_failures():
     assert not sandbox.verdict({"rc": 1, "passed": 179, "bad": ["t::known", "t::new"]}, base)
     assert not sandbox.verdict({"rc": 2, "passed": 0, "bad": []}, base)   # collection error
     assert not sandbox.verdict({"rc": 0, "passed": 170, "bad": []}, base)  # tests vanished
+
+
+def test_report_pooled_rows_are_the_sum_of_their_repos():
+    import server
+    table = server.report()["table"]
+    for group in ("treatment", "placebo"):
+        rows = [r for r in table if r["group"] == group]
+        pooled = [r for r in rows if r["repo"] == "pooled"]
+        if not pooled:
+            continue
+        for k in ("tasks", "static", "fused", "fused_only", "static_only"):
+            assert pooled[0][k] == sum(r[k] for r in rows if r["repo"] != "pooled"), (group, k)

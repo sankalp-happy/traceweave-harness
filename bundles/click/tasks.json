@@ -1,8 +1,17 @@
 {
  "repo": "click",
  "sha": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
- "generated_utc": "2026-10-10T11:29:46Z",
+ "generated_utc": "2026-10-10T12:10:31Z",
  "validated": true,
+ "attrition": {
+  "not a function or method (lambda)": 4,
+  "dunder method": 31,
+  "name shared with another function (override family)": 82,
+  "eligible": 17,
+  "name appears in the test suite": 30,
+  "name under four characters": 2,
+  "dropped by validation": 2
+ },
  "tasks": [
   {
    "id": "click:_FixupStream.seekable",

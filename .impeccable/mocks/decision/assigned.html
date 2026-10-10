@@ -1,0 +1,76 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<style>
+:root{--cover:#23312a;--page:#eef3e6;--rule:#c9dbc9;--form:#4f7a5c;--ink:#1f3fa6;--red:#c2362b;--hl:#f4e04d;--text:#1d2620}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--page);font-family:Archivo,system-ui;color:var(--text)}
+.bar{height:64px;background:var(--cover);display:flex;align-items:center;padding:0 40px;gap:40px;color:#dfe9dd}
+.label{border:1.5px solid #9dbfa6;padding:6px 14px;font-stretch:75%;font-size:15px;color:#eef3e6}
+.label b{font-weight:800;font-stretch:100%}
+nav{display:flex;gap:28px;font-size:15px}
+nav a{color:#b9cdb9;text-decoration:none;padding:21px 0;border-bottom:3px solid transparent}
+nav a.on{color:#fff;border-color:var(--hl)}
+.meta{margin-left:auto;font-size:13px;color:#9dbfa6;font-stretch:80%}
+main{display:grid;grid-template-columns:640px 1fr;gap:40px;padding:40px}
+.form{font-stretch:75%;color:var(--form);font-size:15px}
+.form span{display:inline-block;border-bottom:1px solid var(--rule);min-width:120px;color:var(--text);font-stretch:100%;margin:0 18px 0 6px}
+h2{font-stretch:75%;font-weight:600;color:var(--form);font-size:17px;margin:28px 0 10px}
+.figs{display:flex;align-items:flex-end;gap:36px}
+.fig .n{font-size:168px;line-height:.82;font-weight:800;font-stretch:112%;color:var(--ink);font-variant-numeric:tabular-nums}
+.fig .n small{font-size:64px;font-weight:500;color:#7d8fc4}
+.fig .k{font-stretch:75%;color:var(--form);font-size:16px;margin-top:12px}
+.fig.dim .n{color:#8d9db0}
+.delta{font-size:19px;line-height:1.45;max-width:560px;margin-top:26px}
+.delta b{color:var(--ink)}
+.witness{margin-top:22px;border-top:1px solid var(--rule);padding-top:10px;font-size:13px;color:var(--form);font-stretch:85%}
+.witness code{font-family:ui-monospace,Menlo,monospace;color:var(--text);font-size:12.5px}
+.placebo{margin-top:30px;display:flex;gap:24px;align-items:baseline;background:#e4ecdb;padding:16px 20px}
+.placebo .n{font-size:40px;font-weight:700;font-stretch:112%;color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{font-stretch:75%;font-weight:600;color:var(--form);text-align:left;padding:0 10px 8px;border-bottom:1.5px solid var(--form)}
+td{padding:0 10px;height:40px;border-bottom:1px solid var(--rule)}
+td.m{width:44px;text-align:center;font-size:17px}
+.p{color:var(--ink)} .f{color:var(--red)}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:ui-monospace,Menlo,monospace;font-size:13px}
+td.t{font-family:ui-monospace,Menlo,monospace;font-size:13.5px}
+tr.sel td{background:#fbf6cf}
+.repo{color:var(--form);font-stretch:80%}
+</style></head><body>
+<div class="bar">
+  <div class="label"><b>TraceWeave harness</b> · Book 1 · click, toolz</div>
+  <nav><a class="on">Results</a><a>Tasks</a><a>Method</a></nav>
+  <div class="meta">oracle runs · recorded 10 Oct 2026 · no LLM runs yet</div>
+</div>
+<main>
+<section>
+  <div class="form">Entry <span>1</span> Date <span>10 Oct 2026</span> Model <span>oracle (ceiling)</span></div>
+  <h2>Treatment · 17 rename tasks with a caller only the runtime trace sees</h2>
+  <div class="figs">
+    <div class="fig dim"><div class="n">1<small>/17</small></div><div class="k">pass with static context</div></div>
+    <div class="fig"><div class="n">9<small>/17</small></div><div class="k">pass with runtime edges added</div></div>
+  </div>
+  <p class="delta"><b>8 tasks</b> pass only with runtime context; <b>0</b> go the other way. Exact McNemar p = 0.008.</p>
+  <div class="witness">Witness · <code>python3 tw.py report results/*.jsonl</code> · 280 rows · results/click.oracle.jsonl, results/toolz.oracle.jsonl</div>
+  <div class="placebo"><span class="form">Placebo · 123 tasks · prompts identical in both arms</span><span class="n">108</span><span class="form">pass in each arm</span></div>
+</section>
+<section>
+  <h2 style="margin-top:0">Treatment roster</h2>
+  <table>
+    <tr><th>static</th><th>fused</th><th>task</th><th>repo</th><th style="text-align:right">runtime-only</th><th style="text-align:right">lines seen</th></tr>
+    <tr class="sel"><td class="m f">○</td><td class="m p">●</td><td class="t">Option.flag_activation_value</td><td class="repo">click</td><td class="num">4</td><td class="num">1→8 / 9</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">Command.get_short_help_str</td><td class="repo">click</td><td class="num">1</td><td class="num">3→4 / 4</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">Context.command_path</td><td class="repo">click</td><td class="num">2</td><td class="num">1→4 / 4</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">iter_params_for_processing.sort_key</td><td class="repo">click</td><td class="num">1</td><td class="num">1→2 / 2</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">_Option.takes_value</td><td class="repo">click</td><td class="num">2</td><td class="num">1→3 / 3</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">ShellComplete.func_name</td><td class="repo">click</td><td class="num">1</td><td class="num">1→2 / 2</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">thread_first.evalform_front</td><td class="repo">toolz</td><td class="num">1</td><td class="num">1→2 / 2</td></tr>
+    <tr><td class="m f">○</td><td class="m p">●</td><td class="t">thread_last.evalform_back</td><td class="repo">toolz</td><td class="num">1</td><td class="num">1→2 / 2</td></tr>
+    <tr><td class="m p">●</td><td class="m p">●</td><td class="t">_pause_echo</td><td class="repo">click</td><td class="num">2</td><td class="num">4→4 / 4</td></tr>
+    <tr><td class="m f">○</td><td class="m f">○</td><td class="t">get_binary_stdin</td><td class="repo">click</td><td class="num">1</td><td class="num">2→2 / 3</td></tr>
+    <tr><td class="m f">○</td><td class="m f">○</td><td class="t">_LazyFile.close_intelligently</td><td class="repo">click</td><td class="num">1</td><td class="num">2→2 / 3</td></tr>
+    <tr><td class="m f">○</td><td class="m f">○</td><td class="t">help_option.show_help</td><td class="repo">click</td><td class="num">1</td><td class="num">1→1 / 2</td></tr>
+  </table>
+</section>
+</main>
+</body></html>

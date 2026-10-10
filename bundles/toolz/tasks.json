@@ -1,8 +1,16 @@
 {
  "repo": "toolz",
  "sha": "568c2b8393973cd172a466546c9d95779c452438",
- "generated_utc": "2026-10-10T11:49:14Z",
+ "generated_utc": "2026-10-10T12:10:27Z",
  "validated": true,
+ "attrition": {
+  "not a function or method (lambda)": 5,
+  "name shared with another function (override family)": 2,
+  "dunder method": 10,
+  "name appears in the test suite": 11,
+  "eligible": 2,
+  "dropped by validation": 0
+ },
  "tasks": [
   {
    "id": "toolz:check_arity",

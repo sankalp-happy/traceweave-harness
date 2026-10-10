@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T12:42:08+00:00",
+  "title": "Design System: TraceWeave harness",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1b1b1b",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#4a5057",
+        "tonalRamp": [
+          "#070c11",
+          "#1f252b",
+          "#3b4047",
+          "#585e65",
+          "#777e86",
+          "#989fa7",
+          "#bec5cd",
+          "#e8eff8"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3",
+        "canonical": "#6b7279",
+        "tonalRamp": [
+          "#070c11",
+          "#1f252b",
+          "#3a4147",
+          "#585e65",
+          "#777e85",
+          "#989fa7",
+          "#bdc5cd",
+          "#e8f0f8"
+        ]
+      },
+      "hair": {
+        "role": "neutral",
+        "displayName": "Hair",
+        "canonical": "#d3d9df",
+        "tonalRamp": [
+          "#080c0f",
+          "#202529",
+          "#3b4045",
+          "#595e63",
+          "#787e83",
+          "#999fa5",
+          "#bfc5cb",
+          "#e9eff5"
+        ]
+      },
+      "journal-blue": {
+        "role": "primary",
+        "displayName": "Journal Blue",
+        "canonical": "#0b4f8a",
+        "tonalRamp": [
+          "#000b1d",
+          "#002547",
+          "#044174",
+          "#21609c",
+          "#4481c0",
+          "#65a3e4",
+          "#9bc9fa",
+          "#e3f0ff"
+        ]
+      },
+      "journal-blue-deep": {
+        "role": "primary",
+        "displayName": "Journal Blue Deep",
+        "canonical": "#083c6a",
+        "tonalRamp": [
+          "#010c1c",
+          "#042544",
+          "#0f4170",
+          "#316091",
+          "#5081b4",
+          "#71a3d8",
+          "#9bc9fa",
+          "#e3f0ff"
+        ]
+      },
+      "blue-tint": {
+        "role": "primary",
+        "displayName": "Blue Tint",
+        "canonical": "#dce8f4",
+        "tonalRamp": [
+          "#050c14",
+          "#1c252e",
+          "#37414a",
+          "#555f69",
+          "#747f89",
+          "#95a0ab",
+          "#bac6d1",
+          "#e4f0fc"
+        ]
+      },
+      "slate": {
+        "role": "secondary",
+        "displayName": "Slate",
+        "canonical": "#56616b",
+        "tonalRamp": [
+          "#050c14",
+          "#1c252e",
+          "#37414a",
+          "#545f69",
+          "#737f89",
+          "#94a0ab",
+          "#b9c6d1",
+          "#e3f0fc"
+        ]
+      },
+      "failure-red": {
+        "role": "tertiary",
+        "displayName": "Failure Red",
+        "canonical": "#b23a2e",
+        "tonalRamp": [
+          "#1f0000",
+          "#4a0201",
+          "#7a0c07",
+          "#a42c22",
+          "#ca5042",
+          "#f07363",
+          "#fbada1",
+          "#fee9e5"
+        ]
+      },
+      "red-tint": {
+        "role": "tertiary",
+        "displayName": "Red Tint",
+        "canonical": "#f7e5e2",
+        "tonalRamp": [
+          "#130807",
+          "#2d201e",
+          "#4a3c3a",
+          "#695a57",
+          "#897976",
+          "#ab9a97",
+          "#d1c0bd",
+          "#fceae7"
+        ]
+      },
+      "red-line": {
+        "role": "tertiary",
+        "displayName": "Red Line",
+        "canonical": "#e7c7c2",
+        "tonalRamp": [
+          "#180504",
+          "#341d1a",
+          "#523835",
+          "#715652",
+          "#927571",
+          "#b59692",
+          "#dbbcb7",
+          "#ffe9e5"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#e9eef3",
+        "tonalRamp": [
+          "#080c0f",
+          "#212428",
+          "#3c4044",
+          "#5a5e62",
+          "#797e82",
+          "#9a9fa4",
+          "#c0c5c9",
+          "#eaeff4"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "canonical": "#f7f9fb",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#3e4041",
+          "#5c5e5f",
+          "#7c7d7f",
+          "#9d9fa0",
+          "#c2c4c6",
+          "#edeff1"
+        ]
+      },
+      "control-line": {
+        "role": "neutral",
+        "displayName": "Control Line",
+        "canonical": "#9aa3ab",
+        "tonalRamp": [
+          "#060c11",
+          "#1e252b",
+          "#394148",
+          "#575f66",
+          "#767e86",
+          "#97a0a8",
+          "#bcc5ce",
+          "#e6f0f8"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Page",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display figure",
+        "purpose": "Pass counts in the CONSORT arm boxes."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings and the masthead name."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Table and figure captions."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose and table cells, tabular figures."
+      },
+      "label": {
+        "displayName": "Small-caps label",
+        "purpose": "Arm, group, verdict and column-head labels."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Exclusions, hints, footnotes, legends."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Code, file names, identifiers, commands."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mark-underline",
+        "value": "inset 0 -1.5px 0 var(--ink-3)",
+        "purpose": "Underline under a marked name in code; red variant for unseen names. Not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "All transitions: hover fills (0.2s), run-button hover (0.15s), live-entry arrival (0.7s). Removed under reduced motion."
+      },
+      {
+        "name": "arrive",
+        "value": "0.7s: opacity 0 to 1, translateY(6px) to 0, mist to transparent",
+        "purpose": "A live re-run's entry appearing beside the recorded one."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "report-stack",
+        "value": "1180px"
+      },
+      {
+        "name": "arms-stack",
+        "value": "1000px"
+      },
+      {
+        "name": "compact",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Run Button",
+      "kind": "button",
+      "refersTo": "button-run",
+      "description": "The single primary action: re-run a task live.",
+      "html": "<button class=\"ds-run\">Re-run both arms</button> <button class=\"ds-run\" disabled>Running…</button>",
+      "css": ".ds-run{font:600 15px/1 var(--sans);color:#fff;background:var(--blue);border:1px solid var(--blue);border-radius:0;padding:11px 18px;cursor:pointer;transition:background-color .15s var(--ease)}.ds-run:hover{background:#083c6a}.ds-run:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.ds-run:disabled{background:#8aa5be;border-color:#8aa5be;cursor:progress}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented-option",
+      "description": "Filter between groups or outcomes; pressed option inverts to ink.",
+      "html": "<div class=\"ds-seg\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\">Treatment</button><button aria-pressed=\"false\">Placebo</button></div>",
+      "css": ".ds-seg{display:inline-flex;border:1px solid #9aa3ab}.ds-seg button{font:400 14px var(--sans);color:var(--ink);background:var(--page);border:0;padding:6px 14px;cursor:pointer}.ds-seg button+button{border-left:1px solid #9aa3ab}.ds-seg button[aria-pressed=true]{background:var(--ink);color:#fff}.ds-seg button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Square text field with a small label above.",
+      "html": "<label class=\"ds-field\">Function<input type=\"search\" placeholder=\"Filter by name\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:4px;font:400 13px var(--sans);color:var(--ink-2)}.ds-field input{font:400 14px var(--sans);color:var(--ink);background:var(--page);border:1px solid #9aa3ab;border-radius:0;padding:6px 10px;min-width:260px}.ds-field input::placeholder{color:var(--ink-3)}.ds-field input:focus-visible{outline:2px solid var(--blue);outline-offset:2px}"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "refersTo": "masthead",
+      "description": "Sticky bar closed by a 3px journal-blue rule; current tab underlined in blue.",
+      "html": "<header class=\"ds-mast\"><a class=\"ds-name\" href=\"#\">TraceWeave harness</a><nav><a href=\"#\" aria-current=\"page\">Report</a><a href=\"#\">Tasks</a><a href=\"#\">Method</a></nav><p class=\"ds-status\">Recorded results</p></header>",
+      "css": ".ds-mast{display:flex;align-items:stretch;gap:32px;padding:0 24px;height:60px;border-bottom:3px solid var(--blue);background:var(--page)}.ds-name{align-self:center;font:600 21px/1 var(--serif);color:var(--ink);text-decoration:none}.ds-mast nav{display:flex;gap:24px}.ds-mast nav a{display:flex;align-items:center;color:var(--ink-2);text-decoration:none;font:400 15px var(--sans);border-bottom:3px solid transparent;margin-bottom:-3px}.ds-mast nav a:hover{color:var(--ink)}.ds-mast nav a[aria-current=page]{color:var(--blue);font-weight:700;border-bottom-color:var(--blue)}.ds-mast a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.ds-status{margin:0 0 0 auto;align-self:center;font:400 13px var(--sans);color:var(--ink-2)}"
+    },
+    {
+      "name": "Three-rule Table",
+      "kind": "custom",
+      "refersTo": "table-row-pooled",
+      "description": "Journal outcomes table: serif caption, small-caps heads, 2/1/2px ink rules, pooled row in mist.",
+      "html": "<table class=\"ds-t\"><caption>Table 1. Outcomes by group</caption><thead><tr><th>Group</th><th>Static</th><th>Fused</th><th>Exact p</th></tr></thead><tbody><tr><td>Treatment</td><td>1/17</td><td>9/17</td><td>0.008</td></tr><tr><td>Placebo</td><td>108/123</td><td>108/123</td><td>1.000</td></tr><tr class=\"pooled\"><td>All</td><td>109/140</td><td>117/140</td><td></td></tr></tbody></table>",
+      "css": ".ds-t{border-collapse:collapse;font:400 15px var(--sans);font-variant-numeric:tabular-nums;color:var(--ink)}.ds-t caption{text-align:left;font:600 17px/1.35 var(--serif);margin-bottom:12px}.ds-t th{border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:8px 10px;text-align:right;font-variant:small-caps;letter-spacing:.03em;font-weight:700}.ds-t td{padding:9px 10px;text-align:right}.ds-t th:first-child,.ds-t td:first-child{text-align:left}.ds-t tr+tr td{border-top:1px solid #eef1f4}.ds-t tbody tr:last-child td{border-bottom:2px solid var(--ink)}.ds-t tr.pooled td{background:var(--mist);font-weight:700}.ds-t tbody tr:hover td{background:#f3f6f9}"
+    },
+    {
+      "name": "CONSORT Arm Boxes",
+      "kind": "custom",
+      "refersTo": "consort-arm",
+      "description": "The flow's two terminal boxes; each is a link into its tasks.",
+      "html": "<div class=\"ds-arms\"><a class=\"ds-arm\" href=\"#\"><span class=\"ds-sc\" style=\"color:var(--slate)\">Static arm</span><b>1</b><span class=\"of\">of 17 pass</span><span class=\"hint\">open these</span></a><a class=\"ds-arm\" href=\"#\"><span class=\"ds-sc\" style=\"color:var(--blue)\">Fused arm</span><b>9</b><span class=\"of\">of 17 pass</span><span class=\"hint\">open these</span></a></div>",
+      "css": ".ds-arms{display:flex;gap:20px}.ds-arm{display:block;width:140px;border:1.5px solid var(--ink);border-radius:0;padding:12px;text-align:center;color:var(--ink);text-decoration:none;font:400 14px var(--sans);transition:background-color .2s var(--ease)}.ds-arm:hover{background:var(--mist)}.ds-arm:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.ds-sc{display:block;font-variant:small-caps;letter-spacing:.04em;font-weight:700}.ds-arm b{display:block;font:600 44px/1.05 var(--serif);margin-top:2px}.ds-arm .of{color:var(--ink-2)}.ds-arm .hint{display:block;font-size:12px;color:var(--blue);text-decoration:underline;text-underline-offset:3px;margin-top:2px}"
+    },
+    {
+      "name": "Code Excerpt",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Numbered excerpt; fused-only lines in blue tint, the function's name marked in mist.",
+      "html": "<div class=\"ds-file\"><div class=\"fname\">src/click/core.py</div><div class=\"ds-code\"><span class=\"ln\">212</span><span class=\"tx\">def invoke(self, ctx):</span><span class=\"ln added\">213</span><span class=\"tx added\">    return <mark>_main</mark>(ctx)</span><span class=\"gap\">… 40 lines</span></div></div>",
+      "css": ".ds-file{border:1px solid var(--hair)}.ds-file .fname{font:400 12.5px var(--mono);color:var(--ink-2);padding:6px 10px;border-bottom:1px solid var(--hair);background:#f7f9fb}.ds-code{display:grid;grid-template-columns:max-content minmax(0,1fr);font:400 12.5px/1.6 var(--mono)}.ds-code .ln{padding:0 10px 0 12px;text-align:right;color:var(--ink-3);border-right:1px solid var(--hair)}.ds-code .tx{padding:0 12px;white-space:pre}.ds-code .gap{grid-column:1/-1;color:var(--ink-3);padding:0 12px;background:#f7f9fb;font-size:11.5px}.ds-code .added{background:var(--blue-tint)}.ds-code .ln.added{color:var(--blue);font-weight:700}.ds-code mark{background:#c4d9ef;color:inherit;box-shadow:inset 0 -1.5px 0 var(--ink-3)}"
+    },
+    {
+      "name": "Unseen Lines",
+      "kind": "custom",
+      "refersTo": "unseen-list",
+      "description": "Lines naming the function that the arm never saw; the only red surface.",
+      "html": "<ul class=\"ds-unseen\"><li><span class=\"at\">core.py:418</span><span class=\"src\">cb = <mark>_main</mark></span></li><li><span class=\"at\">testing.py:77</span><span class=\"src\">getattr(cmd, \"<mark>_main</mark>\")</span></li></ul>",
+      "css": ".ds-unseen{margin:0;padding:0;list-style:none;border:1px solid #e7c7c2;background:var(--red-tint)}.ds-unseen li{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:6px 10px;font:400 12.5px var(--mono)}.ds-unseen li+li{border-top:1px solid #ecd2cd}.ds-unseen .at{color:var(--red)}.ds-unseen .src{color:var(--ink)}.ds-unseen mark{background:#efd0cb;color:inherit;box-shadow:inset 0 -1.5px 0 var(--red)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clinical Trial Report",
+    "overview": "The surface is set like a results section in a medical journal: a white page, near-black ink, one journal blue, and figures whose every number links to the rows behind it. Allocation is drawn as a CONSORT flow in 1.5px ink boxes; outcomes sit in three-rule tables; arms are named in small capitals. The register is a printed report someone can audit, not a product dashboard.\n\nDensity is that of a journal page read on a 13 to 15 inch laptop: 15px sans body with tabular figures, 12.5px notes, serif reserved for titles, captions and the headline figures. Colour carries meaning and nothing else. Blue is the fused (intervention) arm and the link; slate is the static arm; red appears only where something failed or an arm could not see a line. Everything held equal between arms recedes into ink and hairlines.\n\nDepth is flat. Structure comes from rules: a 3px blue rule under the masthead, 2px ink rules opening and closing tables, 1.5px ink strokes on figure boxes, hairlines between rows. Corners are square throughout.",
+    "keyCharacteristics": [
+      "White page, ink type, one blue accent with a fixed meaning.",
+      "Serif for titles, captions and figures; sans for UI and prose; system mono only for code.",
+      "Three-rule tables and CONSORT boxes as the primary structures.",
+      "Small-caps labels for arms, groups, verdicts and column heads.",
+      "Square corners, no drop shadows, no fills beyond tints with assigned meanings."
+    ],
+    "rules": [
+      {
+        "name": "The Assigned Meaning Rule",
+        "body": "Blue is the fused arm and navigation; slate is the static arm; red is failure or an unseen line. No colour is used decoratively, and no new hue enters without a meaning.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Is Evidence Rule",
+        "body": "Red marks only a failed verdict, an error, or a line the arm never saw. It is never used for emphasis or warning chrome.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif Is Cited Rule",
+        "body": "Serif sets only what a reader would quote: titles, captions, and headline figures. Controls, nav and prose are sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Small Capitals Rule",
+        "body": "Categorical labels (arm, group, verdict, column head) are small caps in weight 700, never uppercase with tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rules Not Shadows Rule",
+        "body": "Group with a rule or a hairline border; never lift with a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do bind every colour to its meaning: journal blue for the fused arm and links, slate for the static arm, failure red only for failure and unseen lines.",
+      "Do set tables as three-rule tables: 2px ink top, 1px ink under the head, 2px ink closing the body.",
+      "Do draw allocation and flow as CONSORT boxes in 1.5px ink with square corners, and make each figure a link to its rows.",
+      "Do set arm, group, verdict and column-head labels in small caps at weight 700.",
+      "Do keep serif for titles, captions and headline figures, and use tabular figures everywhere.",
+      "Do close evidence with a source line naming the command and rows that produce it."
+    ],
+    "donts": [
+      "Don't introduce rounded corners or drop shadows, and don't summarise results as KPI tiles or stat cards; report them as figures and tables.",
+      "Don't use red for emphasis, warnings or decoration.",
+      "Don't set labels in tracked uppercase; use small caps.",
+      "Don't use glyph or emoji icons; the only icon is a drawn inline SVG chevron for sort direction.",
+      "Don't add hues outside the palette; a new state needs an assigned meaning first."
+    ]
+  }
+}
