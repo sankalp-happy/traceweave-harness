@@ -1,0 +1,33 @@
+{
+ "repo": "confluence-markdown-exporter",
+ "seed": 20261016,
+ "pool": 89,
+ "callers": [
+  "confluence_markdown_exporter/api_clients.py::<module>",
+  "confluence_markdown_exporter/confluence.py::Attachment.export_path",
+  "confluence_markdown_exporter/confluence.py::Attachment.filename",
+  "confluence_markdown_exporter/confluence.py::Page.Converter._add_confluence_url_properties",
+  "confluence_markdown_exporter/confluence.py::Page.Converter._cql_to_dataview",
+  "confluence_markdown_exporter/confluence.py::Page.Converter._format_attachment_link",
+  "confluence_markdown_exporter/confluence.py::Page.Converter._get_path_for_href",
+  "confluence_markdown_exporter/confluence.py::Page.Converter.convert_div",
+  "confluence_markdown_exporter/confluence.py::Page.Converter.convert_page_properties",
+  "confluence_markdown_exporter/confluence.py::Page.Converter.convert_table",
+  "confluence_markdown_exporter/confluence.py::Page._render_inline_comments",
+  "confluence_markdown_exporter/confluence.py::Page._render_page_comments",
+  "confluence_markdown_exporter/confluence.py::Page.export_markdown",
+  "confluence_markdown_exporter/confluence.py::Page.from_json",
+  "confluence_markdown_exporter/confluence.py::_extract_base_url",
+  "confluence_markdown_exporter/main.py::<module>",
+  "confluence_markdown_exporter/utils/app_data_store.py::AppSettings",
+  "confluence_markdown_exporter/utils/drawio_converter.py::extract_mermaid_data",
+  "confluence_markdown_exporter/utils/export.py::sanitize_filename",
+  "confluence_markdown_exporter/utils/lockfile.py::ConfluenceLock",
+  "confluence_markdown_exporter/utils/lockfile.py::ConfluenceLock.add_page",
+  "confluence_markdown_exporter/utils/lockfile.py::ConfluenceLock.save",
+  "confluence_markdown_exporter/utils/lockfile.py::LockfileManager.init",
+  "confluence_markdown_exporter/utils/measure_time.py::measure_time",
+  "confluence_markdown_exporter/utils/table_converter.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

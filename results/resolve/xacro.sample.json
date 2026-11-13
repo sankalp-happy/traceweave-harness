@@ -1,0 +1,25 @@
+{
+ "repo": "xacro",
+ "seed": 20261016,
+ "pool": 17,
+ "callers": [
+  "xacro/__init__.py::<module>",
+  "xacro/__init__.py::QuickLexer.__init__",
+  "xacro/__init__.py::QuickLexer.lex",
+  "xacro/__init__.py::QuickLexer.next",
+  "xacro/__init__.py::QuickLexer.peek",
+  "xacro/__init__.py::create_global_symbols",
+  "xacro/__init__.py::create_global_symbols.deprecate",
+  "xacro/__init__.py::create_global_symbols.message_adapter",
+  "xacro/__init__.py::eval_all",
+  "xacro/__init__.py::get_include_files",
+  "xacro/__init__.py::load_yaml",
+  "xacro/__init__.py::process_include",
+  "xacro/__init__.py::remove_previous_comments",
+  "xacro/cli.py::<module>",
+  "xacro/substitution_args.py::<module>",
+  "xacro/substitution_args.py::resolve_args",
+  "xacro/xmlutils.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

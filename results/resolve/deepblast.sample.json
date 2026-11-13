@@ -1,0 +1,31 @@
+{
+ "repo": "deepblast",
+ "seed": 20261016,
+ "pool": 23,
+ "callers": [
+  "deepblast/alignment.py::<module>",
+  "deepblast/dataset/alphabet.py::Alphabet.__init__",
+  "deepblast/dataset/alphabet.py::UniprotTokenizer.__call__",
+  "deepblast/dataset/dataset.py::<module>",
+  "deepblast/dataset/utils.py::states2edges",
+  "deepblast/nw.py::NeedlemanWunschDecoder.traceback",
+  "deepblast/nw.py::NeedlemanWunschFunction.forward",
+  "deepblast/nw.py::NeedlemanWunschFunctionBackward.backward",
+  "deepblast/nw.py::NeedlemanWunschFunctionBackward.forward",
+  "deepblast/nw.py::_adjoint_backward_pass",
+  "deepblast/nw.py::_adjoint_forward_pass",
+  "deepblast/nw.py::_backward_pass",
+  "deepblast/nw.py::_forward_pass",
+  "deepblast/score.py::<module>",
+  "deepblast/score.py::alignment_score",
+  "deepblast/score.py::alignment_score_kernel",
+  "deepblast/score.py::filter_gaps",
+  "deepblast/sw.py::SmithWatermanDecoder.traceback",
+  "deepblast/sw.py::SmithWatermanFunction.forward",
+  "deepblast/sw.py::SmithWatermanFunctionBackward.forward",
+  "deepblast/sw.py::_backward_pass",
+  "deepblast/sw.py::_forward_pass",
+  "deepblast/trainer.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

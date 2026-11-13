@@ -1,0 +1,33 @@
+{
+ "repo": "term-image",
+ "seed": 20261016,
+ "pool": 115,
+ "callers": [
+  "src/term_image/color.py::Color.from_hex",
+  "src/term_image/image/block.py::BlockImage._pixels_cols",
+  "src/term_image/image/common.py::BaseImage.__format__",
+  "src/term_image/image/common.py::BaseImage._check_formatting",
+  "src/term_image/image/common.py::BaseImage._close_image",
+  "src/term_image/image/common.py::BaseImage.draw.render",
+  "src/term_image/image/common.py::GraphicsImage",
+  "src/term_image/image/common.py::GraphicsImage._get_render_size",
+  "src/term_image/image/kitty.py::<module>",
+  "src/term_image/image/kitty.py::Transmission.compress",
+  "src/term_image/render/_iterator.py::RenderIterator.__del__",
+  "src/term_image/render/_iterator.py::RenderIterator.__next__",
+  "src/term_image/render/_iterator.py::RenderIterator._iterate",
+  "src/term_image/render/_iterator.py::RenderIterator.close",
+  "src/term_image/renderable/_renderable.py::<module>",
+  "src/term_image/renderable/_renderable.py::Renderable._get_render_data_",
+  "src/term_image/renderable/_renderable.py::Renderable._init_render_",
+  "src/term_image/renderable/_renderable.py::Renderable.draw",
+  "src/term_image/renderable/_renderable.py::Renderable.frame_duration.<setter>",
+  "src/term_image/renderable/_renderable.py::Renderable.render",
+  "src/term_image/renderable/_renderable.py::RenderableData",
+  "src/term_image/renderable/_types.py::ArgsNamespace.update",
+  "src/term_image/renderable/_types.py::RenderArgs.update",
+  "src/term_image/utils.py::unix_tty_only",
+  "src/term_image/widget/_urwid.py::UrwidImageScreen.clear_images"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

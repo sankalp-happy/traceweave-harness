@@ -1,0 +1,23 @@
+{
+ "repo": "marshmallow-sqlalchemy",
+ "seed": 20261016,
+ "pool": 15,
+ "callers": [
+  "src/marshmallow_sqlalchemy/__init__.py::<module>",
+  "src/marshmallow_sqlalchemy/convert.py::<module>",
+  "src/marshmallow_sqlalchemy/convert.py::ModelConverter",
+  "src/marshmallow_sqlalchemy/convert.py::ModelConverter._add_column_kwargs",
+  "src/marshmallow_sqlalchemy/convert.py::ModelConverter._get_field_class_for_data_type",
+  "src/marshmallow_sqlalchemy/convert.py::ModelConverter.field_for",
+  "src/marshmallow_sqlalchemy/convert.py::ModelConverter.fields_for_model",
+  "src/marshmallow_sqlalchemy/load_instance_mixin.py::<module>",
+  "src/marshmallow_sqlalchemy/load_instance_mixin.py::LoadInstanceMixin.Opts",
+  "src/marshmallow_sqlalchemy/load_instance_mixin.py::LoadInstanceMixin.Opts.__init__",
+  "src/marshmallow_sqlalchemy/schema.py::SQLAlchemyAutoSchemaMeta.get_declared_sqla_fields",
+  "src/marshmallow_sqlalchemy/schema.py::SQLAlchemySchemaMeta._maybe_filter_foreign_keys",
+  "src/marshmallow_sqlalchemy/schema.py::SQLAlchemySchemaMeta.get_auto_fields",
+  "src/marshmallow_sqlalchemy/schema.py::SQLAlchemySchemaMeta.get_declared_fields",
+  "src/marshmallow_sqlalchemy/schema.py::SQLAlchemySchemaOpts.__init__"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

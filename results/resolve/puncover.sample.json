@@ -1,0 +1,19 @@
+{
+ "repo": "puncover",
+ "seed": 20261016,
+ "pool": 11,
+ "callers": [
+  "puncover/backtrace_helper.py::BacktraceHelper.deepest_call_tree",
+  "puncover/backtrace_helper.py::BacktraceHelper.deepest_callee_tree",
+  "puncover/backtrace_helper.py::BacktraceHelper.deepest_caller_tree",
+  "puncover/backtrace_helper.py::BacktraceHelper.derive_function_symbols",
+  "puncover/backtrace_helper.py::BacktraceHelper.transform_known_symbols",
+  "puncover/collector.py::Collector.all_functions",
+  "puncover/collector.py::Collector.enhance_call_tree",
+  "puncover/puncover.py::get_default_port",
+  "puncover/puncover.py::main",
+  "puncover/renderers.py::<module>",
+  "puncover/renderers.py::HTMLRenderer.url_for"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

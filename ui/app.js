@@ -1,7 +1,7 @@
 "use strict";
 
 const view = document.getElementById("view");
-const state = { report: null, tasks: { group: "all", repo: "all", outcome: "any", q: "", sort: "group", dir: 1 } };
+const state = { report: null, model: null, tasks: { group: "all", repo: "all", outcome: "any", q: "", sort: "group", dir: 1 } };
 
 // ---------- helpers ----------
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -11,6 +11,9 @@ const day = (ts) => new Date(ts).toLocaleDateString("en-GB", { day: "numeric", m
 const clock = (ts, utc = true) => new Date(ts).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", ...(utc && { timeZone: "UTC" }) });
 const taskHref = (id) => `#/task/${encodeURIComponent(id)}`;
 const ran = (a) => a && (a.rc === 0 || a.rc === 1);
+const editorName = (m) => (m === "oracle" ? "Rename script" : m.replace(/^\w+:/, "").split("/").pop());
+const withModel = (path) => (state.model ? `${path}${path.includes("?") ? "&" : "?"}model=${encodeURIComponent(state.model)}` : path);
+const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
 async function api(path, opts) {
   const res = await fetch(path, opts);
@@ -53,10 +56,10 @@ function consort(r) {
   const dropped = a["dropped by validation"] || 0;
   const t = r.table.find((x) => x.repo === "pooled" && x.group === "treatment");
   if (!t) return `<p class="muted">No results for hidden-caller tasks yet.</p>`;
-  const how = "#/method?focus=exclusions";
+  const how = "#/pilot-method?focus=exclusions";
   return `
   <figure class="fig">
-  <figcaption>Figure 1. How the ${t.tasks} tasks were chosen, and how many passed <span class="muted">(results from the rename script, not an LLM)</span></figcaption>
+  <figcaption>Figure 1. How the ${t.tasks} tasks were chosen, and how many passed <span class="muted">(${r.model === "oracle" ? "results from the rename script, not an LLM" : `editor: ${esc(editorName(r.model))}, an LLM`})</span></figcaption>
   <div class="flow">
     <a class="box" href="${how}">Functions with a hidden caller<b>${fmt(eligible + exclTotal)}</b><span class="hint">see how tasks were chosen</span></a>
     <div class="v"></div>
@@ -128,7 +131,7 @@ function renderReport(r) {
         <li><sup>a</sup> Tasks where the two runs disagree.</li>
         <li><sup>b</sup> Exact two-sided McNemar test on the tasks where the two runs disagree.</li>
       </ol>
-      <p class="table-note">The rename script changes the function's name on every line it is shown, so it fails only when a line is missing. Its score is the best any editor could reach with the same code in view. Control tasks get the same prompt both times, so their two runs should match, and they do${placebo ? ` (${placebo.static} and ${placebo.fused} of ${placebo.tasks})` : ""}. ${fusedFails.length ? `With runtime callers added, ${fusedFails.length} hidden-caller tasks still fail. ${oneLine === fusedFails.length ? "Each" : `${oneLine} of them`} misses one line that stores or passes the function instead of calling it, and no call graph records that line.` : ""}</p>
+      <p class="table-note">${r.model === "oracle" ? scriptNote(placebo, fusedFails, oneLine) : llmNote(r, placebo, fusedFails)}</p>
       <p class="witness">These numbers come from <code>${esc(p.command)}</code>, which reads ${fmt(p.rows)} saved runs from ${p.first ? `${day(p.first)}, ${clock(p.first)} to ${clock(p.last)} UTC` : "no runs yet"}.</p>
     </section>
   </div>
@@ -145,6 +148,23 @@ function renderReport(r) {
       <p class="muted">${placebo ? `In ${placebo.tasks} tasks, static analysis already finds every caller, so both runs get the same prompt. ${placebo.tasks - placebo.static} fail both times, because a line that mentions the function sits outside every call graph.` : "No results yet."} <a href="#/tasks?group=placebo">See the control tasks</a>.</p>
     </section>
   </div>`;
+}
+
+function scriptNote(placebo, fusedFails, oneLine) {
+  return `The rename script changes the function's name on every line it is shown, so it fails only when a line is missing. Its score is the best any editor could reach with the same code in view. Control tasks get the same prompt both times, so their two runs should match, and they do${placebo ? ` (${placebo.static} and ${placebo.fused} of ${placebo.tasks})` : ""}. ${fusedFails.length ? `With runtime callers added, ${fusedFails.length} hidden-caller tasks still fail. ${oneLine === fusedFails.length ? "Each" : `${oneLine} of them`} misses one line that stores or passes the function instead of calling it, and no call graph records that line.` : ""}`;
+}
+
+function llmNote(r, placebo, fusedFails) {
+  const ed = esc(editorName(r.model));
+  const c = r.ceiling?.find((x) => x.group === "treatment");
+  const missing = fusedFails.filter((t) => t.fused.refs_shown < t.refs_total).length;
+  const wrong = fusedFails.length - missing;
+  return `${ed} is an LLM. It ran once per task${r.model.startsWith("groq:") ? ", at temperature 0" : ""}. `
+    + (c ? `The rename script, which renames the function on every line it is shown, sets the best score possible with the same code: ${c.static} of ${c.tasks} with static callers only, and ${c.fused} with runtime callers added. ` : "")
+    + (placebo ? `Control tasks get the same prompt both times, so any gap between their two runs comes from the model itself (${placebo.static} and ${placebo.fused} of ${placebo.tasks}). ` : "")
+    + (fusedFails.length ? `With runtime callers added, ${plural(fusedFails.length, "hidden-caller task")} still ${fusedFails.length === 1 ? "fails" : "fail"}.`
+      + (missing ? ` In ${missing === fusedFails.length ? (missing === 1 ? "it" : "all of them") : missing}, a line that mentions the function was not shown.` : "")
+      + (wrong ? ` In ${wrong === fusedFails.length ? (wrong === 1 ? "it" : "all of them") : wrong}, every line was shown and ${ed}'s edit was wrong.` : "") : "");
 }
 
 function sortTasks(tasks, key, dir = 1) {
@@ -243,6 +263,8 @@ function renderTasks(r, params) {
 // ---------- method ----------
 function renderMethod(r) {
   const a = r.attrition;
+  const llms = r.models.filter((m) => m !== "oracle").map(editorName);
+  const script = "The rename script changes the name on every line it is shown and nothing else, so its score is the best possible with that code.";
   const rows = Object.entries(a).filter(([k]) => k !== "eligible" && k !== "dropped by validation").sort((x, y) => y[1] - x[1]);
   view.innerHTML = `
   <h1>How it works</h1>
@@ -256,10 +278,10 @@ function renderMethod(r) {
         <tr><td>Kept the same</td><td>The prompt, the amount of code shown, and the editor. An automatic check on every task confirms that the two prompts differ only in the list of callers and their code.</td></tr>
         <tr><td>Code shown</td><td>For each caller, the editor sees every line in that caller that mentions the function, with two lines either side. For a hidden caller, it also sees the line where the test run recorded the call.</td></tr>
         <tr><td>Pass or fail</td><td>We apply the edits and run all the project's tests. A rename passes only if as many tests pass as before and no new test fails.</td></tr>
-        <tr><td>Editor</td><td>The rename script changes the name on every line it is shown and nothing else, so its score is the best possible with that code. An LLM will use the same steps. No LLM has run yet.</td></tr>
+        <tr><td>Editor</td><td>${llms.length ? `There are two editors, and you can switch between them at the top of the page. ${esc(llms.join(" and "))} ${llms.length === 1 ? "is an LLM" : "are LLMs"} that must answer, for each line it changes, with the text to replace and its replacement. ${script}` : `${script} An LLM will use the same steps. No LLM has run yet.`}</td></tr>
       </tbody></table>
       <h2 style="margin-top:16px">Predictions written before any LLM run</h2>
-      <p class="muted">Written on 10 Oct 2026. The rename script ran before this, and its scores show the best possible result, so they do not test these predictions.</p>
+      <p class="muted">Written on 10 Oct 2026, before any LLM ran. The rename script ran before this, and its scores show the best possible result, so they do not test these predictions.</p>
       <ol>
         <li>On hidden-caller tasks, more renames pass with runtime callers added. An exact two-sided McNemar test checks this.</li>
         <li>On control tasks, both runs score the same apart from the editor's own randomness, because their prompts are identical.</li>
@@ -277,6 +299,7 @@ function renderMethod(r) {
       <p class="muted">To check each task, we rename every line that mentions the function, and the tests must pass. Then we rename only the definition, and the tests must fail.</p>
       <h2 style="margin-top:16px">Limits</h2>
       <ul>
+        ${llms.length ? `<li><b>One LLM, one run per task.</b> A second model and repeated runs would show how much the result depends on the model.</li>` : ""}
         <li><b>Few tasks.</b> This pilot covers two projects and 17 hidden-caller tasks, so the p-value is shown in full.</li>
         <li><b>Search would also work here.</b> Each function has a unique name, so a text search finds every line. The experiment tests code found through call graphs, the way code-search tools for AI find it. It does not test whether renaming is hard.</li>
         <li><b>The test run only sees what the tests run.</b> If no test runs a caller, neither run of the editor sees it.</li>
@@ -306,7 +329,7 @@ function codeBlock(file, name) {
 }
 
 function entry(kind, a, rec) {
-  const match = rec && kind !== "Saved run"
+  const match = rec && kind !== "Saved run" && !kind.startsWith("Rename script")
     ? (a.pass === rec.pass && a.passed === rec.passed && a.failed === rec.failed
       ? `<span class="match pass">Same as the saved run.</span>` : `<span class="match fail">Different from the saved run.</span>`)
     : "";
@@ -319,6 +342,7 @@ function entry(kind, a, rec) {
 
 function armColumn(d, c) {
   const a = d.arms[c];
+  const ed = esc(editorName(d.model));
   const rec = a.recorded;
   const label = `<span class="sc ${c}-c">${RUN[c]}</span>`;
   const n = a.callers.length;
@@ -331,7 +355,9 @@ function armColumn(d, c) {
     <header>${label}<span class="cap">${cap}</span></header>
     <div class="outcome" id="out-${c}">
       ${rec ? entry("Saved run", rec) : `<p class="none">This run has no saved result.</p>`}
-      ${rec && !ran(rec) && rec.note ? `<p class="none">pytest printed <code>${esc(rec.note)}</code></p>` : ""}
+      ${rec?.syntax_error ? `<p class="none">The edit left a file Python cannot read: <code>${esc(rec.syntax_error)}</code></p>`
+        : rec && !ran(rec) && rec.note ? `<p class="none">pytest printed <code>${esc(rec.note)}</code></p>` : ""}
+      ${rec?.error ? `<p class="none">${ed}'s answer was not used: <code>${esc(rec.error.slice(0, 200))}</code></p>` : ""}
     </div>
     <div>
       <div class="block-title">Lines that mention the function but were not shown <span>${a.unseen.length} of ${d.refs_total}</span></div>
@@ -342,6 +368,7 @@ function armColumn(d, c) {
       ${a.excerpts.map((f) => codeBlock(f, d.name)).join("")}
     </div>
     ${failing}
+    ${rec?.reasoning ? `<details class="prompt"><summary>What ${ed} wrote before answering</summary><pre>${esc(rec.reasoning)}</pre></details>` : ""}
     <details class="prompt"><summary>The ${n} caller${n === 1 ? "" : "s"} in this run</summary>
       <pre>${a.callers.map((k) => `${esc(k.qualname)}  ${esc(k.path)}${k.runtime_only ? "   (hidden caller)" : ""}`).join("\n") || "none"}</pre></details>
     <details class="prompt"><summary>The exact prompt the editor received ${rec ? `<code>sha256 ${rec.prompt_sha256.slice(0, 12)}</code>` : ""}</summary><pre>${esc(a.prompt)}</pre></details>
@@ -369,7 +396,7 @@ function renderTask(d) {
     </table></div>` : `<p class="table-note" style="margin-top:24px">This is a control task. Static analysis already finds every caller, so both runs get the same prompt.</p>`}
     <div class="live">
       <button class="run" id="run" type="button">Run both again now</button>
-      <p id="run-note">This runs the rename script with each set of callers, then runs ${esc(d.repo)}'s tests after each. It takes about ${Math.max(2, Math.round(((d.arms.static.recorded?.seconds || 3) + (d.arms.fused.recorded?.seconds || 3)) + 1))} seconds.</p>
+      <p id="run-note">This runs the rename script${d.model === "oracle" ? "" : `, not ${esc(editorName(d.model))},`} with each set of callers, then runs ${esc(d.repo)}'s tests after each. It takes about ${Math.max(2, Math.round(((d.arms.static.recorded?.seconds || 3) + (d.arms.fused.recorded?.seconds || 3)) + 1))} seconds.</p>
     </div>
     <div class="legend" style="margin-bottom:16px"><span><i class="k-added"></i>shown only when runtime callers are added</span><span><i class="k-name"></i>the function's name</span><span><i class="k-unseen"></i>mentions the function but was not shown</span></div>
     <div class="arms-grid">${armColumn(d, "static")}${armColumn(d, "fused")}</div>`;
@@ -383,7 +410,7 @@ function renderTask(d) {
     try {
       const live = await api(`/api/run?id=${encodeURIComponent(d.id)}`, { method: "POST" });
       for (const c of ["static", "fused"]) {
-        document.getElementById(`out-${c}`).insertAdjacentHTML("beforeend", entry(`Run at ${clock(Date.now(), false)}`, live[c], d.arms[c].recorded));
+        document.getElementById(`out-${c}`).insertAdjacentHTML("beforeend", entry(`${d.model === "oracle" ? "Run" : "Rename script, run"} at ${clock(Date.now(), false)}`, live[c], d.arms[c].recorded));
       }
       note.textContent = `Finished in ${((performance.now() - t0) / 1000).toFixed(1)} s. The new results are listed under the saved ones, which stay unchanged.`;
     } catch (err) {
@@ -399,24 +426,41 @@ function renderTask(d) {
 async function route() {
   const [path, query] = location.hash.slice(1).split("?");
   const params = new URLSearchParams(query || "");
-  const section = path.split("/")[1] || "report";
+  const parts = path.split("/");
+  const section = parts[1] || "overview";
+  const pilot = ["pilot", "pilot-results", "pilot-method", "tasks", "task"].includes(section);
   document.querySelectorAll("[data-nav]").forEach((a) => a.toggleAttribute("aria-current", false));
-  const nav = document.querySelector(`[data-nav="${section === "task" ? "tasks" : section}"]`);
+  const nav = document.querySelector(`[data-nav="${pilot ? "method" : section}"]`);
   if (nav) nav.setAttribute("aria-current", "page");
   try {
-    state.report ??= await api("/api/report");
-    const r = state.report;
-    document.getElementById("status").textContent = r.provenance.last
-      ? `Rename script results from ${day(r.provenance.last)}. No LLM run yet.` : "No saved runs yet.";
-    if (section === "report") renderReport(r);
-    else if (section === "tasks") renderTasks(r, params);
-    else if (section === "method") renderMethod(r);
-    else if (section === "task") {
-      view.innerHTML = `<p class="loading">Loading the task…</p>`;
-      renderTask(await api(`/api/task?id=${encodeURIComponent(decodeURIComponent(path.split("/").slice(2).join("/")))}`));
-    } else view.innerHTML = `<p class="notice">This page does not exist. <a href="#/report">Go to the results</a>.</p>`;
-    const titles = { report: "Results", tasks: "Tasks", method: "How it works", task: "Task" };
-    document.title = titles[section] ? `${titles[section]} | TraceWeave harness` : "TraceWeave harness";
+    if (pilot) {
+      state.report ??= await api(withModel("/api/report"));
+      const r = state.report;
+      state.model = r.model;
+      editorSwitch(r, section === "pilot" ? "live" : section);
+      if (section === "pilot") await renderLive(r);
+      else if (section === "pilot-results") renderReport(r);
+      else if (section === "tasks") renderTasks(r, params);
+      else if (section === "pilot-method") renderMethod(r);
+      else {
+        view.innerHTML = `<p class="loading">Loading the task…</p>`;
+        renderTask(await api(withModel(`/api/task?id=${encodeURIComponent(decodeURIComponent(parts.slice(2).join("/")))}`)));
+      }
+    } else {
+      view.innerHTML = `<p class="loading">Loading…</p>`;
+      await loadEditors();
+      aiSwitch();
+      if (section === "overview") await renderOverview();
+      else if (section === "study1" && parts[2] === "fn") await renderFunction(decodeURIComponent(parts[3]), decodeURIComponent(parts[4]), params);
+      else if (section === "study1") await renderStudy1(params);
+      else if (section === "study2" && parts[2] === "task") await renderAgentTask(decodeURIComponent(parts[3]));
+      else if (section === "study2") await renderStudy2();
+      else if (section === "method") await renderMethod2();
+      else view.innerHTML = `<p class="notice">This page does not exist. <a href="#/">Go to the overview</a>.</p>`;
+    }
+    const titles = { overview: "Overview", study1: "Study 1", study2: "Study 2", method: "Method", pilot: "Pilot walkthrough",
+      "pilot-results": "Pilot results", tasks: "Pilot tasks", "pilot-method": "Pilot method", task: "Pilot task" };
+    document.title = titles[section] ? `${titles[section]} | TraceWeave` : "TraceWeave";
   } catch (err) {
     view.innerHTML = `<p class="notice">This page could not load (${esc(err.message)}). Check that <code>python3 tw.py ui</code> is still running.</p>`;
   }
@@ -424,6 +468,34 @@ async function route() {
   if (focus) focus.scrollIntoView({ block: "start" });
   else window.scrollTo(0, 0);
 }
+
+function editorSwitch(r, section) {
+  const el = document.getElementById("status");
+  if (section === "live") {
+    const eds = LIVE.editors.length ? LIVE.editors : [{ id: "oracle", name: "Rename script", ready: true }];
+    const off = eds.find((e) => !e.ready);
+    el.innerHTML = `<span id="ed-label">Editor</span><span class="seg" role="group" aria-labelledby="ed-label">${eds.map((e) => `<button type="button" data-live-editor="${esc(e.id)}" aria-pressed="${e.id === LIVE.editor}" ${e.ready ? "" : "disabled"}>${esc(e.id === "oracle" ? e.name : `AI model (${e.name})`)}</button>`).join("")}</span>${off ? `<span class="ed-off">The AI model is off: ${esc(off.why || "")}</span>` : ""}`;
+    return;
+  }
+  if (r.models.length < 2) {
+    el.textContent = r.models.length ? `Editor: ${editorName(r.model)}` : "No saved runs yet.";
+    return;
+  }
+  el.innerHTML = `<span id="ed-label">Editor</span><span class="seg" role="group" aria-labelledby="ed-label">${r.models.map((m) => `<button type="button" data-model="${esc(m)}" aria-pressed="${m === r.model}">${esc(editorName(m))}</button>`).join("")}</span>`;
+}
+
+document.getElementById("status").addEventListener("click", (e) => {
+  const le = e.target.closest("[data-live-editor]");
+  if (le && !LIVE.busy && le.dataset.liveEditor !== LIVE.editor) {
+    setLiveEditor(le.dataset.liveEditor);
+    return editorSwitch(state.report, "live");
+  }
+  const b = e.target.closest("[data-model]");
+  if (!b || b.dataset.model === state.model) return;
+  state.model = b.dataset.model;
+  state.report = null;
+  route();
+});
 
 view.addEventListener("click", (e) => {
   const row = e.target.closest("tr.go");

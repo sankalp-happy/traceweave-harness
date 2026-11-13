@@ -1,0 +1,33 @@
+{
+ "repo": "movingpandas",
+ "seed": 20261016,
+ "pool": 125,
+ "callers": [
+  "movingpandas/overlay.py::_determine_time_ranges_linebased",
+  "movingpandas/overlay.py::intersection",
+  "movingpandas/point_clusterer.py::_Grid.redistribute_points",
+  "movingpandas/trajectory.py::<module>",
+  "movingpandas/trajectory.py::Trajectory.__init__",
+  "movingpandas/trajectory.py::Trajectory._get_df_with_acceleration",
+  "movingpandas/trajectory.py::Trajectory._repr_html_",
+  "movingpandas/trajectory.py::Trajectory.add_angular_difference",
+  "movingpandas/trajectory.py::Trajectory.requires_geometry.wrapper",
+  "movingpandas/trajectory_aggregator.py::<module>",
+  "movingpandas/trajectory_cleaner.py::TrajectoryCleaner._clean_traj_collection",
+  "movingpandas/trajectory_collection.py::<module>",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection._add_angular_difference",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection._add_direction",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection._df_to_trajectories",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection.drop",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection.get_geom_col",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection.get_segments_between",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection.intersection",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection.to_mf_json",
+  "movingpandas/trajectory_collection.py::TrajectoryCollection.to_traj_gdf",
+  "movingpandas/trajectory_generalizer.py::DouglasPeuckerGeneralizer._generalize_traj",
+  "movingpandas/trajectory_plotter.py::_TrajectoryPlotter.plot",
+  "movingpandas/trajectory_plotter.py::_TrajectoryPlotter.preprocess_data",
+  "movingpandas/trajectory_utils.py::convert_time_ranges_to_segments"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

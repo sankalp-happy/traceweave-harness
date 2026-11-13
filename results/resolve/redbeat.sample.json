@@ -1,0 +1,33 @@
+{
+ "repo": "redbeat",
+ "seed": 20261016,
+ "pool": 27,
+ "callers": [
+  "redbeat/decoder.py::<module>",
+  "redbeat/decoder.py::RedBeatJSONDecoder.dict_to_object",
+  "redbeat/decoder.py::RedBeatJSONEncoder.default",
+  "redbeat/schedulers.py::<module>",
+  "redbeat/schedulers.py::RedBeatConfig.either_or",
+  "redbeat/schedulers.py::RedBeatScheduler.maybe_due",
+  "redbeat/schedulers.py::RedBeatScheduler.schedule",
+  "redbeat/schedulers.py::RedBeatScheduler.setup_schedule",
+  "redbeat/schedulers.py::RedBeatScheduler.tick",
+  "redbeat/schedulers.py::RedBeatScheduler.update_from_dict",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.__init__",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry._next_instance",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.decode_definition",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.decode_meta",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.delete",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.due_at",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.from_key",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.reschedule",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.save",
+  "redbeat/schedulers.py::RedBeatSchedulerEntry.score",
+  "redbeat/schedulers.py::RetryingConnection.__init__",
+  "redbeat/schedulers.py::get_redis",
+  "redbeat/schedules.py::<module>",
+  "redbeat/schedules.py::rrule"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

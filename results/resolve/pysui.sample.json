@@ -1,0 +1,33 @@
+{
+ "repo": "pysui",
+ "seed": 20261016,
+ "pool": 448,
+ "callers": [
+  "pysui/sui/sui_common/config/confgroup.py::ProfileGroup.add_keypair_and_parts",
+  "pysui/sui/sui_common/config/pysui_config.py::<module>",
+  "pysui/sui/sui_common/config/pysui_config.py::PysuiConfiguration.profile_names",
+  "pysui/sui/sui_common/executors/base_parallel_executor.py::_BaseParallelExecutor._update_tracked_balance_from_accumulator",
+  "pysui/sui/sui_common/executors/cache.py::AbstractAsyncCache.add_objects",
+  "pysui/sui/sui_common/executors/object_id_extract.py::<module>",
+  "pysui/sui/sui_common/executors/serial_executor.py::SerialExecutor._processor_loop",
+  "pysui/sui/sui_common/instrumentation.py::instrumented",
+  "pysui/sui/sui_common/txn_arg_encoder.py::_vecmap_raw",
+  "pysui/sui/sui_common/txn_pure.py::PureInput._#3",
+  "pysui/sui/sui_grpc/pgrpc_requests.py::GetObject.__init__",
+  "pysui/sui/sui_grpc/pgrpc_requests.py::GetPastObjectSC.__init__",
+  "pysui/sui/sui_grpc/pgrpc_requests.py::GetTransaction.__init__",
+  "pysui/sui/sui_grpc/pgrpc_requests.py::SubscribeEvents.to_request",
+  "pysui/sui/sui_grpc/suimsgs/google/protobuf/__init__.py::Value.to_dict",
+  "pysui/sui/sui_grpc/suimsgs/sui/rpc/v2/__init__.py::Event",
+  "pysui/sui/sui_grpc/suimsgs/sui/rpc/v2/__init__.py::MultisigMemberSignature",
+  "pysui/sui/sui_grpc/suimsgs/sui/rpc/v2/__init__.py::SystemState",
+  "pysui/sui/sui_grpc/suimsgs/sui/rpc/v2/__init__.py::Validator",
+  "pysui/sui/sui_pgql/pgql_query.py::GetCoinMetaDataSC.encode_fn._encode",
+  "pysui/sui/sui_pgql/pgql_query.py::GetLatestSuiSystemStateSC.encode_fn._encode",
+  "pysui/sui/sui_pgql/pgql_query.py::GetNameServiceAddressSC.encode_fn",
+  "pysui/sui/sui_pgql/pgql_query.py::GetObjectsOwnedByAddressSC.encode_fn._encode",
+  "pysui/sui/sui_pgql/pgql_types.py::MoveFunctionGQL.from_query",
+  "pysui/zklogin_seal/config.py::ZkSealConfig.add_server"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

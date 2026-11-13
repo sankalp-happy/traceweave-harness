@@ -1,0 +1,21 @@
+{
+ "repo": "geocube",
+ "seed": 20261016,
+ "pool": 13,
+ "callers": [
+  "geocube/__init__.py::<module>",
+  "geocube/api/core.py::<module>",
+  "geocube/api/core.py::make_geocube",
+  "geocube/cli/commands/__init__.py::<module>",
+  "geocube/cli/commands/make_geocube.py::<module>",
+  "geocube/cli/geocube.py::<module>",
+  "geocube/cli/geocube.py::_add_subcommands",
+  "geocube/geo_utils/geobox.py::<module>",
+  "geocube/vector_to_cube.py::<module>",
+  "geocube/vector_to_cube.py::VectorToCube.__init__",
+  "geocube/vector_to_cube.py::VectorToCube.make_geocube",
+  "geocube/xarray_extensions/vectorxarray.py::VectorArray.plot",
+  "geocube/xarray_extensions/vectorxarray.py::VectorDataset.plot"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

@@ -1,0 +1,6347 @@
+{
+ "items": 1034,
+ "callers": 199,
+ "real": 240,
+ "folds": 5,
+ "seed": 20261016,
+ "llms": [
+  "groq:openai/gpt-oss-20b",
+  "groq:openai/gpt-oss-120b",
+  "groq:qwen/qwen3.8-27b"
+ ],
+ "predictions": [
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/_termui_impl.py::Editor.edit",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/_termui_impl.py::get_pager_file",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Argument.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::CommandCollection.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Context.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Group.group",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Option.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/core.py::Parameter.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::argument",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::confirmation_option",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::custom_version_option",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::group",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::help_option",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::make_pass_decorator",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::option",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::pass_context",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::pass_obj",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::password_option",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/decorators.py::version_option",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::BadOptionUsage.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::BadParameter.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::ClickException.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::FileError.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::MissingParameter.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::NoSuchCommand.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::NoSuchOption.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/exceptions.py::UsageError.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/formatting.py::HelpFormatter.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/formatting.py::wrap_text",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/globals.py::get_current_context",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::clear",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::confirm",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::echo_via_pager",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::edit",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::get_pager_file",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::getchar",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::launch",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::pause",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::progressbar",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::secho",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::style",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/termui.py::unstyle",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::Choice.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::DateTime.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::File.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::FloatRange.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::Path.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::Tuple.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/types.py::_NumberRangeBase.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/utils.py::format_filename",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/utils.py::get_app_dir",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::<module>",
+   "callee": "src/click/utils.py::open_file",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0067
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.0067
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/parser.py::_OptionParser.__init__",
+   "p": 0.0067
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/utils.py::_get_binary_stream",
+   "p": 0.0251
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/__init__.py::__getattr__",
+   "callee": "src/click/utils.py::_get_text_stream",
+   "p": 0.0251
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_FixupStream.__getattr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0988
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_FixupStream.__getattr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.1823
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_FixupStream.__getattr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.1823
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_FixupStream.__getattr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_force_correct_text_reader",
+   "callee": "src/click/_compat.py::_find_binary_reader",
+   "p": 0.2004
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_force_correct_text_reader",
+   "callee": "src/click/_compat.py::_force_correct_text_stream",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_force_correct_text_reader",
+   "callee": "src/click/_compat.py::_is_binary_reader",
+   "p": 0.2004
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::_make_cached_stream_func",
+   "callee": "src/click/_compat.py::_make_cached_stream_func.func",
+   "p": 0.0114
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stderr",
+   "callee": "src/click/_compat.py::_force_correct_text_writer",
+   "p": 0.891
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stderr",
+   "callee": "src/click/_compat.py::_get_windows_console_stream",
+   "p": 0.9622
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stderr",
+   "callee": "src/click/_winconsole.py::_get_windows_console_stream",
+   "p": 0.0372
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stderr",
+   "callee": "src/click/testing.py::Result.stderr",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdin",
+   "callee": "src/click/_compat.py::_force_correct_text_reader",
+   "p": 0.9092
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdin",
+   "callee": "src/click/_compat.py::_get_windows_console_stream",
+   "p": 0.9691
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdin",
+   "callee": "src/click/_winconsole.py::_get_windows_console_stream",
+   "p": 0.048
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdout",
+   "callee": "src/click/_compat.py::_force_correct_text_writer",
+   "p": 0.909
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdout",
+   "callee": "src/click/_compat.py::_get_windows_console_stream",
+   "p": 0.9733
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdout",
+   "callee": "src/click/_winconsole.py::_get_windows_console_stream",
+   "p": 0.0223
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::get_text_stdout",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::is_ascii_encoding",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::is_ascii_encoding",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::is_ascii_encoding",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::is_ascii_encoding",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::should_strip_ansi",
+   "callee": "src/click/_compat.py::_NonClosingTextIOWrapper.isatty",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::should_strip_ansi",
+   "callee": "src/click/_compat.py::_is_jupyter_kernel_output",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::should_strip_ansi",
+   "callee": "src/click/_compat.py::isatty",
+   "p": 0.962
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::should_strip_ansi",
+   "callee": "src/click/_winconsole.py::ConsoleStream.isatty",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_compat.py::should_strip_ansi",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleRawIOBase.isatty",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/_termui_impl.py::Editor.edit_files",
+   "p": 0.9531
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/testing.py::EchoingStdin.read",
+   "p": 0.052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit",
+   "callee": "src/click/utils.py::_LazyFile.open",
+   "p": 0.052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit.<overload#1>",
+   "callee": "src/click/_termui_impl.py::Editor.edit",
+   "p": 0.4717
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::Editor.edit.<overload#1>",
+   "callee": "src/click/termui.py::edit",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.eta",
+   "callee": "src/click/_termui_impl.py::ProgressBar.time_per_iteration",
+   "p": 0.3236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.format_bar",
+   "callee": "src/click/_termui_impl.py::ProgressBar.pct",
+   "p": 0.3236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.format_eta",
+   "callee": "src/click/_termui_impl.py::ProgressBar.eta",
+   "p": 0.3226
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.format_pct",
+   "callee": "src/click/_termui_impl.py::ProgressBar.pct",
+   "p": 0.278
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.make_step",
+   "callee": "src/click/testing.py::_FDCapture.start",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/testing.py::BytesIOCopy.flush",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::ProgressBar.render_finish",
+   "callee": "src/click/utils.py::_PacifyFlushWrapper.flush",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/_compat.py::_AtomicFile.close",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/_compat.py::get_best_encoding",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/_termui_impl.py::_nullpager",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/core.py::Context.close",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.close",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/types.py::Path.__init__",
+   "p": 0.2098
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_termui_impl.py::_pipepager",
+   "callee": "src/click/utils.py::_LazyFile.close",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/_textwrap.py::TextWrapper.indent_only",
+   "callee": "src/click/formatting.py::HelpFormatter.indent",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.get_usage_pieces",
+   "callee": "src/click/core.py::Argument.make_metavar",
+   "p": 0.9858
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.get_usage_pieces",
+   "callee": "src/click/core.py::Parameter.make_metavar",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/_termui_impl.py::ProgressBar.update",
+   "p": 0.0395
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/core.py::Argument.to_info_dict",
+   "p": 0.0203
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/core.py::Command.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/core.py::Context.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/core.py::Group.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/core.py::Option.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/core.py::Parameter.to_info_dict",
+   "p": 0.9691
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::Choice.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::DateTime.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::File.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::FuncParamType.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::ParamType.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::Path.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::Tuple.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Argument.to_info_dict",
+   "callee": "src/click/types.py::_NumberRangeBase.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__init__",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__init__",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__repr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__repr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__repr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.__repr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/core.py::Command.shell_complete",
+   "p": 0.0506
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/core.py::Context.exit",
+   "p": 0.052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/core.py::Group.shell_complete",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/core.py::Parameter.shell_complete",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/shell_completion.py::shell_complete",
+   "p": 0.9701
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/types.py::Choice.shell_complete",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/types.py::File.shell_complete",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/types.py::ParamType.shell_complete",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command._main_shell_completion",
+   "callee": "src/click/types.py::Path.shell_complete",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/core.py::Command.invoke",
+   "p": 0.0252
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/core.py::Context.invoke",
+   "p": 0.9622
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/core.py::Group.invoke",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/core.py::_format_deprecated_suffix",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/termui.py::style",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/testing.py::CliRunner.invoke",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.invoke",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/core.py::Command._main_shell_completion",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/core.py::Command.invoke",
+   "p": 0.9858
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/core.py::Command.make_context",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/core.py::Context.exit",
+   "p": 0.9658
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/core.py::Context.invoke",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/core.py::Group.invoke",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/exceptions.py::ClickException.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/exceptions.py::ClickException.show",
+   "p": 0.9678
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/exceptions.py::Exit.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/exceptions.py::NoArgsIsHelpError.show",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/exceptions.py::UsageError.show",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/testing.py::CliRunner.invoke",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/testing.py::Result.stderr",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.main",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.make_context",
+   "callee": "src/click/core.py::Command.parse_args",
+   "p": 0.9287
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.make_context",
+   "callee": "src/click/core.py::Context.scope",
+   "p": 0.9815
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.make_context",
+   "callee": "src/click/core.py::Group.parse_args",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Command.make_context",
+   "callee": "src/click/parser.py::_OptionParser.parse_args",
+   "p": 0.0876
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context",
+   "callee": "src/click/core.py::Context.__init__",
+   "p": 0.0231
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context",
+   "callee": "src/click/formatting.py::HelpFormatter.__init__",
+   "p": 0.0977
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context._default_map_has",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context._default_map_has",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context._default_map_has",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context._default_map_has",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.call_on_close",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.call_on_close",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.forward",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0089
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.forward",
+   "callee": "src/click/core.py::Command.invoke",
+   "p": 0.4693
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.forward",
+   "callee": "src/click/core.py::Context.invoke",
+   "p": 0.9528
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.forward",
+   "callee": "src/click/core.py::Group.invoke",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.forward",
+   "callee": "src/click/testing.py::CliRunner.invoke",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_help",
+   "callee": "src/click/core.py::Command.get_help",
+   "p": 0.9691
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_help",
+   "callee": "src/click/core.py::Context.get_help",
+   "p": 0.0203
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_help",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_help",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_usage",
+   "callee": "src/click/core.py::Command.get_usage",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_usage",
+   "callee": "src/click/core.py::Context.get_usage",
+   "p": 0.0315
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_usage",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.get_usage",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/_termui_impl.py::ProgressBar.update",
+   "p": 0.0456
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/core.py::Context._make_sub_context",
+   "p": 0.9647
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/core.py::Option.get_default",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/core.py::Parameter.get_default",
+   "p": 0.9733
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/core.py::Parameter.type_cast_value",
+   "p": 0.9815
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/core.py::augment_usage_errors",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/core.py::Command.invoke",
+   "p": 0.5798
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/core.py::Context.invoke",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/core.py::Group.invoke",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.invoke.<overload#1>",
+   "callee": "src/click/testing.py::CliRunner.invoke",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.lookup_default",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.lookup_default",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.lookup_default",
+   "callee": "src/click/core.py::Context._default_map_has",
+   "p": 0.95
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.lookup_default",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.lookup_default",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.set_parameter_source",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.set_parameter_source",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.set_parameter_source",
+   "callee": "src/click/shell_completion.py::BashComplete.source",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.set_parameter_source",
+   "callee": "src/click/shell_completion.py::ShellComplete.source",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.set_parameter_source",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Context.set_parameter_source",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.__init__",
+   "callee": "src/click/core.py::Argument.__init__",
+   "p": 0.0067
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.__init__",
+   "callee": "src/click/core.py::Group.result_callback",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.add_command",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.add_command",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.add_command",
+   "callee": "src/click/core.py::_check_nested_chain",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.add_command",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.add_command",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/_compat.py::_make_cached_stream_func.func",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0011
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/core.py::Group.command.decorator",
+   "p": 0.7004
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/core.py::Group.group.decorator",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/core.py::Group.result_callback.decorator",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/decorators.py::argument.decorator",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.3883
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/decorators.py::command.decorator",
+   "p": 0.0876
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/decorators.py::make_pass_decorator.decorator",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/decorators.py::option.decorator",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command",
+   "callee": "src/click/decorators.py::pass_meta_key.decorator",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.<overload#0>",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.1958
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.<overload#0>",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.4693
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.<overload#0>",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.decorator",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.1958
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.decorator",
+   "callee": "src/click/core.py::Group.add_command",
+   "p": 0.9709
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.decorator",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.command.decorator",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.9701
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.group.decorator",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.2053
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.group.decorator",
+   "callee": "src/click/core.py::Group.add_command",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.group.decorator",
+   "callee": "src/click/core.py::Group.group",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.group.decorator",
+   "callee": "src/click/decorators.py::group",
+   "p": 0.9853
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/core.py::Command.parse_args",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/core.py::CommandCollection.get_command",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/core.py::Group.get_command",
+   "p": 0.9287
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/core.py::Group.parse_args",
+   "p": 0.9287
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/exceptions.py::NoSuchCommand.__init__",
+   "p": 0.7869
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/parser.py::_OptionParser.parse_args",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/parser.py::_split_opt",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.resolve_command",
+   "callee": "src/click/utils.py::make_str",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/core.py::Command.get_short_help_str",
+   "p": 0.9658
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/core.py::Command.shell_complete",
+   "p": 0.9678
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0039
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/core.py::Group.shell_complete",
+   "p": 0.0226
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/core.py::Parameter.shell_complete",
+   "p": 0.0832
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/core.py::_complete_visible_commands",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/shell_completion.py::CompletionItem.__init__",
+   "p": 0.8493
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/shell_completion.py::shell_complete",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/types.py::Choice.shell_complete",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/types.py::File.shell_complete",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/types.py::ParamType.shell_complete",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/types.py::Path.shell_complete",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Group.shell_complete",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/core.py::Option._infer_flag_kind",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/core.py::Option._pick_type",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/core.py::Option._validate",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/core.py::_format_deprecated_label",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option._infer_flag_kind",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option._resolve_lazy_default",
+   "callee": "src/click/core.py::Option.flag_activation_value",
+   "p": 0.278
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option._resolve_lazy_default",
+   "callee": "src/click/core.py::Option.is_bool_flag",
+   "p": 0.278
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option._resolve_lazy_default",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/core.py::Option.consume_value",
+   "p": 0.0252
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/core.py::Option.flag_activation_value",
+   "p": 0.3626
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/core.py::Option.prompt_for_value",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/core.py::Parameter.consume_value",
+   "p": 0.9622
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/shell_completion.py::BashComplete.source",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/shell_completion.py::ShellComplete.source",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.consume_value",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.get_error_hint",
+   "callee": "src/click/core.py::Argument.get_error_hint",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.get_error_hint",
+   "callee": "src/click/core.py::Option.get_error_hint",
+   "p": 0.0315
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.get_error_hint",
+   "callee": "src/click/core.py::Parameter.get_error_hint",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.get_help_record._write_opts",
+   "callee": "src/click/core.py::Argument.make_metavar",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.get_help_record._write_opts",
+   "callee": "src/click/core.py::Parameter.make_metavar",
+   "p": 0.9597
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.get_help_record._write_opts",
+   "callee": "src/click/formatting.py::join_options",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.process_value",
+   "callee": "src/click/core.py::Option.is_bool_flag",
+   "p": 0.3236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.process_value",
+   "callee": "src/click/core.py::Option.process_value",
+   "p": 0.0203
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.process_value",
+   "callee": "src/click/core.py::Parameter.process_value",
+   "p": 0.9691
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/_termui_impl.py::ProgressBar.update",
+   "p": 0.0395
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Argument.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Command.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Context.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Group.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Option._resolve_lazy_default",
+   "p": 0.9544
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Option.flag_activation_value",
+   "p": 0.3236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Option.to_info_dict",
+   "p": 0.0203
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Parameter._hide_unset",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/core.py::Parameter.to_info_dict",
+   "p": 0.9691
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::Choice.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::DateTime.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::File.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::FuncParamType.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::ParamType.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::Path.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::Tuple.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.to_info_dict",
+   "callee": "src/click/types.py::_NumberRangeBase.to_info_dict",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.value_from_envvar",
+   "callee": "src/click/core.py::Option.is_bool_flag",
+   "p": 0.3626
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.value_from_envvar",
+   "callee": "src/click/core.py::Option.resolve_envvar_value",
+   "p": 0.937
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.value_from_envvar",
+   "callee": "src/click/core.py::Parameter.resolve_envvar_value",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.value_from_envvar",
+   "callee": "src/click/core.py::batch",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.value_from_envvar",
+   "callee": "src/click/types.py::BoolParamType.str_to_bool",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Option.value_from_envvar",
+   "callee": "src/click/types.py::ParamType.split_envvar_value",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Argument._parse_decls",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Argument.human_readable_name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Command.shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Group.shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Option._parse_decls",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Parameter._parse_decls",
+   "p": 0.1401
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Parameter.human_readable_name",
+   "p": 0.2462
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/core.py::Parameter.shell_complete",
+   "p": 0.0011
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/shell_completion.py::shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::Choice.shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::CompositeParamType.arity",
+   "p": 0.1467
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::File.shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::ParamType.shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::Path.shell_complete",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::Tuple.arity",
+   "p": 0.1467
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__init__",
+   "callee": "src/click/types.py::convert_type",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__repr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__repr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__repr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.__repr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.get_default",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.get_default",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.get_default",
+   "callee": "src/click/core.py::Context._default_map_has",
+   "p": 0.9658
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.get_default",
+   "callee": "src/click/core.py::Context.lookup_default",
+   "p": 0.9658
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.get_default",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.get_default",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/types.py::Choice.get_metavar",
+   "p": 0.6016
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/types.py::DateTime.get_metavar",
+   "p": 0.6016
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/types.py::ParamType.get_metavar",
+   "p": 0.9691
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.make_metavar",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.process_value",
+   "callee": "src/click/_termui_impl.py::ProgressBar.update",
+   "p": 0.0456
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.process_value",
+   "callee": "src/click/core.py::Parameter.type_cast_value",
+   "p": 0.95
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.process_value",
+   "callee": "src/click/core.py::Parameter.value_is_missing",
+   "p": 0.95
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.process_value",
+   "callee": "src/click/decorators.py::confirmation_option.callback",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.process_value",
+   "callee": "src/click/decorators.py::version_option.callback",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.process_value",
+   "callee": "src/click/exceptions.py::MissingParameter.__init__",
+   "p": 0.7869
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.value_from_envvar",
+   "callee": "src/click/core.py::Option.resolve_envvar_value",
+   "p": 0.0753
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.value_from_envvar",
+   "callee": "src/click/core.py::Parameter.resolve_envvar_value",
+   "p": 0.9533
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::Parameter.value_from_envvar",
+   "callee": "src/click/types.py::ParamType.split_envvar_value",
+   "p": 0.9699
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::__getattr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::__getattr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::__getattr__",
+   "callee": "src/click/core.py::Command.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::__getattr__",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.0033
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::__getattr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::__getattr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_check_nested_chain",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_check_nested_chain",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_check_nested_chain",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_check_nested_chain",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_check_nested_chain",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/core.py::CommandCollection.get_command",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/core.py::CommandCollection.list_commands",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.0089
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/core.py::Group.get_command",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/core.py::Group.list_commands",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/core.py::_complete_visible_commands",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/core.py::Argument.__init__",
+   "p": 0.0459
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/core.py::Group.command.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/core.py::Group.group.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/core.py::Group.result_callback.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/decorators.py::argument.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/decorators.py::command.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/decorators.py::make_pass_decorator.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/decorators.py::option.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::argument",
+   "callee": "src/click/decorators.py::pass_meta_key.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::help_option.show_help",
+   "callee": "src/click/core.py::Command.get_help",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::help_option.show_help",
+   "callee": "src/click/core.py::Context.exit",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::help_option.show_help",
+   "callee": "src/click/core.py::Context.get_help",
+   "p": 0.9622
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::help_option.show_help",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator",
+   "callee": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "p": 0.2731
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator",
+   "callee": "src/click/decorators.py::pass_context.new_func",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator",
+   "callee": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator",
+   "callee": "src/click/decorators.py::pass_obj.new_func",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/core.py::Command.invoke",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/core.py::Context.ensure_object",
+   "p": 0.9714
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/core.py::Context.find_object",
+   "p": 0.9714
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/core.py::Context.invoke",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/core.py::Group.invoke",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/globals.py::get_current_context",
+   "p": 0.9709
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "callee": "src/click/testing.py::CliRunner.invoke",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/core.py::Group.command.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/core.py::Group.group.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/core.py::Group.result_callback.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/core.py::Option.__init__",
+   "p": 0.5237
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/decorators.py::argument.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/decorators.py::command.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/decorators.py::make_pass_decorator.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/decorators.py::option.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::option",
+   "callee": "src/click/decorators.py::pass_meta_key.decorator",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_context",
+   "callee": "src/click/decorators.py::make_pass_decorator.decorator.new_func",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_context",
+   "callee": "src/click/decorators.py::pass_context.new_func",
+   "p": 0.0063
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_context",
+   "callee": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_context",
+   "callee": "src/click/decorators.py::pass_obj.new_func",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/core.py::Group.command.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/core.py::Group.group.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/core.py::Group.result_callback.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/decorators.py::argument.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/decorators.py::command.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/decorators.py::make_pass_decorator.decorator",
+   "p": 0.0119
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/decorators.py::option.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key",
+   "callee": "src/click/decorators.py::pass_meta_key.decorator",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "callee": "src/click/core.py::Command.invoke",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "callee": "src/click/core.py::Context.invoke",
+   "p": 0.9622
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "callee": "src/click/core.py::Context.meta",
+   "p": 0.4763
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "callee": "src/click/core.py::Group.invoke",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "callee": "src/click/globals.py::get_current_context",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/decorators.py::pass_meta_key.decorator.new_func",
+   "callee": "src/click/testing.py::CliRunner.invoke",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::<module>",
+   "callee": "src/click/_compat.py::get_text_stderr",
+   "p": 0.1883
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::<module>",
+   "callee": "src/click/globals.py::resolve_color_default",
+   "p": 0.1883
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::<module>",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.1883
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::<module>",
+   "callee": "src/click/utils.py::format_filename",
+   "p": 0.1883
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::BadParameter.format_message",
+   "callee": "src/click/core.py::Argument.get_error_hint",
+   "p": 0.5917
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::BadParameter.format_message",
+   "callee": "src/click/core.py::Option.get_error_hint",
+   "p": 0.5917
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::BadParameter.format_message",
+   "callee": "src/click/core.py::Parameter.get_error_hint",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::BadParameter.format_message",
+   "callee": "src/click/exceptions.py::_join_param_hints",
+   "p": 0.9709
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::NoArgsIsHelpError.__init__",
+   "callee": "src/click/core.py::Command.get_help",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::NoArgsIsHelpError.__init__",
+   "callee": "src/click/core.py::Context.get_help",
+   "p": 0.9733
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::NoSuchCommand.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::NoSuchCommand.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::NoSuchCommand.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/exceptions.py::NoSuchCommand.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/_compat.py::term_len",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.9533
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/formatting.py::iter_rows",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/formatting.py::measure_table",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/formatting.py::wrap_text",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_dl",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_heading",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_heading",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_heading",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_heading",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.9287
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_heading",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_paragraph",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_paragraph",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_paragraph",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_paragraph",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.937
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_paragraph",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/formatting.py::HelpFormatter.indent",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.937
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/formatting.py::wrap_text",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_text",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/_compat.py::term_len",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/formatting.py::HelpFormatter.indent",
+   "p": 0.0016
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.9287
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/formatting.py::wrap_text",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/formatting.py::HelpFormatter.write_usage",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "callee": "src/click/decorators.py::option",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "callee": "src/click/exceptions.py::BadOptionUsage.__init__",
+   "p": 0.8476
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_long_opt",
+   "callee": "src/click/decorators.py::option",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_long_opt",
+   "callee": "src/click/exceptions.py::NoSuchOption.__init__",
+   "p": 0.8476
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_long_opt",
+   "callee": "src/click/parser.py::_Argument.process",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_long_opt",
+   "callee": "src/click/parser.py::_Option.process",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_long_opt",
+   "callee": "src/click/parser.py::_Option.takes_value",
+   "p": 0.3873
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_long_opt",
+   "callee": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "p": 0.9531
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/decorators.py::option",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/exceptions.py::NoSuchOption.__init__",
+   "p": 0.8493
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/parser.py::_Argument.process",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/parser.py::_Option.process",
+   "p": 0.9678
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/parser.py::_Option.takes_value",
+   "p": 0.4853
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/parser.py::_OptionParser._get_value_from_state",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/parser.py::_normalize_opt",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._match_short_opt",
+   "callee": "src/click/testing.py::_FDCapture.stop",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._process_args_for_args",
+   "callee": "src/click/parser.py::_Argument.process",
+   "p": 0.9678
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._process_args_for_args",
+   "callee": "src/click/parser.py::_Option.process",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/parser.py::_OptionParser._process_args_for_args",
+   "callee": "src/click/parser.py::_unpack_args",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete",
+   "callee": "src/click/shell_completion.py::ShellComplete.__init__",
+   "p": 0.2053
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete.source",
+   "callee": "src/click/shell_completion.py::BashComplete._check_version",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete.source",
+   "callee": "src/click/shell_completion.py::BashComplete.source",
+   "p": 0.0226
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::BashComplete.source",
+   "callee": "src/click/shell_completion.py::ShellComplete.source",
+   "p": 0.9678
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::BashComplete.format_completion",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::BashComplete.get_completion_args",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::FishComplete.format_completion",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::FishComplete.get_completion_args",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::PowerShellComplete.format_completion",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::PowerShellComplete.get_completion_args",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::ShellComplete.format_completion",
+   "p": 0.9858
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::ShellComplete.get_completion_args",
+   "p": 0.9858
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::ZshComplete.format_completion",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.complete",
+   "callee": "src/click/shell_completion.py::ZshComplete.get_completion_args",
+   "p": 0.2534
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/core.py::Command.shell_complete",
+   "p": 0.9079
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/core.py::Group.shell_complete",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/core.py::Parameter.shell_complete",
+   "p": 0.9079
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/shell_completion.py::_resolve_context",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/shell_completion.py::_resolve_incomplete",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/shell_completion.py::shell_complete",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/types.py::Choice.shell_complete",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/types.py::File.shell_complete",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/types.py::ParamType.shell_complete",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.get_completions",
+   "callee": "src/click/types.py::Path.shell_complete",
+   "p": 0.7236
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::ShellComplete.source_vars",
+   "callee": "src/click/shell_completion.py::ShellComplete.func_name",
+   "p": 0.3226
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/core.py::Command.make_context",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/core.py::Group.__init__",
+   "p": 0.0067
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/core.py::Group.resolve_command",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_context",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_incomplete",
+   "callee": "src/click/core.py::Command.get_params",
+   "p": 0.9699
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_incomplete",
+   "callee": "src/click/core.py::Group.command",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_incomplete",
+   "callee": "src/click/decorators.py::command",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_incomplete",
+   "callee": "src/click/shell_completion.py::_is_incomplete_argument",
+   "p": 0.9092
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_incomplete",
+   "callee": "src/click/shell_completion.py::_is_incomplete_option",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::_resolve_incomplete",
+   "callee": "src/click/shell_completion.py::_start_of_option",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::add_completion_class",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::add_completion_class",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::add_completion_class",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/shell_completion.py::add_completion_class",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/_compat.py::_NonClosingTextIOWrapper.isatty",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/_compat.py::isatty",
+   "p": 0.0549
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/_compat.py::strip_ansi",
+   "p": 0.0517
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/_winconsole.py::ConsoleStream.isatty",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleRawIOBase.isatty",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/exceptions.py::UsageError.__init__",
+   "p": 0.0598
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/globals.py::resolve_color_default",
+   "p": 0.1883
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/testing.py::CliRunner.isolation._getchar",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/types.py::Choice.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/types.py::convert_type",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/utils.py::_LazyFile.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::<module>",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.0517
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/_compat.py::_make_cached_stream_func.func",
+   "p": 0.0205
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/_compat.py::should_strip_ansi",
+   "p": 0.9853
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/_compat.py::strip_ansi",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/globals.py::resolve_color_default",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/testing.py::CliRunner.isolation.should_strip_ansi",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/testing.py::Result.stderr",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::_readline_prompt",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::get_pager_file",
+   "callee": "src/click/_termui_impl.py::get_pager_file",
+   "p": 0.9853
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::get_pager_file",
+   "callee": "src/click/globals.py::resolve_color_default",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::get_pager_file",
+   "callee": "src/click/termui.py::get_pager_file",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::getchar",
+   "callee": "src/click/testing.py::CliRunner.isolation._getchar",
+   "p": 0.0395
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::getchar",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/_compat.py::_NonClosingTextIOWrapper.isatty",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/_compat.py::isatty",
+   "p": 0.9753
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/_winconsole.py::ConsoleStream.isatty",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleRawIOBase.isatty",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/termui.py::getchar",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::pause",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.9759
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::prompt.prompt_func",
+   "callee": "src/click/termui.py::_readline_prompt",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::prompt.prompt_func",
+   "callee": "src/click/termui.py::hidden_prompt_func",
+   "p": 0.0091
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/termui.py::prompt.prompt_func",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.flush",
+   "callee": "src/click/testing.py::BytesIOCopy.flush",
+   "p": 0.2772
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.flush",
+   "callee": "src/click/utils.py::_PacifyFlushWrapper.flush",
+   "p": 0.0753
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.write",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.write",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.write",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.write",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::BytesIOCopy.write",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.1543
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/core.py::Command.main",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/formatting.py::HelpFormatter.getvalue",
+   "p": 0.051
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::BytesIOCopy.flush",
+   "p": 0.3559
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.3559
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::CliRunner.get_default_prog_name",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::CliRunner.isolation",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::Result.__init__",
+   "p": 0.7949
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::Result.output",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::Result.stderr",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::_FDCapture.__init__",
+   "p": 0.7949
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::_FDCapture.start",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/testing.py::_FDCapture.stop",
+   "p": 0.9687
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.invoke",
+   "callee": "src/click/utils.py::_PacifyFlushWrapper.flush",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/_compat.py::should_strip_ansi",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/termui.py::hidden_prompt_func",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::CliRunner.isolation._getchar",
+   "p": 0.0114
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::CliRunner.isolation._patched_pdb_init",
+   "p": 0.0114
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "p": 0.0114
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::CliRunner.isolation.should_strip_ansi",
+   "p": 0.0079
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::CliRunner.isolation.visible_input",
+   "p": 0.0114
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::CliRunner.make_env",
+   "p": 0.95
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::EchoingStdin.__init__",
+   "p": 0.7197
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::Result.output",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::Result.stderr",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::StreamMixer.__init__",
+   "p": 0.7197
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.__init__",
+   "p": 0.7197
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/testing.py::make_input_stream",
+   "p": 0.9736
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/testing.py::BytesIOCopy.flush",
+   "p": 0.6016
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.6016
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/testing.py::EchoingStdin.read",
+   "p": 0.6078
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/utils.py::_PacifyFlushWrapper.flush",
+   "p": 0.0385
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._getchar",
+   "callee": "src/click/utils.py::echo",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation._patched_pdb_init",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/termui.py::prompt",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/testing.py::BytesIOCopy.flush",
+   "p": 0.5927
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.5927
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::CliRunner.isolation.hidden_input",
+   "callee": "src/click/utils.py::_PacifyFlushWrapper.flush",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin.__init__",
+   "callee": "src/click/testing.py::Result.output",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin._echo",
+   "callee": "src/click/_termui_impl.py::MaybeStripAnsi.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin._echo",
+   "callee": "src/click/_winconsole.py::ConsoleStream.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin._echo",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin._echo",
+   "callee": "src/click/formatting.py::HelpFormatter.write",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin._echo",
+   "callee": "src/click/testing.py::BytesIOCopy.write",
+   "p": 0.8469
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin.read1",
+   "callee": "src/click/_compat.py::_FixupStream.read1",
+   "p": 0.5798
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin.read1",
+   "callee": "src/click/testing.py::EchoingStdin._echo",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::EchoingStdin.read1",
+   "callee": "src/click/testing.py::EchoingStdin.read1",
+   "p": 0.0226
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::StreamMixer",
+   "callee": "src/click/testing.py::BytesIOCopy.__init__",
+   "p": 0.1958
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::StreamMixer",
+   "callee": "src/click/testing.py::Result.output",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::StreamMixer",
+   "callee": "src/click/testing.py::Result.stderr",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::StreamMixer",
+   "callee": "src/click/testing.py::Result.stdout",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/testing.py::StreamMixer",
+   "callee": "src/click/testing.py::StreamMixer.__init__",
+   "p": 0.3666
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice",
+   "callee": "src/click/types.py::Choice.__init__",
+   "p": 0.0977
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/core.py::Argument.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/core.py::Command.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/core.py::Context.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/core.py::Group.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/core.py::Option.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/core.py::Parameter.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::Choice.to_info_dict",
+   "p": 0.0166
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::DateTime.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::File.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::FuncParamType.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::ParamType.to_info_dict",
+   "p": 0.9733
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::Path.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::Tuple.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Choice.to_info_dict",
+   "callee": "src/click/types.py::_NumberRangeBase.to_info_dict",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.convert",
+   "callee": "src/click/core.py::Context.fail",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.convert",
+   "callee": "src/click/types.py::DateTime._try_to_convert_date",
+   "p": 0.9509
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.convert",
+   "callee": "src/click/types.py::ParamType.fail",
+   "p": 0.9622
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/core.py::Argument.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/core.py::Command.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/core.py::Context.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/core.py::Group.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/core.py::Option.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/core.py::Parameter.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::Choice.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::DateTime.to_info_dict",
+   "p": 0.0315
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::File.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::FuncParamType.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::ParamType.to_info_dict",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::Path.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::Tuple.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::DateTime.to_info_dict",
+   "callee": "src/click/types.py::_NumberRangeBase.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File",
+   "callee": "src/click/types.py::File.__init__",
+   "p": 0.0089
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::File.resolve_lazy_flag",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FileInfoDict",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FloatParamType",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FloatParamType",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FloatParamType",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FloatParamType",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FloatRange._clamp",
+   "callee": "src/click/utils.py::_LazyFile.open",
+   "p": 0.0031
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FuncParamType.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FuncParamType.__init__",
+   "callee": "src/click/_compat.py::_make_cached_stream_func.func",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FuncParamType.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FuncParamType.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FuncParamType.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::FuncParamTypeInfoDict#1",
+   "callee": "src/click/_compat.py::_make_cached_stream_func.func",
+   "p": 0.0517
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::IntRange._clamp",
+   "callee": "src/click/utils.py::_LazyFile.open",
+   "p": 0.0068
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamType",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamType",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamType",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamType",
+   "callee": "src/click/types.py::CompositeParamType.arity",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamType",
+   "callee": "src/click/types.py::Tuple.arity",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamType",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0052
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamTypeInfoDict",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamTypeInfoDict",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamTypeInfoDict",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::ParamTypeInfoDict",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/_compat.py::_FixupStream.readable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/_compat.py::_FixupStream.writable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleReader.readable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.writable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/types.py::Path.__init__",
+   "p": 0.2129
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/_compat.py::_FixupStream.readable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/_compat.py::_FixupStream.writable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleReader.readable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.writable",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/core.py::Context.fail",
+   "p": 0.0218
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/types.py::ParamType.fail",
+   "p": 0.9678
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/types.py::Path.coerce_path_result",
+   "p": 0.9849
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.convert",
+   "callee": "src/click/utils.py::format_filename",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/_compat.py::_FixupStream.readable",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/_compat.py::_FixupStream.writable",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleReader.readable",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.writable",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/core.py::Argument.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/core.py::Command.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/core.py::Context.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/core.py::Group.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/core.py::Option.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/core.py::Parameter.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::Choice.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::DateTime.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::File.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::FuncParamType.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::ParamType.to_info_dict",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::Path.to_info_dict",
+   "p": 0.0315
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::Tuple.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Path.to_info_dict",
+   "callee": "src/click/types.py::_NumberRangeBase.to_info_dict",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::PathInfoDict",
+   "callee": "src/click/_compat.py::_FixupStream.readable",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::PathInfoDict",
+   "callee": "src/click/_compat.py::_FixupStream.writable",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::PathInfoDict",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleReader.readable",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::PathInfoDict",
+   "callee": "src/click/_winconsole.py::_WindowsConsoleWriter.writable",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::StringParamType",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::StringParamType",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::StringParamType",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::StringParamType",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Tuple.name",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Tuple.name",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Tuple.name",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::Tuple.name",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0166
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/core.py::Context.fail",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::BoolParamType.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::Choice.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::DateTime.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::File.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::FloatRange._clamp",
+   "p": 0.5917
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::FuncParamType.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::IntRange._clamp",
+   "p": 0.5917
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::ParamType.convert",
+   "p": 0.1723
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::ParamType.fail",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::Path.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::StringParamType.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::Tuple.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::UUIDParameterType.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::UnprocessedParamType.convert",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::_NumberParamTypeBase.convert",
+   "p": 0.9707
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::_NumberRangeBase._clamp",
+   "p": 0.1577
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::_NumberRangeBase._describe_range",
+   "p": 0.9531
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/types.py::_NumberRangeBase.convert",
+   "callee": "src/click/types.py::_NumberRangeBase.convert",
+   "p": 0.0315
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_KeepOpenFile.__getattr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0988
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_KeepOpenFile.__getattr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0988
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_KeepOpenFile.__getattr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.1823
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_KeepOpenFile.__getattr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0059
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile",
+   "callee": "src/click/utils.py::_LazyFile.__init__",
+   "p": 0.1958
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__getattr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__getattr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__getattr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__getattr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__getattr__",
+   "callee": "src/click/utils.py::_LazyFile.open",
+   "p": 0.9531
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.close",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/core.py::Context.close",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.close",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.006
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0058
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/utils.py::_LazyFile.close",
+   "p": 0.0315
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.__init__",
+   "callee": "src/click/utils.py::_LazyFile.open",
+   "p": 0.0317
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close",
+   "callee": "src/click/_compat.py::_AtomicFile.close",
+   "p": 0.3559
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close",
+   "callee": "src/click/core.py::Context.close",
+   "p": 0.0396
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.close",
+   "p": 0.098
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close",
+   "callee": "src/click/utils.py::_LazyFile.close",
+   "p": 0.0252
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close_intelligently",
+   "callee": "src/click/_compat.py::_AtomicFile.close",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close_intelligently",
+   "callee": "src/click/core.py::Context.close",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close_intelligently",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.close",
+   "p": 0.0507
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.close_intelligently",
+   "callee": "src/click/utils.py::_LazyFile.close",
+   "p": 0.9519
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/_compat.py::open_stream",
+   "p": 0.9843
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/exceptions.py::FileError.__init__",
+   "p": 0.8493
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.mode",
+   "p": 0.0036
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_LazyFile.open",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::__getattr__",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::__getattr__",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::__getattr__",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::__getattr__",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0021
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_get_binary_stream",
+   "callee": "src/click/_compat.py::_AtomicFile.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_get_binary_stream",
+   "callee": "src/click/_winconsole.py::ConsoleStream.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_get_binary_stream",
+   "callee": "src/click/testing.py::_NamedTextIOWrapper.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "click",
+   "caller": "src/click/utils.py::_get_binary_stream",
+   "callee": "src/click/types.py::Tuple.name",
+   "p": 0.0038
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/__init__.py::<module>",
+   "callee": "toolz/_signatures.py::create_signature_registry",
+   "p": 0.9658
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/__init__.py::<module>",
+   "callee": "toolz/functoolz.py::compose",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_has_keywords",
+   "callee": "toolz/_signatures.py::check_keywords",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_has_keywords",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_arity",
+   "callee": "toolz/_signatures.py::check_arity",
+   "p": 0.9759
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_arity",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_partial_args",
+   "callee": "toolz/_signatures.py::check_partial",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_partial_args",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_partial_args",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_valid_args",
+   "callee": "toolz/_signatures.py::check_valid",
+   "p": 0.9709
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_valid_args",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_is_valid_args",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_num_required_args",
+   "callee": "toolz/_signatures.py::check_required_args",
+   "p": 0.9709
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::_num_required_args",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_arity",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_arity",
+   "callee": "toolz/functoolz.py::is_arity",
+   "p": 0.9759
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_keywords",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_keywords",
+   "callee": "toolz/functoolz.py::has_keywords",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_partial",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_partial",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_partial",
+   "callee": "toolz/functoolz.py::is_partial_args",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_required_args",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_required_args",
+   "callee": "toolz/functoolz.py::num_required_args",
+   "p": 0.9709
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_varargs",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::check_varargs",
+   "callee": "toolz/functoolz.py::has_varargs",
+   "p": 0.9759
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/_signatures.py::signature_or_spec",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::<module>",
+   "callee": "toolz/curried/exceptions.py::merge",
+   "p": 0.0021
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::<module>",
+   "callee": "toolz/curried/exceptions.py::merge_with",
+   "p": 0.0021
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::<module>",
+   "callee": "toolz/dicttoolz.py::merge",
+   "p": 0.0021
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::<module>",
+   "callee": "toolz/dicttoolz.py::merge_with",
+   "p": 0.0021
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::merge",
+   "callee": "toolz/curried/exceptions.py::merge",
+   "p": 0.0317
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::merge",
+   "callee": "toolz/dicttoolz.py::merge",
+   "p": 0.9733
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::merge_with",
+   "callee": "toolz/curried/exceptions.py::merge_with",
+   "p": 0.3559
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::merge_with",
+   "callee": "toolz/dicttoolz.py::merge_with",
+   "p": 0.9622
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/curried/exceptions.py::merge_with",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0835
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/dicttoolz.py::itemmap",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/dicttoolz.py::keymap",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/dicttoolz.py::merge",
+   "callee": "toolz/curried/exceptions.py::merge",
+   "p": 0.0052
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/dicttoolz.py::merge",
+   "callee": "toolz/dicttoolz.py::_get_factory",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/dicttoolz.py::merge",
+   "callee": "toolz/dicttoolz.py::merge",
+   "p": 0.0052
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/dicttoolz.py::valmap",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0031
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::<module>",
+   "callee": "toolz/functoolz.py::has_keywords",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::<module>",
+   "callee": "toolz/functoolz.py::has_varargs",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::<module>",
+   "callee": "toolz/functoolz.py::is_partial_args",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::<module>",
+   "callee": "toolz/functoolz.py::is_valid_args",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::<module>",
+   "callee": "toolz/functoolz.py::num_required_args",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__call__",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0031
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__call__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.5656
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__doc__",
+   "callee": "toolz/functoolz.py::Compose.__doc__.composed_doc",
+   "p": 0.9709
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__doc__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__getstate__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__hash__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__name__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__name__",
+   "callee": "toolz/itertoolz.py::join",
+   "p": 0.0205
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__repr__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__setstate__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__signature__",
+   "callee": "toolz/itertoolz.py::first",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::Compose.__signature__",
+   "callee": "toolz/itertoolz.py::last",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::_restore_curry",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::_restore_curry",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.3127
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::apply",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::apply",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.052
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::complement",
+   "callee": "toolz/functoolz.py::compose",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::complement",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::compose",
+   "callee": "toolz/functoolz.py::Compose.__init__",
+   "p": 0.8519
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::compose",
+   "callee": "toolz/functoolz.py::identity",
+   "p": 0.024
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__eq__",
+   "callee": "toolz/functoolz.py::curry.__init__",
+   "p": 0.003
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__eq__",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.3236
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__eq__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.3236
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__eq__",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.3236
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__hash__",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.4941
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__hash__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.4941
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__hash__",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.4941
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__init__",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.1142
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__init__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.1142
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__init__",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.1142
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__reduce__",
+   "callee": "toolz/functoolz.py::_restore_curry",
+   "p": 0.0251
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__reduce__",
+   "callee": "toolz/functoolz.py::curry.__init__",
+   "p": 0.0042
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__reduce__",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.3626
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__reduce__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.3626
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__reduce__",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.3626
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__reduce__",
+   "callee": "toolz/itertoolz.py::join",
+   "p": 0.051
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.__repr__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.3626
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/_signatures.py::signature_or_spec",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.1867
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.4941
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.4941
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/functoolz.py::has_varargs",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/functoolz.py::is_partial_args",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry._should_curry",
+   "callee": "toolz/functoolz.py::is_valid_args",
+   "p": 0.9843
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.args",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.09
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.bind",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0042
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.call",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0042
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.func",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0535
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::curry.keywords",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.3236
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::excepts.__call__",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::excepts.__call__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.052
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::excepts.__init__",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0031
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::instanceproperty",
+   "callee": "toolz/functoolz.py::InstanceProperty.__init__",
+   "p": 0.7197
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::instanceproperty",
+   "callee": "toolz/functoolz.py::instanceproperty",
+   "p": 0.0788
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::is_arity",
+   "callee": "toolz/_signatures.py::_is_arity",
+   "p": 0.4763
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::is_arity",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::is_arity",
+   "callee": "toolz/functoolz.py::curry.keywords",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::is_arity",
+   "callee": "toolz/functoolz.py::has_keywords",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::is_arity",
+   "callee": "toolz/functoolz.py::has_varargs",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::is_arity",
+   "callee": "toolz/functoolz.py::num_required_args",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize",
+   "callee": "toolz/functoolz.py::has_keywords",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize",
+   "callee": "toolz/functoolz.py::is_arity",
+   "p": 0.9687
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize",
+   "callee": "toolz/functoolz.py::memoize.memof",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize.key#0",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize.key#1",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0036
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize.memof",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0031
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::memoize.memof",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0456
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::num_required_args",
+   "callee": "toolz/_signatures.py::_num_required_args",
+   "p": 0.4807
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::num_required_args",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::thread_first",
+   "callee": "toolz/functoolz.py::thread_first.evalform_front",
+   "p": 0.4853
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::thread_first.evalform_front",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0176
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::thread_first.evalform_front",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.1239
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::thread_last.evalform_back",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/functoolz.py::thread_last.evalform_back",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.6545
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/itertoolz.py::<module>",
+   "callee": "toolz/itertoolz.py::drop",
+   "p": 0.024
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/itertoolz.py::mapcat",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0031
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/itertoolz.py::mapcat",
+   "callee": "toolz/itertoolz.py::concat",
+   "p": 0.9736
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/itertoolz.py::partition",
+   "callee": "toolz/functoolz.py::curry.args",
+   "p": 0.006
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/recipes.py::partitionby",
+   "callee": "toolz/functoolz.py::curry.func",
+   "p": 0.0068
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/recipes.py::partitionby",
+   "callee": "toolz/itertoolz.py::groupby",
+   "p": 0.1239
+  },
+  {
+   "repo": "toolz",
+   "caller": "toolz/recipes.py::partitionby",
+   "callee": "toolz/itertoolz.py::pluck",
+   "p": 0.9687
+  }
+ ],
+ "scores": {
+  "PyCG \u222a Pyright": {
+   "tp": 188,
+   "fp": 13,
+   "fn": 52,
+   "precision": 0.935,
+   "recall": 0.783,
+   "f1": 0.853
+  },
+  "gpt-oss-20b": {
+   "tp": 218,
+   "fp": 68,
+   "fn": 22,
+   "precision": 0.762,
+   "recall": 0.908,
+   "f1": 0.829
+  },
+  "gpt-oss-120b": {
+   "tp": 230,
+   "fp": 82,
+   "fn": 10,
+   "precision": 0.737,
+   "recall": 0.958,
+   "f1": 0.833
+  },
+  "qwen3.8-27b": {
+   "tp": 197,
+   "fp": 50,
+   "fn": 43,
+   "precision": 0.798,
+   "recall": 0.821,
+   "f1": 0.809
+  },
+  "majority of the 3 LLMs": {
+   "tp": 218,
+   "fp": 64,
+   "fn": 22,
+   "precision": 0.773,
+   "recall": 0.908,
+   "f1": 0.835
+  },
+  "static \u222a any LLM": {
+   "tp": 230,
+   "fp": 117,
+   "fn": 10,
+   "precision": 0.663,
+   "recall": 0.958,
+   "f1": 0.784
+  },
+  "learned combiner": {
+   "tp": 202,
+   "fp": 20,
+   "fn": 38,
+   "precision": 0.91,
+   "recall": 0.842,
+   "f1": 0.874
+  }
+ },
+ "shared": {
+  "PyCG \u222a Pyright": {
+   "tp": 58,
+   "fp": 10,
+   "fn": 36,
+   "precision": 0.853,
+   "recall": 0.617,
+   "f1": 0.716
+  },
+  "gpt-oss-20b": {
+   "tp": 73,
+   "fp": 29,
+   "fn": 21,
+   "precision": 0.716,
+   "recall": 0.777,
+   "f1": 0.745
+  },
+  "gpt-oss-120b": {
+   "tp": 85,
+   "fp": 30,
+   "fn": 9,
+   "precision": 0.739,
+   "recall": 0.904,
+   "f1": 0.813
+  },
+  "qwen3.8-27b": {
+   "tp": 56,
+   "fp": 12,
+   "fn": 38,
+   "precision": 0.824,
+   "recall": 0.596,
+   "f1": 0.691
+  },
+  "majority of the 3 LLMs": {
+   "tp": 73,
+   "fp": 21,
+   "fn": 21,
+   "precision": 0.777,
+   "recall": 0.777,
+   "f1": 0.777
+  },
+  "static \u222a any LLM": {
+   "tp": 85,
+   "fp": 48,
+   "fn": 9,
+   "precision": 0.639,
+   "recall": 0.904,
+   "f1": 0.749
+  },
+  "learned combiner": {
+   "tp": 72,
+   "fp": 14,
+   "fn": 22,
+   "precision": 0.837,
+   "recall": 0.766,
+   "f1": 0.8
+  }
+ },
+ "weights": {
+  "bias": -3.71,
+  "PyCG says yes": 0.09,
+  "Pyright says yes": 1.6,
+  "gpt-oss-20b says yes": 0.85,
+  "gpt-oss-120b says yes": 2.93,
+  "qwen3.8-27b says yes": 1.39,
+  "written as a call": 0.53,
+  "written as a reference": -1.6,
+  "written as a class name": -1.51,
+  "name shared with other functions": -0.12,
+  "method of the caller's own class": -0.46
+ }
+}

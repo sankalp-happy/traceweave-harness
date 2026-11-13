@@ -138,9 +138,10 @@ excerpts. You may only edit lines that appear in the excerpts below.
 ## Source excerpts
 {excerpts}
 ## Output
-Return the edits as JSON. Each edit replaces one whole existing line, named by
-its path and line number exactly as shown above; `text` is the complete new
-line, indentation included. Lines you do not list are left unchanged.
+Return the edits as JSON. Each edit changes one existing line, named by its
+path and line number exactly as shown above: every occurrence of `old` on that
+line is replaced by `new`. `old` must appear on that line exactly as shown.
+Lines you do not list are left unchanged.
 """
 
 EDITS_SCHEMA = {
@@ -153,9 +154,10 @@ EDITS_SCHEMA = {
                 "properties": {
                     "path": {"type": "string"},
                     "line": {"type": "integer"},
-                    "text": {"type": "string"},
+                    "old": {"type": "string"},
+                    "new": {"type": "string"},
                 },
-                "required": ["path", "line", "text"],
+                "required": ["path", "line", "old", "new"],
                 "additionalProperties": False,
             },
         }

@@ -1,0 +1,33 @@
+{
+ "repo": "all-repos",
+ "seed": 20261016,
+ "pool": 90,
+ "callers": [
+  "all_repos/autofix/_pre_commit_hook_migrate.py::<module>",
+  "all_repos/autofix/pre_commit_autoupdate.py::<module>",
+  "all_repos/autofix/pre_commit_autoupdate.py::main",
+  "all_repos/autofix/pre_commit_migrate_config.py::<module>",
+  "all_repos/autofix_lib.py::_fix_inner",
+  "all_repos/autofix_lib.py::from_cli",
+  "all_repos/autofix_lib.py::repo_context",
+  "all_repos/clone.py::_init",
+  "all_repos/complete.py::main",
+  "all_repos/config.py::load_config",
+  "all_repos/gitlab_api.py::req",
+  "all_repos/grep.py::<module>",
+  "all_repos/manual.py::main",
+  "all_repos/mapper.py::thread_mapper",
+  "all_repos/push/azure_repos_pull_request.py::push",
+  "all_repos/push/bitbucket_server_pull_request.py::push",
+  "all_repos/push/github_pull_request.py::<module>",
+  "all_repos/push/gitlab_pull_request.py::Settings",
+  "all_repos/sed.py::<module>",
+  "all_repos/source/azure_repos.py::Settings",
+  "all_repos/source/azure_repos.py::list_repos",
+  "all_repos/source/bitbucket_server.py::list_repos",
+  "all_repos/source/github.py::list_repos",
+  "all_repos/source/github_org.py::list_repos",
+  "all_repos/source/gitlab_org.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

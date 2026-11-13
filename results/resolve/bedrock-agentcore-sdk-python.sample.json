@@ -1,0 +1,33 @@
+{
+ "repo": "bedrock-agentcore-sdk-python",
+ "seed": 20261016,
+ "pool": 161,
+ "callers": [
+  "src/bedrock_agentcore/_utils/identity_propagation.py::_inject_identity_wat_header",
+  "src/bedrock_agentcore/evaluation/custom_code_based_evaluators/third_party/base.py::<module>",
+  "src/bedrock_agentcore/evaluation/dataset_client.py::<module>",
+  "src/bedrock_agentcore/evaluation/runner/batch/batch_evaluation_runner.py::BatchEvaluationRunner.run_dataset_evaluation",
+  "src/bedrock_agentcore/evaluation/runner/on_demand/on_demand_runner.py::OnDemandEvaluationDatasetRunner._batch",
+  "src/bedrock_agentcore/evaluation/runner/on_demand/on_demand_runner.py::OnDemandEvaluationDatasetRunner._run_scenario",
+  "src/bedrock_agentcore/evaluation/utils/__init__.py::<module>",
+  "src/bedrock_agentcore/evaluation/utils/cloudwatch_span_helper.py::CloudWatchSpanHelper.query_log_group",
+  "src/bedrock_agentcore/memory/client.py::<module>",
+  "src/bedrock_agentcore/memory/client.py::MemoryClient.create_memory_and_wait",
+  "src/bedrock_agentcore/memory/client.py::MemoryClient.list_events",
+  "src/bedrock_agentcore/memory/session.py::MemorySession.add_turns",
+  "src/bedrock_agentcore/memory/session.py::MemorySession.delete_event",
+  "src/bedrock_agentcore/memory/session.py::MemorySession.list_events",
+  "src/bedrock_agentcore/memory/session.py::MemorySessionManager.__init__",
+  "src/bedrock_agentcore/memory/session.py::MemorySessionManager._configure_timestamp_serialization",
+  "src/bedrock_agentcore/memory/session.py::MemorySessionManager.get_event",
+  "src/bedrock_agentcore/payments/integrations/handlers.py::<module>",
+  "src/bedrock_agentcore/payments/integrations/handlers.py::GenericPaymentHandler._parse_json_or_dict",
+  "src/bedrock_agentcore/payments/manager.py::PaymentManager._validate_input_parameters",
+  "src/bedrock_agentcore/payments/manager.py::PaymentManager.delete_payment_instrument",
+  "src/bedrock_agentcore/payments/manager.py::PaymentManager.delete_payment_session",
+  "src/bedrock_agentcore/payments/manager.py::PaymentManager.list_payment_instruments",
+  "src/bedrock_agentcore/policy/client.py::<module>",
+  "src/bedrock_agentcore/runtime/app.py::RequestContextFormatter.format"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

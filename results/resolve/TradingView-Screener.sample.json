@@ -1,0 +1,12 @@
+{
+ "repo": "TradingView-Screener",
+ "seed": 20261016,
+ "pool": 4,
+ "callers": [
+  "src/tradingview_screener/__init__.py::<module>",
+  "src/tradingview_screener/query.py::Query.__init__",
+  "src/tradingview_screener/query.py::Query.limit",
+  "src/tradingview_screener/query.py::Query.offset"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

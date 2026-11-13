@@ -1,0 +1,17 @@
+{
+ "repo": "python-lazy-object-proxy",
+ "seed": 20261016,
+ "pool": 9,
+ "callers": [
+  "src/lazy_object_proxy/__init__.py::<module>",
+  "src/lazy_object_proxy/simple.py::<module>",
+  "src/lazy_object_proxy/simple.py::Proxy",
+  "src/lazy_object_proxy/simple.py::Proxy.__reduce_ex__",
+  "src/lazy_object_proxy/simple.py::make_proxy_method",
+  "src/lazy_object_proxy/slots.py::<module>",
+  "src/lazy_object_proxy/slots.py::Proxy",
+  "src/lazy_object_proxy/slots.py::Proxy.__reduce_ex__",
+  "src/lazy_object_proxy/utils.py::await_"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

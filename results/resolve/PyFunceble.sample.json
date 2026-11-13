@@ -1,0 +1,33 @@
+{
+ "repo": "PyFunceble",
+ "seed": 20261016,
+ "pool": 528,
+ "callers": [
+  "PyFunceble/checker/availability/base.py::AvailabilityCheckerBase.__init__",
+  "PyFunceble/checker/base.py::CheckerBase.propagate_subject.wrapper",
+  "PyFunceble/checker/base.py::CheckerBase.set_use_platform",
+  "PyFunceble/checker/base.py::CheckerBase.subject.<setter>",
+  "PyFunceble/checker/syntax/base.py::SyntaxCheckerBase",
+  "PyFunceble/checker/syntax/ip.py::IPSyntaxChecker.is_reserved_v4",
+  "PyFunceble/checker/syntax/ipv6.py::IPv6SyntaxChecker.is_valid",
+  "PyFunceble/config/loader.py::ConfigLoader.reload_config.wrapper",
+  "PyFunceble/converter/adblock_input_line2subject.py::AdblockInputLine2Subject.__init__",
+  "PyFunceble/database/session.py::DBSession.execute_if_authorized.inner_metdhod",
+  "PyFunceble/dataset/whois/csv.py::<module>",
+  "PyFunceble/helpers/directory.py::DirectoryHelper.__init__",
+  "PyFunceble/helpers/merge.py::Merge.into",
+  "PyFunceble/logger.py::Logger.single_logger_factory",
+  "PyFunceble/logger.py::Logger.single_logger_factory.single_logger.wrapper",
+  "PyFunceble/query/dns/query_tool.py::DNSQueryTool.update_lookup_record",
+  "PyFunceble/query/http_status_code.py::HTTPStatusCode.ensure_subject_is_given",
+  "PyFunceble/query/http_status_code.py::HTTPStatusCode.guess_and_set_timeout",
+  "PyFunceble/query/netinfo/hostbyaddr.py::HostByAddrInfo.get_info",
+  "PyFunceble/query/platform.py::PlatformQueryTool.guess_and_set_checker_priority",
+  "PyFunceble/query/record/dns.py::DNSQueryToolRecord",
+  "PyFunceble/query/whois/converter/base.py::ConverterBase.ensure_data_to_convert_is_given",
+  "PyFunceble/query/whois/converter/expiration_date.py::<module>",
+  "PyFunceble/storage.py::<module>",
+  "PyFunceble/utils/version.py::VersionUtility.set_local_version"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

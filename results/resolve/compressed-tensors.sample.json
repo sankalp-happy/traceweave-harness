@@ -1,0 +1,33 @@
+{
+ "repo": "compressed-tensors",
+ "seed": 20261016,
+ "pool": 142,
+ "callers": [
+  "src/compressed_tensors/__init__.py::<module>",
+  "src/compressed_tensors/compressors/model_compressors/model_compressor.py::ModelCompressor.from_pretrained_model",
+  "src/compressed_tensors/compressors/mxfp4/base.py::<module>",
+  "src/compressed_tensors/compressors/nvfp4/base.py::<module>",
+  "src/compressed_tensors/config/sparse_bitmask.py::<module>",
+  "src/compressed_tensors/entrypoints/convert/converters/autoawq.py::AutoAWQConverter.validate",
+  "src/compressed_tensors/entrypoints/convert/converters/ct_dequantizer.py::<module>",
+  "src/compressed_tensors/entrypoints/convert/converters/ct_dequantizer.py::CompressedTensorsDequantizer.get_dependencies",
+  "src/compressed_tensors/entrypoints/convert/converters/ct_dequantizer.py::CompressedTensorsDequantizer.process",
+  "src/compressed_tensors/entrypoints/convert/converters/modelopt_nvfp4.py::<module>",
+  "src/compressed_tensors/modeling/attention.py::<module>",
+  "src/compressed_tensors/modeling/kvcache.py::register_key_hook._hook",
+  "src/compressed_tensors/offload/cache/base.py::OffloadCache.from_mapping",
+  "src/compressed_tensors/offload/cache/dist_cpu.py::<module>",
+  "src/compressed_tensors/offload/cache/utils.py::catch_cpu_mem_error",
+  "src/compressed_tensors/offload/dispatch.py::dispatch_model",
+  "src/compressed_tensors/offload/dispatch.py::dispatch_with_map",
+  "src/compressed_tensors/offload/module.py::<module>",
+  "src/compressed_tensors/quantization/quant_metadata.py::<module>",
+  "src/compressed_tensors/transform/factory/base.py::<module>",
+  "src/compressed_tensors/transform/factory/matrix_multiply.py::<module>",
+  "src/compressed_tensors/transform/factory/matrix_multiply.py::RandomMatrixFactory.__init__",
+  "src/compressed_tensors/utils/helpers.py::deprecated",
+  "src/compressed_tensors/utils/impl_backend.py::ImplBackend.entrypoint.decorator",
+  "src/compressed_tensors/utils/mtp.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

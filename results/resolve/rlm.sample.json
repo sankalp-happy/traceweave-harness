@@ -1,0 +1,33 @@
+{
+ "repo": "rlm",
+ "seed": 20261016,
+ "pool": 65,
+ "callers": [
+  "rlm/clients/gemini.py::GeminiClient.completion",
+  "rlm/core/comms_utils.py::LMResponse.to_dict",
+  "rlm/core/comms_utils.py::socket_request",
+  "rlm/core/lm_handler.py::LMHandler.__init__",
+  "rlm/core/lm_handler.py::LMHandler.address",
+  "rlm/core/lm_handler.py::LMHandler.start",
+  "rlm/core/lm_handler.py::LMRequestHandler._handle_batched.run_one",
+  "rlm/core/lm_handler.py::LMRequestHandler._handle_single",
+  "rlm/core/types.py::ModelUsageSummary",
+  "rlm/core/types.py::ModelUsageSummary.to_dict",
+  "rlm/core/types.py::REPLResult.__str__",
+  "rlm/core/types.py::RLMChatCompletion.from_dict",
+  "rlm/core/types.py::RLMIteration.to_dict",
+  "rlm/core/types.py::UsageSummary.from_dict",
+  "rlm/core/types.py::UsageSummary.total_cost",
+  "rlm/core/types.py::UsageSummary.total_input_tokens",
+  "rlm/environments/docker_repl.py::<module>",
+  "rlm/environments/local_repl.py::<module>",
+  "rlm/environments/local_repl.py::LocalREPL.__del__",
+  "rlm/environments/local_repl.py::LocalREPL._restore_scaffold",
+  "rlm/environments/local_repl.py::LocalREPL._rlm_query_batched",
+  "rlm/environments/local_repl.py::LocalREPL._show_vars",
+  "rlm/environments/local_repl.py::LocalREPL.add_context",
+  "rlm/environments/local_repl.py::LocalREPL.cleanup",
+  "rlm/utils/parsing.py::format_execution_result"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

@@ -1,0 +1,24 @@
+{
+ "repo": "fastapi-injectable",
+ "seed": 20261016,
+ "pool": 16,
+ "callers": [
+  "src/fastapi_injectable/__init__.py::<module>",
+  "src/fastapi_injectable/async_exit_stack.py::AsyncExitStackManager.cleanup_all_stacks",
+  "src/fastapi_injectable/concurrency.py::<module>",
+  "src/fastapi_injectable/concurrency.py::LoopManager._get_background_loop",
+  "src/fastapi_injectable/concurrency.py::LoopManager.run_in_loop",
+  "src/fastapi_injectable/decorator.py::<module>",
+  "src/fastapi_injectable/decorator.py::injectable.decorator",
+  "src/fastapi_injectable/decorator.py::injectable.decorator.sync_wrapper",
+  "src/fastapi_injectable/logging.py::configure_logging",
+  "src/fastapi_injectable/logging.py::reset_logger_handlers",
+  "src/fastapi_injectable/main.py::_build_dependency_only_callable",
+  "src/fastapi_injectable/main.py::resolve_dependencies",
+  "src/fastapi_injectable/pytest_plugin.py::<module>",
+  "src/fastapi_injectable/pytest_plugin.py::reset_injectable_state",
+  "src/fastapi_injectable/util.py::<module>",
+  "src/fastapi_injectable/util.py::_create_async_depends_function"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

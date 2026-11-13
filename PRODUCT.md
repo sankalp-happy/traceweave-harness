@@ -20,11 +20,13 @@ The presenter drives the UI on a laptop screen while the examiner leans in.
 
 ## Product Purpose
 
-The TraceWeave harness runs one controlled experiment: does giving an LLM runtime
-call-graph context change whether its repo-wide edits work? The UI exists to make
-that experiment inspectable in front of an examiner: the result, then any single
-task's two arms side by side, then a live re-run on demand. Success is an examiner
-who can check a claim against the evidence without the presenter narrating it.
+TraceWeave asks whether AI can recover the calls static analysis misses, and
+whether an AI agent edits code safely with that context. Ground truth is recorded
+from execution (the project's test suite under a tracer). Study 1 scores static
+analysers, three LLMs and a learned combiner on "does this code call that
+function?"; Study 2 runs an AI agent on renames a regex cannot do. The UI makes
+both inspectable in front of an examiner: the precision-recall plane first, then
+any item or task, then a live run on demand.
 
 ## Positioning
 
@@ -37,6 +39,9 @@ command that regenerates it.
 - Shown at a booth on the presenter's laptop; examiners lean in to a 13–15 inch screen.
 - Network and API credentials may be absent: recorded results must render fully offline.
 - A live run takes seconds (click's suite is ~5 s per arm); the UI must show that it is running.
+- The live demo (`#/live`, the default view) runs the experiment on screen: the suite under a
+  tracer (sys.monitoring, Python 3.12+), an editor, and the suite again per arm, streamed as
+  server-sent events. gpt-oss-20b needs a Groq key in `.env` and a network; everything else runs offline.
 - Examiners may ask "show me the prompt", "which lines couldn't it see", "why did this fail".
 
 ## Capabilities and Constraints
@@ -45,7 +50,8 @@ command that regenerates it.
   checkouts under `work/<repo>` (created by `tw.py fetch`).
 - Two arms per task: **static** (PyCG ∪ Pyright callers) and **fused** (plus runtime-only callers).
 - Two task groups: **treatment** (≥1 runtime-only caller) and **placebo** (none; prompts identical).
-- Models: `oracle` (ceiling), `claude:<id>` (needs key), `replay:<file>`.
+- Models: `oracle` (ceiling), `groq:<id>` (gpt-oss-20b live; needs key and network), `claude:<id>` (needs key), `replay:<file>`.
+- LLM edits are `{path, line, old, new}`, so a model never retypes indentation; the oracle and recorded rows use whole lines.
 - Verdict: same passing-test count as baseline and no new failures.
 - Terminology to keep exact: arm, treatment, placebo, oracle, runtime-only caller,
   reference lines, verdict.
@@ -55,7 +61,8 @@ command that regenerates it.
 - `results/click.oracle.jsonl`, `results/toolz.oracle.jsonl`: oracle runs, 140 tasks × 2 arms.
 - Headline (oracle ceiling): treatment static 1/17 vs fused 9/17, exact p ≈ 0.008;
   placebo 108/123 in both arms.
-- No LLM results exist yet. The UI must not imply that they do.
+- No saved LLM results are reported yet: the 78-row gpt-oss-20b pilot (whole-line edits) sits in
+  `results/pilot/` and is left out of every page. LLM verdicts on the live page come from that session only, and say so.
 
 ## Product Principles
 

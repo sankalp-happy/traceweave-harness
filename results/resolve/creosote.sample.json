@@ -1,0 +1,14 @@
+{
+ "repo": "creosote",
+ "seed": 20261016,
+ "pool": 6,
+ "callers": [
+  "src/creosote/cli.py::<module>",
+  "src/creosote/config.py::parse_args",
+  "src/creosote/parsers.py::get_excluded_deps_which_are_not_installed",
+  "src/creosote/resolvers.py::DepsResolver.map_dep_to_canonical_name",
+  "src/creosote/resolvers.py::DepsResolver.map_dep_to_import_via_record_file",
+  "src/creosote/resolvers.py::DepsResolver.map_dep_to_import_via_top_level_txt_file"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

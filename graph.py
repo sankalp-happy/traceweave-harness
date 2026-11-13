@@ -37,7 +37,8 @@ class Bundle:
         g = json.loads((self.dir / "graph.json").read_text())
         self.nodes: dict[str, dict] = g["nodes"]
         self.provenance = g["provenance"]
-        self.static = {tuple(e) for tool in g["static_edges"].values() for e in tool}
+        self.static_by_tool = {tool: {tuple(e) for e in edges} for tool, edges in g["static_edges"].items()}
+        self.static = set().union(*self.static_by_tool.values())
         self.runtime = [tuple(e) for e in g["runtime_edges"]]
 
     @property
@@ -70,6 +71,15 @@ class Bundle:
 
     def dynamic_only(self, target: str) -> set[str]:
         return self.runtime_in.get(target, set()) - self.static_in.get(target, set())
+
+    def node_at(self, path: str, qualname: str, line: int) -> str:
+        """A traced frame -> its graph node, the way build_bundle.py maps the
+        recorded trace: by name, else the innermost node whose span holds the line."""
+        if f"{path}::{qualname}" in self.nodes:
+            return f"{path}::{qualname}"
+        spans = [(n["line"], k) for k, n in self.nodes.items()
+                 if n["path"] == path and n["line"] <= line <= n["end"] and n["kind"] != "class_body"]
+        return max(spans)[1] if spans else ENTRY
 
     def tasks(self) -> list[dict]:
         tasks = json.loads((self.dir / "tasks.json").read_text())["tasks"]

@@ -1,0 +1,33 @@
+{
+ "repo": "sec-edgar",
+ "seed": 20261016,
+ "pool": 70,
+ "callers": [
+  "secedgar/cik_lookup.py::CIKLookup._get_lookup_soup",
+  "secedgar/client.py::<module>",
+  "secedgar/client.py::NetworkClient._prepare_query",
+  "secedgar/client.py::NetworkClient.wait_for_download_async",
+  "secedgar/core/_base.py::AbstractFiling.clean_directory_path",
+  "secedgar/core/_index.py::IndexFilings.entry_filter",
+  "secedgar/core/company.py::CompanyFilings.__init__",
+  "secedgar/core/company.py::CompanyFilings.end_date.<setter>",
+  "secedgar/core/company.py::CompanyFilings.params",
+  "secedgar/core/company.py::CompanyFilings.save",
+  "secedgar/core/daily.py::DailyFilings._get_idx_formatted_date",
+  "secedgar/core/daily.py::DailyFilings._get_tar_urls",
+  "secedgar/core/daily.py::DailyFilings.date.<setter>",
+  "secedgar/core/daily.py::DailyFilings.idx_filename",
+  "secedgar/core/daily.py::DailyFilings.save",
+  "secedgar/core/daily.py::DailyFilings.year",
+  "secedgar/core/filings.py::<module>",
+  "secedgar/core/filings.py::filings",
+  "secedgar/core/quarterly.py::<module>",
+  "secedgar/core/quarterly.py::QuarterlyFilings.quarter.<setter>",
+  "secedgar/core/rest.py::<module>",
+  "secedgar/utils.py::add_quarter",
+  "secedgar/utils.py::get_month",
+  "secedgar/utils.py::get_quarter",
+  "secedgar/utils.py::sanitize_date"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

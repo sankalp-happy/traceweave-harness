@@ -1,0 +1,33 @@
+{
+ "repo": "apiflask",
+ "seed": 20261016,
+ "pool": 51,
+ "callers": [
+  "src/apiflask/__init__.py::<module>",
+  "src/apiflask/app.py::APIFlask._add_response",
+  "src/apiflask/app.py::APIFlask._apply_decorators.decorator",
+  "src/apiflask/app.py::APIFlask._collect_security_info",
+  "src/apiflask/app.py::APIFlask._collect_security_info._update_auth_info",
+  "src/apiflask/app.py::APIFlask._get_spec",
+  "src/apiflask/blueprint.py::<module>",
+  "src/apiflask/commands.py::spec_command",
+  "src/apiflask/fields.py::_FileTypeAnnotation.__get_pydantic_core_schema__",
+  "src/apiflask/helpers.py::pagination_builder",
+  "src/apiflask/openapi.py::get_path_description",
+  "src/apiflask/openapi.py::get_security_and_security_schemes",
+  "src/apiflask/openapi_adapters.py::OpenAPIHelper.get_marshmallow_plugin",
+  "src/apiflask/openapi_adapters.py::OpenAPIHelper.schema_to_parameters",
+  "src/apiflask/openapi_adapters.py::get_unique_schema_name",
+  "src/apiflask/scaffold.py::APIScaffold.auth_required",
+  "src/apiflask/scaffold.py::APIScaffold.doc",
+  "src/apiflask/scaffold.py::APIScaffold.input.decorator",
+  "src/apiflask/scaffold.py::APIScaffold.output",
+  "src/apiflask/scaffold.py::APIScaffold.output.decorator",
+  "src/apiflask/schema_adapters/pydantic.py::PydanticAdapter.get_openapi_schema",
+  "src/apiflask/schema_adapters/registry.py::SchemaRegistry.create_adapter",
+  "src/apiflask/validators.py::validate_file_size",
+  "src/apiflask/validators.py::validate_file_size._format_error",
+  "src/apiflask/validators.py::validate_file_type"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

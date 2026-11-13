@@ -1,0 +1,33 @@
+{
+ "repo": "ShivyC",
+ "seed": 20261016,
+ "pool": 238,
+ "callers": [
+  "shivyc/asm_gen.py::ASMGen.make_asm",
+  "shivyc/ctypes.py::UnionCType.set_members",
+  "shivyc/il_cmds/control.py::Call.make_asm",
+  "shivyc/il_cmds/math.py::_NegNot.make_asm",
+  "shivyc/il_cmds/value.py::AddrRel.make_asm",
+  "shivyc/il_cmds/value.py::SetRel.make_asm",
+  "shivyc/il_gen.py::ILCode.copy",
+  "shivyc/il_gen.py::SymbolTable.add_typedef",
+  "shivyc/parser/expression.py::parse_logical_or",
+  "shivyc/parser/parser.py::parse_root",
+  "shivyc/tree/arithmetic_exprs.py::<module>",
+  "shivyc/tree/arithmetic_exprs.py::Minus._nonarith",
+  "shivyc/tree/arithmetic_exprs.py::Mult._arith_const",
+  "shivyc/tree/arithmetic_exprs.py::_ArithBinOp.make_il",
+  "shivyc/tree/assignment_exprs.py::Equals.make_il",
+  "shivyc/tree/call_exprs.py::FuncCall.make_il",
+  "shivyc/tree/control_flow_nodes.py::IfStatement.make_il",
+  "shivyc/tree/expr_base.py::_RExprNode.make_il_raw",
+  "shivyc/tree/general_nodes.py::DeclInfo.do_body",
+  "shivyc/tree/general_nodes.py::Declaration._check_struct_member_decl_info",
+  "shivyc/tree/general_nodes.py::Declaration.make_specs_ctype",
+  "shivyc/tree/memory_exprs.py::ArraySubsc.pointer_subsc",
+  "shivyc/tree/type_exprs.py::<module>",
+  "shivyc/tree/unary_exprs.py::_ArithUnOp.make_il",
+  "shivyc/tree/utils.py::set_type"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

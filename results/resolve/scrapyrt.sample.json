@@ -1,0 +1,19 @@
+{
+ "repo": "scrapyrt",
+ "seed": 20261016,
+ "pool": 11,
+ "callers": [
+  "scrapyrt/core.py::<module>",
+  "scrapyrt/core.py::CrawlManager.__init__",
+  "scrapyrt/core.py::CrawlManager._init_spider_start",
+  "scrapyrt/core.py::CrawlManager.get_project_settings",
+  "scrapyrt/core.py::CrawlManager.handle_scheduling",
+  "scrapyrt/core.py::ScrapyrtCrawlerRunner.create_crawler",
+  "scrapyrt/log.py::setup_spider_logging",
+  "scrapyrt/resources.py::<module>",
+  "scrapyrt/resources.py::ServiceResource.format_error_response",
+  "scrapyrt/resources.py::ServiceResource.render",
+  "scrapyrt/utils.py::extract_scrapy_request_args"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

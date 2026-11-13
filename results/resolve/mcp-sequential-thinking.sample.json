@@ -1,0 +1,9 @@
+{
+ "repo": "mcp-sequential-thinking",
+ "seed": 20261016,
+ "pool": 1,
+ "callers": [
+  "mcp_sequential_thinking/storage.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

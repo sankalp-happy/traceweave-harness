@@ -1,0 +1,12 @@
+{
+ "repo": "django-ses",
+ "seed": 20261016,
+ "pool": 4,
+ "callers": [
+  "django_ses/conf.py::SesSettings",
+  "django_ses/utils.py::EventMessageVerifier._get_cert_url",
+  "django_ses/views.py::<module>",
+  "django_ses/views.py::superuser_only"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

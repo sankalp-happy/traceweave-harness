@@ -1,0 +1,33 @@
+{
+ "repo": "rejax",
+ "seed": 20261016,
+ "pool": 102,
+ "callers": [
+  "src/rejax/algos/algorithm.py::<module>",
+  "src/rejax/algos/algorithm.py::Algorithm.discrete",
+  "src/rejax/algos/algorithm.py::Algorithm.init_state",
+  "src/rejax/algos/dqn.py::DQN.create_agent",
+  "src/rejax/algos/iqn.py::EpsilonGreedyPolicy.EpsilonGreedyPolicy",
+  "src/rejax/algos/iqn.py::IQN.collect_transitions.sample_uniform",
+  "src/rejax/algos/iqn.py::IQN.create_agent",
+  "src/rejax/algos/mixins.py::OnPolicyMixin.iteration_size",
+  "src/rejax/algos/mixins.py::ReplayBufferMixin.train.eval_iteration",
+  "src/rejax/algos/ppo.py::<module>",
+  "src/rejax/algos/sac.py::SAC.target_entropy",
+  "src/rejax/algos/td3.py::TD3.collect_transitions",
+  "src/rejax/algos/td3.py::TD3.initialize_network_params",
+  "src/rejax/algos/td3.py::TD3.vmap_critic",
+  "src/rejax/buffers.py::ReplayBuffer.empty",
+  "src/rejax/compat/gymnasium2gymnax.py::Gymnasium2GymnaxEnv.action_space",
+  "src/rejax/compat/gymnasium2gymnax.py::Gymnasium2GymnaxEnv.observation_space",
+  "src/rejax/compat/gymnasium2gymnax.py::create_gymnasium",
+  "src/rejax/compat/gymnasium2gymnax.py::shape_dtype_from_pytree",
+  "src/rejax/networks.py::DeterministicPolicy",
+  "src/rejax/networks.py::DeterministicPolicy.__call__",
+  "src/rejax/networks.py::DiscretePolicy.action_log_prob",
+  "src/rejax/networks.py::DiscreteQNetwork.__call__",
+  "src/rejax/networks.py::DuelingQNetwork",
+  "src/rejax/networks.py::GaussianPolicy"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

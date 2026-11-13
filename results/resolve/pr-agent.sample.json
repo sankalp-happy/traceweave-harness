@@ -1,0 +1,33 @@
+{
+ "repo": "pr-agent",
+ "seed": 20261016,
+ "pool": 215,
+ "callers": [
+  "pr_agent/algo/ai_handlers/litellm_helpers.py::_log_task_exceptions",
+  "pr_agent/algo/git_patch_processing.py::extract_hunk_lines_from_patch",
+  "pr_agent/algo/pr_processing.py::pr_generate_compressed_diff",
+  "pr_agent/algo/run_details.py::_read_token_field",
+  "pr_agent/algo/skills_loader.py::_gather_resources",
+  "pr_agent/algo/utils.py::load_yaml",
+  "pr_agent/config_loader.py::apply_secrets_manager_config",
+  "pr_agent/git_providers/azuredevops_provider.py::AzureDevopsProvider.__init__",
+  "pr_agent/git_providers/git_provider.py::GitProvider.publish_persistent_comment_full",
+  "pr_agent/git_providers/gitea_provider.py::GiteaProvider.get_repo_file_content",
+  "pr_agent/git_providers/gitlab_provider.py::<module>",
+  "pr_agent/git_providers/gitlab_provider.py::GitLabProvider._compare_submodule",
+  "pr_agent/git_providers/gitlab_provider.py::GitLabProvider._get_gitmodules_map",
+  "pr_agent/git_providers/gitlab_provider.py::GitLabProvider.get_pr_labels",
+  "pr_agent/git_providers/gitlab_provider.py::GitLabProvider.publish_comment",
+  "pr_agent/git_providers/plain_diff_provider.py::<module>",
+  "pr_agent/git_providers/utils.py::_reapply_env_overrides",
+  "pr_agent/git_providers/utils.py::apply_repo_settings",
+  "pr_agent/identity_providers/__init__.py::<module>",
+  "pr_agent/mosaico/diff_provider.py::DiffInputProvider.__init__",
+  "pr_agent/mosaico/dispatch.py::_run_pr_agent",
+  "pr_agent/mosaico/executor.py::PRAgentExecutor.execute",
+  "pr_agent/mosaico/observability.py::parse_observability_metadata",
+  "pr_agent/secret_providers/__init__.py::get_secret_provider",
+  "pr_agent/servers/gitlab_webhook.py::start"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

@@ -1,0 +1,33 @@
+{
+ "repo": "sqllineage",
+ "seed": 20261016,
+ "pool": 112,
+ "callers": [
+  "sqllineage/core/holders.py::SQLLineageHolder.column_lineage_graph",
+  "sqllineage/core/holders.py::SQLLineageHolder.intermediate_tables",
+  "sqllineage/core/holders.py::StatementLineageHolder.read",
+  "sqllineage/core/holders.py::SubQueryLineageHolder._property_getter",
+  "sqllineage/core/holders.py::SubQueryLineageHolder.add_read",
+  "sqllineage/core/holders.py::SubQueryLineageHolder.add_write_column",
+  "sqllineage/core/metadata_provider.py::MetaDataSession.register_session_metadata",
+  "sqllineage/core/models.py::Column.to_source_columns._to_src_col",
+  "sqllineage/core/parser/sqlfluff/analyzer.py::SqlFluffLineageAnalyzer.analyze",
+  "sqllineage/core/parser/sqlfluff/extractors/cte.py::<module>",
+  "sqllineage/core/parser/sqlfluff/extractors/select.py::<module>",
+  "sqllineage/core/parser/sqlfluff/models.py::SqlFluffColumn._extract_source_columns",
+  "sqllineage/core/parser/sqlfluff/models.py::SqlFluffColumn._get_column_from_subquery",
+  "sqllineage/core/parser/sqlfluff/utils.py::extract_column_qualifier",
+  "sqllineage/core/parser/sqlfluff/utils.py::list_subqueries",
+  "sqllineage/core/parser/sqlparse/analyzer.py::SqlParseLineageAnalyzer._extract_from_dml",
+  "sqllineage/core/parser/sqlparse/handlers/base.py::NextTokenBaseHandler.handle",
+  "sqllineage/core/parser/sqlparse/handlers/base.py::NextTokenBaseHandler.indicate",
+  "sqllineage/core/parser/sqlparse/handlers/cte.py::CTEHandler._handle",
+  "sqllineage/core/parser/sqlparse/handlers/source.py::<module>",
+  "sqllineage/core/parser/sqlparse/handlers/source.py::SourceHandler._add_dataset_from_identifier",
+  "sqllineage/core/parser/sqlparse/handlers/source.py::SourceHandler._handle_table",
+  "sqllineage/core/parser/sqlparse/handlers/target.py::TargetHandler._handle",
+  "sqllineage/core/parser/sqlparse/models.py::SqlParseColumn.of",
+  "sqllineage/drawing.py::draw_lineage_graph"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

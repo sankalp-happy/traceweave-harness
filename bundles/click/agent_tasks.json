@@ -1,0 +1,2398 @@
+{
+ "repo": "click",
+ "sha": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+ "generated_utc": "2026-10-16T11:50:52Z",
+ "attrition": {
+  "no call from package code ran": 41,
+  "the tests call it directly": 40,
+  "a line names it twice": 1,
+  "called on a line that does not name it (a callback)": 7,
+  "dropped by validation": 70
+ },
+ "validated": true,
+ "tasks": [
+  {
+   "id": "click:IntRange._clamp",
+   "target": "src/click/types.py::IntRange._clamp",
+   "name": "_clamp",
+   "new_name": "_clamp_v2",
+   "namesakes": [
+    "src/click/types.py::FloatRange._clamp",
+    "src/click/types.py::_NumberRangeBase._clamp"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     672
+    ],
+    [
+     "src/click/types.py",
+     675
+    ],
+    [
+     "src/click/types.py",
+     750
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:FloatRange._clamp",
+   "target": "src/click/types.py::FloatRange._clamp",
+   "name": "_clamp",
+   "new_name": "_clamp_v2",
+   "namesakes": [
+    "src/click/types.py::IntRange._clamp",
+    "src/click/types.py::_NumberRangeBase._clamp"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     672
+    ],
+    [
+     "src/click/types.py",
+     675
+    ],
+    [
+     "src/click/types.py",
+     798
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:_get_windows_console_stream",
+   "target": "src/click/_compat.py::_get_windows_console_stream",
+   "name": "_get_windows_console_stream",
+   "new_name": "_get_windows_console_stream_v2",
+   "namesakes": [
+    "src/click/_winconsole.py::_get_windows_console_stream"
+   ],
+   "right_lines": [
+    [
+     "src/click/_compat.py",
+     341
+    ],
+    [
+     "src/click/_compat.py",
+     348
+    ],
+    [
+     "src/click/_compat.py",
+     355
+    ],
+    [
+     "src/click/_compat.py",
+     530
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Option._parse_decls",
+   "target": "src/click/core.py::Option._parse_decls",
+   "name": "_parse_decls",
+   "new_name": "_parse_decls_v2",
+   "namesakes": [
+    "src/click/core.py::Argument._parse_decls",
+    "src/click/core.py::Parameter._parse_decls"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2321
+    ],
+    [
+     "src/click/core.py",
+     3228
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Argument._parse_decls",
+   "target": "src/click/core.py::Argument._parse_decls",
+   "name": "_parse_decls",
+   "new_name": "_parse_decls_v2",
+   "namesakes": [
+    "src/click/core.py::Option._parse_decls",
+    "src/click/core.py::Parameter._parse_decls"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2321
+    ],
+    [
+     "src/click/core.py",
+     3734
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Argument.add_to_parser",
+   "target": "src/click/core.py::Argument.add_to_parser",
+   "name": "add_to_parser",
+   "new_name": "add_to_parser_v2",
+   "namesakes": [
+    "src/click/core.py::Option.add_to_parser",
+    "src/click/core.py::Parameter.add_to_parser"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1223
+    ],
+    [
+     "src/click/core.py",
+     3767
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Tuple.arity",
+   "target": "src/click/types.py::Tuple.arity",
+   "name": "arity",
+   "new_name": "arity_v2",
+   "namesakes": [
+    "src/click/types.py::CompositeParamType.arity"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2330
+    ],
+    [
+     "src/click/core.py",
+     2353
+    ],
+    [
+     "src/click/core.py",
+     2355
+    ],
+    [
+     "src/click/types.py",
+     1271
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:version_option.callback",
+   "target": "src/click/decorators.py::version_option.callback",
+   "name": "callback",
+   "new_name": "callback_v2",
+   "namesakes": [
+    "src/click/decorators.py::confirmation_option.callback"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2633
+    ],
+    [
+     "src/click/decorators.py",
+     501
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Context.close",
+   "target": "src/click/core.py::Context.close",
+   "name": "close",
+   "new_name": "close_v2",
+   "namesakes": [
+    "src/click/_compat.py::_AtomicFile.close",
+    "src/click/testing.py::_NamedTextIOWrapper.close",
+    "src/click/utils.py::_LazyFile.close"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     689
+    ],
+    [
+     "src/click/core.py",
+     826
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_LazyFile.close",
+   "target": "src/click/utils.py::_LazyFile.close",
+   "name": "close",
+   "new_name": "close_v2",
+   "namesakes": [
+    "src/click/_compat.py::_AtomicFile.close",
+    "src/click/core.py::Context.close",
+    "src/click/testing.py::_NamedTextIOWrapper.close"
+   ],
+   "right_lines": [
+    [
+     "src/click/utils.py",
+     183
+    ],
+    [
+     "src/click/utils.py",
+     193
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Command.collect_usage_pieces",
+   "target": "src/click/core.py::Command.collect_usage_pieces",
+   "name": "collect_usage_pieces",
+   "new_name": "collect_usage_pieces_v2",
+   "namesakes": [
+    "src/click/core.py::Group.collect_usage_pieces"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1163
+    ],
+    [
+     "src/click/core.py",
+     1166
+    ],
+    [
+     "src/click/core.py",
+     1941
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Group.collect_usage_pieces",
+   "target": "src/click/core.py::Group.collect_usage_pieces",
+   "name": "collect_usage_pieces",
+   "new_name": "collect_usage_pieces_v2",
+   "namesakes": [
+    "src/click/core.py::Command.collect_usage_pieces"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1163
+    ],
+    [
+     "src/click/core.py",
+     1940
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.consume_value",
+   "target": "src/click/core.py::Parameter.consume_value",
+   "name": "consume_value",
+   "new_name": "consume_value_v2",
+   "namesakes": [
+    "src/click/core.py::Option.consume_value"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2474
+    ],
+    [
+     "src/click/core.py",
+     2746
+    ],
+    [
+     "src/click/core.py",
+     3594
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Option.consume_value",
+   "target": "src/click/core.py::Option.consume_value",
+   "name": "consume_value",
+   "new_name": "consume_value_v2",
+   "namesakes": [
+    "src/click/core.py::Parameter.consume_value"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2746
+    ],
+    [
+     "src/click/core.py",
+     3582
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:UnprocessedParamType.convert",
+   "target": "src/click/types.py::UnprocessedParamType.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     284
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:StringParamType.convert",
+   "target": "src/click/types.py::StringParamType.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     296
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Choice.convert",
+   "target": "src/click/types.py::Choice.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     443
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:DateTime.convert",
+   "target": "src/click/types.py::DateTime.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     555
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:_NumberParamTypeBase.convert",
+   "target": "src/click/types.py::_NumberParamTypeBase.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     587
+    ],
+    [
+     "src/click/types.py",
+     660
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:BoolParamType.convert",
+   "target": "src/click/types.py::BoolParamType.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     859
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:UUIDParameterType.convert",
+   "target": "src/click/types.py::UUIDParameterType.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::Tuple.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     880
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Tuple.convert",
+   "target": "src/click/types.py::Tuple.convert",
+   "name": "convert",
+   "new_name": "convert_v2",
+   "namesakes": [
+    "src/click/types.py::BoolParamType.convert",
+    "src/click/types.py::Choice.convert",
+    "src/click/types.py::DateTime.convert",
+    "src/click/types.py::File.convert",
+    "src/click/types.py::FuncParamType.convert",
+    "src/click/types.py::ParamType.convert",
+    "src/click/types.py::Path.convert",
+    "src/click/types.py::StringParamType.convert",
+    "src/click/types.py::UUIDParameterType.convert",
+    "src/click/types.py::UnprocessedParamType.convert",
+    "src/click/types.py::_NumberParamTypeBase.convert",
+    "src/click/types.py::_NumberRangeBase.convert"
+   ],
+   "right_lines": [
+    [
+     "src/click/types.py",
+     155
+    ],
+    [
+     "src/click/types.py",
+     1274
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Editor.edit",
+   "target": "src/click/_termui_impl.py::Editor.edit",
+   "name": "edit",
+   "new_name": "edit_v2",
+   "namesakes": [
+    "src/click/termui.py::edit"
+   ],
+   "right_lines": [
+    [
+     "src/click/_termui_impl.py",
+     724
+    ],
+    [
+     "src/click/termui.py",
+     893
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Context.fail",
+   "target": "src/click/core.py::Context.fail",
+   "name": "fail",
+   "new_name": "fail_v2",
+   "namesakes": [
+    "src/click/types.py::ParamType.fail"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     807
+    ],
+    [
+     "src/click/core.py",
+     1382
+    ],
+    [
+     "src/click/core.py",
+     2005
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:BashComplete.format_completion",
+   "target": "src/click/shell_completion.py::BashComplete.format_completion",
+   "name": "format_completion",
+   "new_name": "format_completion_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::FishComplete.format_completion",
+    "src/click/shell_completion.py::PowerShellComplete.format_completion",
+    "src/click/shell_completion.py::ShellComplete.format_completion",
+    "src/click/shell_completion.py::ZshComplete.format_completion"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     385
+    ],
+    [
+     "src/click/shell_completion.py",
+     444
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ZshComplete.format_completion",
+   "target": "src/click/shell_completion.py::ZshComplete.format_completion",
+   "name": "format_completion",
+   "new_name": "format_completion_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::BashComplete.format_completion",
+    "src/click/shell_completion.py::FishComplete.format_completion",
+    "src/click/shell_completion.py::PowerShellComplete.format_completion",
+    "src/click/shell_completion.py::ShellComplete.format_completion"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     385
+    ],
+    [
+     "src/click/shell_completion.py",
+     466
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ClickException.format_message",
+   "target": "src/click/exceptions.py::ClickException.format_message",
+   "name": "format_message",
+   "new_name": "format_message_v2",
+   "namesakes": [
+    "src/click/exceptions.py::BadParameter.format_message",
+    "src/click/exceptions.py::FileError.format_message",
+    "src/click/exceptions.py::MissingParameter.format_message",
+    "src/click/exceptions.py::NoSuchCommand.format_message",
+    "src/click/exceptions.py::NoSuchOption.format_message"
+   ],
+   "right_lines": [
+    [
+     "src/click/exceptions.py",
+     51
+    ],
+    [
+     "src/click/exceptions.py",
+     108
+    ],
+    [
+     "src/click/exceptions.py",
+     339
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:MissingParameter.format_message",
+   "target": "src/click/exceptions.py::MissingParameter.format_message",
+   "name": "format_message",
+   "new_name": "format_message_v2",
+   "namesakes": [
+    "src/click/exceptions.py::BadParameter.format_message",
+    "src/click/exceptions.py::ClickException.format_message",
+    "src/click/exceptions.py::FileError.format_message",
+    "src/click/exceptions.py::NoSuchCommand.format_message",
+    "src/click/exceptions.py::NoSuchOption.format_message"
+   ],
+   "right_lines": [
+    [
+     "src/click/exceptions.py",
+     108
+    ],
+    [
+     "src/click/exceptions.py",
+     184
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:NoSuchOption.format_message",
+   "target": "src/click/exceptions.py::NoSuchOption.format_message",
+   "name": "format_message",
+   "new_name": "format_message_v2",
+   "namesakes": [
+    "src/click/exceptions.py::BadParameter.format_message",
+    "src/click/exceptions.py::ClickException.format_message",
+    "src/click/exceptions.py::FileError.format_message",
+    "src/click/exceptions.py::MissingParameter.format_message",
+    "src/click/exceptions.py::NoSuchCommand.format_message"
+   ],
+   "right_lines": [
+    [
+     "src/click/exceptions.py",
+     108
+    ],
+    [
+     "src/click/exceptions.py",
+     262
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:NoSuchCommand.format_message",
+   "target": "src/click/exceptions.py::NoSuchCommand.format_message",
+   "name": "format_message",
+   "new_name": "format_message_v2",
+   "namesakes": [
+    "src/click/exceptions.py::BadParameter.format_message",
+    "src/click/exceptions.py::ClickException.format_message",
+    "src/click/exceptions.py::FileError.format_message",
+    "src/click/exceptions.py::MissingParameter.format_message",
+    "src/click/exceptions.py::NoSuchOption.format_message"
+   ],
+   "right_lines": [
+    [
+     "src/click/exceptions.py",
+     108
+    ],
+    [
+     "src/click/exceptions.py",
+     298
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Command.format_options",
+   "target": "src/click/core.py::Command.format_options",
+   "name": "format_options",
+   "new_name": "format_options_v2",
+   "namesakes": [
+    "src/click/core.py::Group.format_options"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1267
+    ],
+    [
+     "src/click/core.py",
+     1288
+    ],
+    [
+     "src/click/core.py",
+     1946
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Group.format_options",
+   "target": "src/click/core.py::Group.format_options",
+   "name": "format_options",
+   "new_name": "format_options_v2",
+   "namesakes": [
+    "src/click/core.py::Command.format_options"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1267
+    ],
+    [
+     "src/click/core.py",
+     1945
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Group.get_command",
+   "target": "src/click/core.py::Group.get_command",
+   "name": "get_command",
+   "new_name": "get_command_v2",
+   "namesakes": [
+    "src/click/core.py::CommandCollection.get_command"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     76
+    ],
+    [
+     "src/click/core.py",
+     1761
+    ],
+    [
+     "src/click/core.py",
+     1930
+    ],
+    [
+     "src/click/core.py",
+     1955
+    ],
+    [
+     "src/click/core.py",
+     2065
+    ],
+    [
+     "src/click/core.py",
+     2071
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:BashComplete.get_completion_args",
+   "target": "src/click/shell_completion.py::BashComplete.get_completion_args",
+   "name": "get_completion_args",
+   "new_name": "get_completion_args_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::FishComplete.get_completion_args",
+    "src/click/shell_completion.py::PowerShellComplete.get_completion_args",
+    "src/click/shell_completion.py::ShellComplete.get_completion_args",
+    "src/click/shell_completion.py::ZshComplete.get_completion_args"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     383
+    ],
+    [
+     "src/click/shell_completion.py",
+     432
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ZshComplete.get_completion_args",
+   "target": "src/click/shell_completion.py::ZshComplete.get_completion_args",
+   "name": "get_completion_args",
+   "new_name": "get_completion_args_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::BashComplete.get_completion_args",
+    "src/click/shell_completion.py::FishComplete.get_completion_args",
+    "src/click/shell_completion.py::PowerShellComplete.get_completion_args",
+    "src/click/shell_completion.py::ShellComplete.get_completion_args"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     383
+    ],
+    [
+     "src/click/shell_completion.py",
+     454
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:FishComplete.get_completion_args",
+   "target": "src/click/shell_completion.py::FishComplete.get_completion_args",
+   "name": "get_completion_args",
+   "new_name": "get_completion_args_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::BashComplete.get_completion_args",
+    "src/click/shell_completion.py::PowerShellComplete.get_completion_args",
+    "src/click/shell_completion.py::ShellComplete.get_completion_args",
+    "src/click/shell_completion.py::ZshComplete.get_completion_args"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     383
+    ],
+    [
+     "src/click/shell_completion.py",
+     490
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:PowerShellComplete.get_completion_args",
+   "target": "src/click/shell_completion.py::PowerShellComplete.get_completion_args",
+   "name": "get_completion_args",
+   "new_name": "get_completion_args_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::BashComplete.get_completion_args",
+    "src/click/shell_completion.py::FishComplete.get_completion_args",
+    "src/click/shell_completion.py::ShellComplete.get_completion_args",
+    "src/click/shell_completion.py::ZshComplete.get_completion_args"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     383
+    ],
+    [
+     "src/click/shell_completion.py",
+     530
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.get_default",
+   "target": "src/click/core.py::Parameter.get_default",
+   "name": "get_default",
+   "new_name": "get_default_v2",
+   "namesakes": [
+    "src/click/core.py::Option.get_default"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2438
+    ],
+    [
+     "src/click/core.py",
+     2515
+    ],
+    [
+     "src/click/core.py",
+     3211
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.get_error_hint",
+   "target": "src/click/core.py::Parameter.get_error_hint",
+   "name": "get_error_hint",
+   "new_name": "get_error_hint_v2",
+   "namesakes": [
+    "src/click/core.py::Argument.get_error_hint",
+    "src/click/core.py::Option.get_error_hint"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2817
+    ],
+    [
+     "src/click/core.py",
+     3223
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Option.get_error_hint",
+   "target": "src/click/core.py::Option.get_error_hint",
+   "name": "get_error_hint",
+   "new_name": "get_error_hint_v2",
+   "namesakes": [
+    "src/click/core.py::Argument.get_error_hint",
+    "src/click/core.py::Parameter.get_error_hint"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     3222
+    ],
+    [
+     "src/click/exceptions.py",
+     150
+    ],
+    [
+     "src/click/exceptions.py",
+     188
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Argument.get_error_hint",
+   "target": "src/click/core.py::Argument.get_error_hint",
+   "name": "get_error_hint",
+   "new_name": "get_error_hint_v2",
+   "namesakes": [
+    "src/click/core.py::Option.get_error_hint",
+    "src/click/core.py::Parameter.get_error_hint"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     3762
+    ],
+    [
+     "src/click/exceptions.py",
+     150
+    ],
+    [
+     "src/click/exceptions.py",
+     188
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Command.get_help",
+   "target": "src/click/core.py::Command.get_help",
+   "name": "get_help",
+   "new_name": "get_help_v2",
+   "namesakes": [
+    "src/click/core.py::Context.get_help"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     839
+    ],
+    [
+     "src/click/core.py",
+     1226
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:ParamType.get_metavar",
+   "target": "src/click/types.py::ParamType.get_metavar",
+   "name": "get_metavar",
+   "new_name": "get_metavar_v2",
+   "namesakes": [
+    "src/click/types.py::Choice.get_metavar",
+    "src/click/types.py::DateTime.get_metavar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2418
+    ],
+    [
+     "src/click/core.py",
+     3718
+    ],
+    [
+     "src/click/types.py",
+     158
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Choice.get_metavar",
+   "target": "src/click/types.py::Choice.get_metavar",
+   "name": "get_metavar",
+   "new_name": "get_metavar_v2",
+   "namesakes": [
+    "src/click/types.py::DateTime.get_metavar",
+    "src/click/types.py::ParamType.get_metavar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2418
+    ],
+    [
+     "src/click/core.py",
+     3718
+    ],
+    [
+     "src/click/types.py",
+     415
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:DateTime.get_metavar",
+   "target": "src/click/types.py::DateTime.get_metavar",
+   "name": "get_metavar",
+   "new_name": "get_metavar_v2",
+   "namesakes": [
+    "src/click/types.py::Choice.get_metavar",
+    "src/click/types.py::ParamType.get_metavar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2418
+    ],
+    [
+     "src/click/core.py",
+     3718
+    ],
+    [
+     "src/click/types.py",
+     546
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ParamType.get_missing_message",
+   "target": "src/click/types.py::ParamType.get_missing_message",
+   "name": "get_missing_message",
+   "new_name": "get_missing_message_v2",
+   "namesakes": [
+    "src/click/types.py::Choice.get_missing_message"
+   ],
+   "right_lines": [
+    [
+     "src/click/exceptions.py",
+     201
+    ],
+    [
+     "src/click/types.py",
+     161
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Choice.get_missing_message",
+   "target": "src/click/types.py::Choice.get_missing_message",
+   "name": "get_missing_message",
+   "new_name": "get_missing_message_v2",
+   "namesakes": [
+    "src/click/types.py::ParamType.get_missing_message"
+   ],
+   "right_lines": [
+    [
+     "src/click/exceptions.py",
+     201
+    ],
+    [
+     "src/click/types.py",
+     433
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Context.get_usage",
+   "target": "src/click/core.py::Context.get_usage",
+   "name": "get_usage",
+   "new_name": "get_usage_v2",
+   "namesakes": [
+    "src/click/core.py::Command.get_usage"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     829
+    ],
+    [
+     "src/click/exceptions.py",
+     106
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Command.get_usage",
+   "target": "src/click/core.py::Command.get_usage",
+   "name": "get_usage",
+   "new_name": "get_usage_v2",
+   "namesakes": [
+    "src/click/core.py::Context.get_usage"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     833
+    ],
+    [
+     "src/click/core.py",
+     1093
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.get_usage_pieces",
+   "target": "src/click/core.py::Parameter.get_usage_pieces",
+   "name": "get_usage_pieces",
+   "new_name": "get_usage_pieces_v2",
+   "namesakes": [
+    "src/click/core.py::Argument.get_usage_pieces"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     728
+    ],
+    [
+     "src/click/core.py",
+     1173
+    ],
+    [
+     "src/click/core.py",
+     2814
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Argument.get_usage_pieces",
+   "target": "src/click/core.py::Argument.get_usage_pieces",
+   "name": "get_usage_pieces",
+   "new_name": "get_usage_pieces_v2",
+   "namesakes": [
+    "src/click/core.py::Parameter.get_usage_pieces"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     728
+    ],
+    [
+     "src/click/core.py",
+     1173
+    ],
+    [
+     "src/click/core.py",
+     3753
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.human_readable_name",
+   "target": "src/click/core.py::Parameter.human_readable_name",
+   "name": "human_readable_name",
+   "new_name": "human_readable_name_v2",
+   "namesakes": [
+    "src/click/core.py::Argument.human_readable_name"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2361
+    ],
+    [
+     "src/click/core.py",
+     2408
+    ],
+    [
+     "src/click/core.py",
+     2764
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Argument.human_readable_name",
+   "target": "src/click/core.py::Argument.human_readable_name",
+   "name": "human_readable_name",
+   "new_name": "human_readable_name_v2",
+   "namesakes": [
+    "src/click/core.py::Parameter.human_readable_name"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2361
+    ],
+    [
+     "src/click/core.py",
+     2764
+    ],
+    [
+     "src/click/core.py",
+     3710
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Group.invoke",
+   "target": "src/click/core.py::Group.invoke",
+   "name": "invoke",
+   "new_name": "invoke_v2",
+   "namesakes": [
+    "src/click/core.py::Command.invoke",
+    "src/click/core.py::Context.invoke",
+    "src/click/testing.py::CliRunner.invoke"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1545
+    ],
+    [
+     "src/click/core.py",
+     1991
+    ],
+    [
+     "src/click/core.py",
+     2025
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Group.list_commands",
+   "target": "src/click/core.py::Group.list_commands",
+   "name": "list_commands",
+   "new_name": "list_commands_v2",
+   "namesakes": [
+    "src/click/core.py::CommandCollection.list_commands"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     74
+    ],
+    [
+     "src/click/core.py",
+     1760
+    ],
+    [
+     "src/click/core.py",
+     1936
+    ],
+    [
+     "src/click/core.py",
+     1954
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.make_metavar",
+   "target": "src/click/core.py::Parameter.make_metavar",
+   "name": "make_metavar",
+   "new_name": "make_metavar_v2",
+   "namesakes": [
+    "src/click/core.py::Argument.make_metavar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2414
+    ],
+    [
+     "src/click/core.py",
+     3346
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Argument.make_metavar",
+   "target": "src/click/core.py::Argument.make_metavar",
+   "name": "make_metavar",
+   "new_name": "make_metavar_v2",
+   "namesakes": [
+    "src/click/core.py::Parameter.make_metavar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     3715
+    ],
+    [
+     "src/click/core.py",
+     3754
+    ],
+    [
+     "src/click/core.py",
+     3760
+    ],
+    [
+     "src/click/core.py",
+     3764
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:_OptionParser.parse_args",
+   "target": "src/click/parser.py::_OptionParser.parse_args",
+   "name": "parse_args",
+   "new_name": "parse_args_v2",
+   "namesakes": [
+    "src/click/core.py::Command.parse_args",
+    "src/click/core.py::Group.parse_args"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1363
+    ],
+    [
+     "src/click/parser.py",
+     298
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:_Option.process",
+   "target": "src/click/parser.py::_Option.process",
+   "name": "process",
+   "new_name": "process_v2",
+   "namesakes": [
+    "src/click/parser.py::_Argument.process"
+   ],
+   "right_lines": [
+    [
+     "src/click/parser.py",
+     169
+    ],
+    [
+     "src/click/parser.py",
+     388
+    ],
+    [
+     "src/click/parser.py",
+     418
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:_Argument.process",
+   "target": "src/click/parser.py::_Argument.process",
+   "name": "process",
+   "new_name": "process_v2",
+   "namesakes": [
+    "src/click/parser.py::_Option.process"
+   ],
+   "right_lines": [
+    [
+     "src/click/parser.py",
+     191
+    ],
+    [
+     "src/click/parser.py",
+     322
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.resolve_envvar_value",
+   "target": "src/click/core.py::Parameter.resolve_envvar_value",
+   "name": "resolve_envvar_value",
+   "new_name": "resolve_envvar_value_v2",
+   "namesakes": [
+    "src/click/core.py::Option.resolve_envvar_value"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2662
+    ],
+    [
+     "src/click/core.py",
+     2716
+    ],
+    [
+     "src/click/core.py",
+     3520
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Option.resolve_envvar_value",
+   "target": "src/click/core.py::Option.resolve_envvar_value",
+   "name": "resolve_envvar_value",
+   "new_name": "resolve_envvar_value_v2",
+   "namesakes": [
+    "src/click/core.py::Parameter.resolve_envvar_value"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     3510
+    ],
+    [
+     "src/click/core.py",
+     3547
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Command.shell_complete",
+   "target": "src/click/core.py::Command.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Group.shell_complete",
+    "src/click/core.py::Parameter.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::Choice.shell_complete",
+    "src/click/types.py::File.shell_complete",
+    "src/click/types.py::ParamType.shell_complete",
+    "src/click/types.py::Path.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1410
+    ],
+    [
+     "src/click/core.py",
+     2101
+    ],
+    [
+     "src/click/shell_completion.py",
+     366
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Group.shell_complete",
+   "target": "src/click/core.py::Group.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Command.shell_complete",
+    "src/click/core.py::Parameter.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::Choice.shell_complete",
+    "src/click/types.py::File.shell_complete",
+    "src/click/types.py::ParamType.shell_complete",
+    "src/click/types.py::Path.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2085
+    ],
+    [
+     "src/click/shell_completion.py",
+     366
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.shell_complete",
+   "target": "src/click/core.py::Parameter.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Command.shell_complete",
+    "src/click/core.py::Group.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::Choice.shell_complete",
+    "src/click/types.py::File.shell_complete",
+    "src/click/types.py::ParamType.shell_complete",
+    "src/click/types.py::Path.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2827
+    ],
+    [
+     "src/click/shell_completion.py",
+     366
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ParamType.shell_complete",
+   "target": "src/click/types.py::ParamType.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Command.shell_complete",
+    "src/click/core.py::Group.shell_complete",
+    "src/click/core.py::Parameter.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::Choice.shell_complete",
+    "src/click/types.py::File.shell_complete",
+    "src/click/types.py::Path.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2848
+    ],
+    [
+     "src/click/types.py",
+     213
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Choice.shell_complete",
+   "target": "src/click/types.py::Choice.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Command.shell_complete",
+    "src/click/core.py::Group.shell_complete",
+    "src/click/core.py::Parameter.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::File.shell_complete",
+    "src/click/types.py::ParamType.shell_complete",
+    "src/click/types.py::Path.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2848
+    ],
+    [
+     "src/click/types.py",
+     484
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:File.shell_complete",
+   "target": "src/click/types.py::File.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Command.shell_complete",
+    "src/click/core.py::Group.shell_complete",
+    "src/click/core.py::Parameter.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::Choice.shell_complete",
+    "src/click/types.py::ParamType.shell_complete",
+    "src/click/types.py::Path.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2848
+    ],
+    [
+     "src/click/types.py",
+     1018
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Path.shell_complete",
+   "target": "src/click/types.py::Path.shell_complete",
+   "name": "shell_complete",
+   "new_name": "shell_complete_v2",
+   "namesakes": [
+    "src/click/core.py::Command.shell_complete",
+    "src/click/core.py::Group.shell_complete",
+    "src/click/core.py::Parameter.shell_complete",
+    "src/click/shell_completion.py::shell_complete",
+    "src/click/types.py::Choice.shell_complete",
+    "src/click/types.py::File.shell_complete",
+    "src/click/types.py::ParamType.shell_complete"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2848
+    ],
+    [
+     "src/click/types.py",
+     1220
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:CliRunner.isolation.should_strip_ansi",
+   "target": "src/click/testing.py::CliRunner.isolation.should_strip_ansi",
+   "name": "should_strip_ansi",
+   "new_name": "should_strip_ansi_v2",
+   "namesakes": [
+    "src/click/_compat.py::should_strip_ansi"
+   ],
+   "right_lines": [
+    [
+     "src/click/termui.py",
+     98
+    ],
+    [
+     "src/click/testing.py",
+     506
+    ],
+    [
+     "src/click/utils.py",
+     342
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ClickException.show",
+   "target": "src/click/exceptions.py::ClickException.show",
+   "name": "show",
+   "new_name": "show_v2",
+   "namesakes": [
+    "src/click/exceptions.py::NoArgsIsHelpError.show",
+    "src/click/exceptions.py::UsageError.show"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1562
+    ],
+    [
+     "src/click/exceptions.py",
+     57
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:UsageError.show",
+   "target": "src/click/exceptions.py::UsageError.show",
+   "name": "show",
+   "new_name": "show_v2",
+   "namesakes": [
+    "src/click/exceptions.py::ClickException.show",
+    "src/click/exceptions.py::NoArgsIsHelpError.show"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1562
+    ],
+    [
+     "src/click/exceptions.py",
+     87
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:NoArgsIsHelpError.show",
+   "target": "src/click/exceptions.py::NoArgsIsHelpError.show",
+   "name": "show",
+   "new_name": "show_v2",
+   "namesakes": [
+    "src/click/exceptions.py::ClickException.show",
+    "src/click/exceptions.py::UsageError.show"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     1562
+    ],
+    [
+     "src/click/exceptions.py",
+     338
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:ShellComplete.source",
+   "target": "src/click/shell_completion.py::ShellComplete.source",
+   "name": "source",
+   "new_name": "source_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::BashComplete.source"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     48
+    ],
+    [
+     "src/click/shell_completion.py",
+     339
+    ],
+    [
+     "src/click/shell_completion.py",
+     430
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:BashComplete.source",
+   "target": "src/click/shell_completion.py::BashComplete.source",
+   "name": "source",
+   "new_name": "source_v2",
+   "namesakes": [
+    "src/click/shell_completion.py::ShellComplete.source"
+   ],
+   "right_lines": [
+    [
+     "src/click/shell_completion.py",
+     48
+    ],
+    [
+     "src/click/shell_completion.py",
+     428
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Parameter.to_info_dict",
+   "target": "src/click/core.py::Parameter.to_info_dict",
+   "name": "to_info_dict",
+   "new_name": "to_info_dict_v2",
+   "namesakes": [
+    "src/click/core.py::Argument.to_info_dict",
+    "src/click/core.py::Command.to_info_dict",
+    "src/click/core.py::Context.to_info_dict",
+    "src/click/core.py::Group.to_info_dict",
+    "src/click/core.py::Option.to_info_dict",
+    "src/click/types.py::Choice.to_info_dict",
+    "src/click/types.py::DateTime.to_info_dict",
+    "src/click/types.py::File.to_info_dict",
+    "src/click/types.py::FuncParamType.to_info_dict",
+    "src/click/types.py::ParamType.to_info_dict",
+    "src/click/types.py::Path.to_info_dict",
+    "src/click/types.py::Tuple.to_info_dict",
+    "src/click/types.py::_NumberRangeBase.to_info_dict"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2374
+    ],
+    [
+     "src/click/core.py",
+     3176
+    ],
+    [
+     "src/click/core.py",
+     3705
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  },
+  {
+   "id": "click:Parameter.value_from_envvar",
+   "target": "src/click/core.py::Parameter.value_from_envvar",
+   "name": "value_from_envvar",
+   "new_name": "value_from_envvar_v2",
+   "namesakes": [
+    "src/click/core.py::Option.value_from_envvar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2498
+    ],
+    [
+     "src/click/core.py",
+     2707
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:Option.value_from_envvar",
+   "target": "src/click/core.py::Option.value_from_envvar",
+   "name": "value_from_envvar",
+   "new_name": "value_from_envvar_v2",
+   "namesakes": [
+    "src/click/core.py::Parameter.value_from_envvar"
+   ],
+   "right_lines": [
+    [
+     "src/click/core.py",
+     2498
+    ],
+    [
+     "src/click/core.py",
+     3534
+    ]
+   ],
+   "validation": {
+    "right_passes": false,
+    "regex_fails": false,
+    "definition_only_fails": false
+   },
+   "valid": false
+  },
+  {
+   "id": "click:HelpFormatter.write",
+   "target": "src/click/formatting.py::HelpFormatter.write",
+   "name": "write",
+   "new_name": "write_v2",
+   "namesakes": [
+    "src/click/_termui_impl.py::MaybeStripAnsi.write",
+    "src/click/_winconsole.py::ConsoleStream.write",
+    "src/click/_winconsole.py::_WindowsConsoleWriter.write",
+    "src/click/testing.py::BytesIOCopy.write"
+   ],
+   "right_lines": [
+    [
+     "src/click/formatting.py",
+     146
+    ],
+    [
+     "src/click/formatting.py",
+     176
+    ],
+    [
+     "src/click/formatting.py",
+     177
+    ],
+    [
+     "src/click/formatting.py",
+     183
+    ],
+    [
+     "src/click/formatting.py",
+     193
+    ],
+    [
+     "src/click/formatting.py",
+     194
+    ],
+    [
+     "src/click/formatting.py",
+     196
+    ],
+    [
+     "src/click/formatting.py",
+     202
+    ],
+    [
+     "src/click/formatting.py",
+     206
+    ],
+    [
+     "src/click/formatting.py",
+     211
+    ],
+    [
+     "src/click/formatting.py",
+     218
+    ],
+    [
+     "src/click/formatting.py",
+     227
+    ],
+    [
+     "src/click/formatting.py",
+     251
+    ],
+    [
+     "src/click/formatting.py",
+     253
+    ],
+    [
+     "src/click/formatting.py",
+     256
+    ],
+    [
+     "src/click/formatting.py",
+     266
+    ],
+    [
+     "src/click/formatting.py",
+     269
+    ]
+   ],
+   "validation": {
+    "right_passes": true,
+    "regex_fails": true,
+    "definition_only_fails": true
+   },
+   "valid": true
+  }
+ ]
+}

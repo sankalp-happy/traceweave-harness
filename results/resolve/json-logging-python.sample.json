@@ -1,0 +1,27 @@
+{
+ "repo": "json-logging-python",
+ "seed": 20261016,
+ "pool": 19,
+ "callers": [
+  "json_logging/__init__.py::__init",
+  "json_logging/__init__.py::get_correlation_id",
+  "json_logging/__init__.py::init_request_instrument",
+  "json_logging/dto.py::DefaultRequestResponseDTO.on_request_complete",
+  "json_logging/formatters.py::BaseJSONFormatter.format",
+  "json_logging/formatters.py::JSONLogFormatter._format_log_object",
+  "json_logging/formatters.py::JSONLogWebFormatter._format_log_object",
+  "json_logging/framework/connexion/__init__.py::<module>",
+  "json_logging/framework/fastapi/implementation.py::<module>",
+  "json_logging/framework/fastapi/implementation.py::JSONLoggingASGIMiddleware.dispatch",
+  "json_logging/framework/flask/__init__.py::<module>",
+  "json_logging/framework/flask/__init__.py::FlaskAppRequestInstrumentationConfigurator.config.after_request",
+  "json_logging/framework/quart/__init__.py::<module>",
+  "json_logging/framework/sanic/__init__.py::<module>",
+  "json_logging/util.py::<module>",
+  "json_logging/util.py::RequestUtil.__new__",
+  "json_logging/util.py::RequestUtil._get_correlation_id_in_request_header",
+  "json_logging/util.py::RequestUtil.get_correlation_id",
+  "json_logging/util.py::RequestUtil.get_request_from_call_stack"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

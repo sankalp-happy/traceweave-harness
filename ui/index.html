@@ -3,22 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TraceWeave harness</title>
+<title>TraceWeave</title>
 <link rel="preload" href="fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="mast">
-  <a class="name" href="#/report">TraceWeave harness</a>
+  <a class="name" href="#/">TraceWeave</a>
   <nav aria-label="Sections">
-    <a href="#/report" data-nav="report">Results</a>
-    <a href="#/tasks" data-nav="tasks">Tasks</a>
-    <a href="#/method" data-nav="method">How it works</a>
+    <a href="#/" data-nav="overview">Overview</a>
+    <a href="#/study1" data-nav="study1">Study 1: finding calls</a>
+    <a href="#/study2" data-nav="study2">Study 2: the AI agent</a>
+    <a href="#/method" data-nav="method">Method</a>
   </nav>
   <p class="status" id="status"></p>
 </header>
 <main id="view" tabindex="-1"><p class="loading">Loading saved results…</p></main>
+<script src="live.js"></script>
+<script src="studies.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

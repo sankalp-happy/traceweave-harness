@@ -1,0 +1,33 @@
+{
+ "repo": "jsonapi-requests",
+ "seed": 20261016,
+ "pool": 83,
+ "callers": [
+  "jsonapi_requests/__init__.py::<module>",
+  "jsonapi_requests/configuration.py::Factory.create",
+  "jsonapi_requests/data.py::AbstractCollectionValue",
+  "jsonapi_requests/data.py::JsonApiObject.__init__",
+  "jsonapi_requests/data.py::Record.from_data",
+  "jsonapi_requests/data.py::SchemaAlternativeWrapper.allow_as_data",
+  "jsonapi_requests/data.py::SchemaAlternativeWrapper.from_data",
+  "jsonapi_requests/data.py::SchemaAlternativeWrapper.get_type",
+  "jsonapi_requests/orm/api_model.py::<module>",
+  "jsonapi_requests/orm/api_model.py::ApiModel.endpoint",
+  "jsonapi_requests/orm/api_model.py::ApiModel.from_id",
+  "jsonapi_requests/orm/api_model.py::ApiModel.id",
+  "jsonapi_requests/orm/api_model.py::ApiModel.id.<setter>",
+  "jsonapi_requests/orm/api_model.py::ApiModel.refresh",
+  "jsonapi_requests/orm/api_model.py::ApiModel.type",
+  "jsonapi_requests/orm/api_model.py::OptionsFactory.fields",
+  "jsonapi_requests/orm/fields.py::<module>",
+  "jsonapi_requests/orm/fields.py::InstanceToManyRelation.set_related",
+  "jsonapi_requests/orm/fields.py::RelationField.get_data",
+  "jsonapi_requests/orm/registry.py::TypeRegistry.get_model",
+  "jsonapi_requests/orm/repositories.py::Repository.add",
+  "jsonapi_requests/orm/repositories.py::Repository.pouplate_related",
+  "jsonapi_requests/orm/repositories.py::Repository.update_or_create_form_raw_object",
+  "jsonapi_requests/request_factory.py::ApiRequestFactory.configured_options",
+  "jsonapi_requests/request_factory.py::ApiRequestFactory.request"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

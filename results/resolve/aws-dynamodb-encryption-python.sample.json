@@ -1,0 +1,33 @@
+{
+ "repo": "aws-dynamodb-encryption-python",
+ "seed": 20261016,
+ "pool": 60,
+ "callers": [
+  "src/dynamodb_encryption_sdk/__init__.py::<module>",
+  "src/dynamodb_encryption_sdk/delegated_keys/jce.py::JceNameLocalDelegatedKey.__init__",
+  "src/dynamodb_encryption_sdk/delegated_keys/jce.py::JceNameLocalDelegatedKey._enable_wrap",
+  "src/dynamodb_encryption_sdk/encrypted/__init__.py::<module>",
+  "src/dynamodb_encryption_sdk/encrypted/__init__.py::CryptoConfig.with_item",
+  "src/dynamodb_encryption_sdk/encrypted/client.py::<module>",
+  "src/dynamodb_encryption_sdk/encrypted/item.py::<module>",
+  "src/dynamodb_encryption_sdk/internal/crypto/authentication.py::<module>",
+  "src/dynamodb_encryption_sdk/internal/crypto/authentication.py::_hash_data",
+  "src/dynamodb_encryption_sdk/internal/crypto/jce_bridge/authentication.py::JavaSignature",
+  "src/dynamodb_encryption_sdk/internal/crypto/jce_bridge/primitives.py::JavaSymmetricEncryptionAlgorithm._disable_encryption",
+  "src/dynamodb_encryption_sdk/internal/crypto/jce_bridge/primitives.py::SimplePadding",
+  "src/dynamodb_encryption_sdk/internal/formatting/material_description.py::<module>",
+  "src/dynamodb_encryption_sdk/internal/formatting/serialize/attribute.py::serialize_attribute._serialize_binary",
+  "src/dynamodb_encryption_sdk/internal/formatting/serialize/attribute.py::serialize_attribute._serialize_function",
+  "src/dynamodb_encryption_sdk/internal/formatting/serialize/attribute.py::serialize_attribute._serialize_string",
+  "src/dynamodb_encryption_sdk/internal/utils.py::TableInfoCache",
+  "src/dynamodb_encryption_sdk/material_providers/aws_kms.py::AwsKmsCryptographicMaterialsProvider",
+  "src/dynamodb_encryption_sdk/material_providers/aws_kms.py::KeyInfo",
+  "src/dynamodb_encryption_sdk/material_providers/wrapped.py::<module>",
+  "src/dynamodb_encryption_sdk/material_providers/wrapped.py::WrappedCryptographicMaterialsProvider.__init__",
+  "src/dynamodb_encryption_sdk/materials/raw.py::<module>",
+  "src/dynamodb_encryption_sdk/materials/raw.py::RawDecryptionMaterials",
+  "src/dynamodb_encryption_sdk/materials/raw.py::RawEncryptionMaterials.encryption_key",
+  "src/dynamodb_encryption_sdk/structures.py::AttributeActions.__attrs_post_init__"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

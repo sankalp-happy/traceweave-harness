@@ -1,0 +1,33 @@
+{
+ "repo": "autoray",
+ "seed": 20261016,
+ "pool": 32,
+ "callers": [
+  "autoray/__init__.py::<module>",
+  "autoray/autoray.py::Composed.__init__",
+  "autoray/autoray.py::Composed.make_function",
+  "autoray/autoray.py::Composed.register.wrapper",
+  "autoray/autoray.py::_make_device_dtype_dispatch._dispatcher#0",
+  "autoray/autoray.py::_register_creation_inject",
+  "autoray/autoray.py::compose",
+  "autoray/autoray.py::do",
+  "autoray/autoray.py::get_namespace",
+  "autoray/autoray.py::import_lib_fn",
+  "autoray/autoray.py::infer_backend_device_dtype",
+  "autoray/autoray.py::make_translator",
+  "autoray/autoray.py::register_function",
+  "autoray/autoray.py::register_function.decorator",
+  "autoray/autoray.py::register_function.wrapper_decorator",
+  "autoray/autoray.py::wrap_args_kwargs_from_raw",
+  "autoray/grad.py::<module>",
+  "autoray/lazy/__init__.py::<module>",
+  "autoray/lazy/core.py::<module>",
+  "autoray/lazy/core.py::LazyArray",
+  "autoray/lazy/core.py::make_binary_func",
+  "autoray/lazy/core.py::make_reduction_func",
+  "autoray/lazy/core.py::make_unary_func",
+  "autoray/lazy/draw.py::default_to_neutral_style",
+  "autoray/lazy/linalg.py::<module>"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

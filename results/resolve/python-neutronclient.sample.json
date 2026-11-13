@@ -1,0 +1,33 @@
+{
+ "repo": "python-neutronclient",
+ "seed": 20261016,
+ "pool": 30,
+ "callers": [
+  "neutronclient/client.py::HTTPClient.__init__",
+  "neutronclient/client.py::HTTPClient._cs_request",
+  "neutronclient/client.py::HTTPClient.authenticate_and_fetch_endpoint_url",
+  "neutronclient/client.py::HTTPClient.do_request",
+  "neutronclient/client.py::HTTPClient.request",
+  "neutronclient/common/exceptions.py::NeutronClientException.__init__",
+  "neutronclient/neutron/v2_0/__init__.py::parse_args_to_dict",
+  "neutronclient/osc/v2/logging/network_log.py::CreateNetworkLog.take_action",
+  "neutronclient/osc/v2/logging/network_log.py::DeleteNetworkLog.take_action",
+  "neutronclient/osc/v2/logging/network_log.py::SetNetworkLog.take_action",
+  "neutronclient/osc/v2/logging/network_log.py::ShowNetworkLog.take_action",
+  "neutronclient/osc/v2/logging/network_log.py::_get_common_attrs",
+  "neutronclient/osc/v2/sfc/sfc_flow_classifier.py::CreateSfcFlowClassifier.take_action",
+  "neutronclient/osc/v2/sfc/sfc_flow_classifier.py::SetSfcFlowClassifier.take_action",
+  "neutronclient/osc/v2/sfc/sfc_flow_classifier.py::_get_common_attrs",
+  "neutronclient/osc/v2/sfc/sfc_port_chain.py::_get_common_attrs",
+  "neutronclient/osc/v2/sfc/sfc_port_pair.py::CreateSfcPortPair.take_action",
+  "neutronclient/osc/v2/sfc/sfc_port_pair.py::SetSfcPortPair.take_action",
+  "neutronclient/osc/v2/sfc/sfc_port_pair.py::_get_common_attrs",
+  "neutronclient/osc/v2/sfc/sfc_port_pair_group.py::CreateSfcPortPairGroup.take_action",
+  "neutronclient/osc/v2/sfc/sfc_port_pair_group.py::SetSfcPortPairGroup.take_action",
+  "neutronclient/osc/v2/sfc/sfc_port_pair_group.py::_get_common_attrs",
+  "neutronclient/osc/v2/sfc/sfc_service_graph.py::CreateSfcServiceGraph.take_action",
+  "neutronclient/osc/v2/sfc/sfc_service_graph.py::SetSfcServiceGraph.take_action",
+  "neutronclient/osc/v2/subnet_onboard/subnet_onboard.py::NetworkOnboardSubnets.take_action"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

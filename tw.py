@@ -5,6 +5,7 @@
     python3 tw.py tasks click --validate           select rename tasks, prove each is gradeable
     python3 tw.py run click --model oracle         both arms, every task, scored by the suite
     python3 tw.py run click --model claude:claude-opus-5-5
+    python3 tw.py run click --model groq:openai/gpt-oss-20b   GROQ_API_KEY from env or .env
     python3 tw.py report results/*.jsonl           the results table
     python3 tw.py show click:Context._make_sub_context [--results FILE]   one task, both arms
     python3 tw.py prompt click:<qualname> static   the exact prompt an arm receives
@@ -41,11 +42,12 @@ def find_task(task_id: str) -> tuple[Bundle, dict]:
     raise SystemExit(f"no task {task_id!r}; see bundles/{bundle.name}/tasks.json")
 
 
-def attempt(bundle: Bundle, edits: list[dict], base: dict) -> dict:
-    sandbox.reset(bundle.repo)
-    applied = sandbox.apply(bundle.repo, edits)
-    tests = sandbox.run_tests(bundle.repo)
-    sandbox.reset(bundle.repo)
+def attempt(bundle: Bundle, edits: list[dict], base: dict, on_event=None) -> dict:
+    with sandbox.lock(bundle.repo):
+        sandbox.reset(bundle.repo)
+        applied = sandbox.apply(bundle.repo, edits)
+        tests = sandbox.run_tests(bundle.repo, on_event)
+        sandbox.reset(bundle.repo)
     return {"apply": applied, "tests": tests, "pass": sandbox.verdict(tests, base)}
 
 
@@ -236,9 +238,82 @@ def cmd_prompt(args) -> int:
     return 0
 
 
+def cmd_truth(args) -> int:
+    import truth
+    bundle = Bundle(args.repo)
+    t = truth.build(bundle)
+    (bundle.dir / "truth.json").write_text(json.dumps(t, separators=(",", ":")) + "\n")
+    calls = [e for e in t["edges"] if e[0] != "<entry>"]
+    print(f"{bundle.name}: {len(calls)} in-package call sites, {len({(e[0], e[1]) for e in calls})} caller->callee pairs, "
+          f"{sum(len(v) for v in t['lines'].values())} package lines ran; suite {t['suite']['passed']} passed "
+          f"in {t['suite']['seconds']} s -> bundles/{bundle.name}/truth.json")
+    return 0
+
+
+def cmd_resolve(args) -> int:
+    import resolve
+    out = resolve.run(Bundle(args.repo), args.model, args.effort, args.limit)
+    print(f"-> {out}")
+    return 0
+
+
+def cmd_bench(args) -> int:
+    import bench, resolve
+    for name in args.repos:
+        b = Bundle(name)
+        its = bench.items(b)
+        llm = resolve.answers(b)
+        sample = set(resolve.sample(b, its))
+        sub = [i for i in its if i["caller"] in sample]
+        print(f"\n{name}: {len(its)} items, {sum(i['label'] for i in its)} real calls; "
+              f"{len(bench.unnamed(b, its))} real calls whose target is never named")
+        print(f"  {'resolver':28s} {'on':>8s} {'prec':>6s} {'recall':>6s} {'F1':>6s}   shared-name recall")
+        rows = [(k, f, its, "all") for k, f in bench.BASELINES.items()] + [(k, f, sub, "sample") for k, f in bench.BASELINES.items()]
+        for model, got in llm.items():
+            done = [i for i in sub if i["caller"] in got]
+            rows.append((model, lambda i, got=got: i["callee"] in got.get(i["caller"], ()), done, f"{len({i['caller'] for i in done})} fn"))
+        for k, f, pool, on in rows:
+            sc, sh = bench.score(pool, f), bench.score([i for i in pool if i["shared"] > 1], f)
+            print(f"  {k:28s} {on:>8s} {sc['precision']:6.2f} {sc['recall']:6.2f} {sc['f1']:6.2f}   {sh['recall']:.2f}")
+    return 0
+
+
+def cmd_agent_tasks(args) -> int:
+    import agent
+    bundle = Bundle(args.repo)
+    found, attrition = agent.candidates(bundle)
+    print(f"{bundle.name}: {len(found)} candidates; left out: {attrition}")
+    if args.validate:
+        agent.validate(bundle, found)
+        attrition["dropped by validation"] = sum(not t["valid"] for t in found)
+    (bundle.dir / "agent_tasks.json").write_text(json.dumps(
+        {"repo": bundle.name, "sha": bundle.repo["sha"], "generated_utc": now(), "attrition": attrition,
+         "validated": args.validate, "tasks": found}, indent=1) + "\n")
+    print(f"{sum(t.get('valid', False) for t in found)} tasks kept -> bundles/{bundle.name}/agent_tasks.json")
+    return 0
+
+
+def cmd_agent(args) -> int:
+    import agent
+    print(f"-> {agent.run(Bundle(args.repo), args.model, args.effort)}")
+    return 0
+
+
+def cmd_learn(args) -> int:
+    import ml
+    r = ml.report(args.repos)
+    out = HERE / "results" / "resolve" / "learned.json"
+    out.write_text(json.dumps(r, indent=1) + "\n")
+    print(f"{r['items']} items from {r['callers']} functions ({r['real']} real calls), 5-fold out-of-fold scores:")
+    for k, sc in r["scores"].items():
+        print(f"  {k:26s} precision {sc['precision']:.2f}  recall {sc['recall']:.2f}  F1 {sc['f1']:.2f}")
+    print(f"-> {out}")
+    return 0
+
+
 def cmd_ui(args) -> int:
     import server
-    server.serve(args.port)
+    server.serve(args.port, args.host)
     return 0
 
 
@@ -260,7 +335,17 @@ def main() -> int:
     p.add_argument("--budget", type=int, default=context.BUDGET_TOKENS); p.set_defaults(fn=cmd_show)
     p = sub.add_parser("prompt"); p.add_argument("task"); p.add_argument("condition", choices=CONDITIONS)
     p.add_argument("--budget", type=int, default=context.BUDGET_TOKENS); p.set_defaults(fn=cmd_prompt)
-    p = sub.add_parser("ui"); p.add_argument("--port", type=int, default=8765); p.set_defaults(fn=cmd_ui)
+    p = sub.add_parser("truth"); p.add_argument("repo"); p.set_defaults(fn=cmd_truth)
+    p = sub.add_parser("resolve"); p.add_argument("repo"); p.add_argument("--model", required=True)
+    p.add_argument("--effort", default="low"); p.add_argument("--limit", type=int); p.set_defaults(fn=cmd_resolve)
+    p = sub.add_parser("bench"); p.add_argument("repos", nargs="+"); p.set_defaults(fn=cmd_bench)
+    p = sub.add_parser("learn"); p.add_argument("repos", nargs="+"); p.set_defaults(fn=cmd_learn)
+    p = sub.add_parser("agent-tasks"); p.add_argument("repo"); p.add_argument("--validate", action="store_true")
+    p.set_defaults(fn=cmd_agent_tasks)
+    p = sub.add_parser("agent"); p.add_argument("repo"); p.add_argument("--model", required=True)
+    p.add_argument("--effort", default="low"); p.set_defaults(fn=cmd_agent)
+    p = sub.add_parser("ui"); p.add_argument("--port", type=int, default=8765)
+    p.add_argument("--host", default=os.environ.get("TW_HOST", "127.0.0.1")); p.set_defaults(fn=cmd_ui)
     args = ap.parse_args()
     return args.fn(args)
 

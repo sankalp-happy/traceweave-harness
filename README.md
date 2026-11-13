@@ -1,21 +1,58 @@
 # TraceWeave harness
 
-**Does giving an LLM runtime call-graph context change whether its code edits work?**
+**Static analysis misses about a third of the calls a Python program really
+makes. Can AI find them, and can an AI agent edit code safely with what it finds?**
 
-The harness runs one controlled experiment. The same model, the same prompt and
-the same token budget are used on two arms, and the only thing that changes
-between them is whether the model is told about callers that **only runtime
-tracing can see**. The judge is the project's own test suite, not an LLM.
+Everything here is scored against what the program did: the project's own
+test suite runs under a tracer (Python 3.12 `sys.monitoring`) and records every
+call, with the line it came from. Nothing is labelled by hand or by a model.
+
+| | What it asks | Who answers | Result so far |
+|---|---|---|---|
+| **Ground truth** | What did click's 1,939 passing tests actually call? | the tracer (`tw.py truth`) | 704 caller-to-callee paths; PyCG ∪ Pyright hold 69% |
+| **Study 1** | Does this line of code call that function? (2,381 items) | PyCG, Pyright, gpt-oss-20b, gpt-oss-120b, qwen3.8-27b, a learned combiner | static P 0.94 / R 0.78; best AI R 0.96 but P 0.74; combiner F1 0.87, the best |
+| **Study 2** | Rename a function whose name another function shares | regex, an AI agent with grep / static / runtime context | regex 0 of 9; exact rename 9 of 9; AI agent runs in `results/agent/` |
+
+The AI models were run on Groq at temperature 0. The learned combiner is a
+logistic regression over static flags, each model's answer and how the name is
+written, scored out-of-fold (5-fold, grouped by function). In click, AI finds the
+calls static analysis is blind to (shared names, properties); in toolz, where
+static analysis is already near perfect, the models mostly add false claims,
+and the combiner learns to lean on static analysis there.
 
 It is the downstream half of TraceWeave-Core, the research repo (not yet published).
-Core measures how many runtime call edges static analysis misses. This repo asks
-whether those misses matter when an AI edits code. Everything heavy (PyCG,
-Pyright, Docker, tracing) happened once in Core, and the results are bundled
-here. Running the experiment needs Python 3.11+, git and pytest, and nothing else.
+Core builds the static call graphs; the bundles here carry them, so running
+everything needs Python 3.12+, git and pytest, and nothing else (plus a Groq key in
+`.env` for the AI runs).
+
+### The studies, from the command line
+
+```bash
+python3 tw.py truth click                        # record the ground truth (about 6 s)
+python3 tw.py bench click toolz                  # Study 1: every resolver, scored
+python3 tw.py resolve click --model groq:openai/gpt-oss-120b   # ask a model (resumable)
+python3 tw.py learn click toolz                  # train and cross-validate the combiner
+python3 tw.py agent-tasks click --validate       # Study 2: find and validate the tasks
+python3 tw.py agent click --model groq:openai/gpt-oss-120b     # run the agent (resumable)
+python3 tw.py ui                                 # the demo: http://127.0.0.1:8765/
+```
+
+| file | what it does |
+|---|---|
+| `truth.py` | ground truth from one traced test run: every call, its line, every line that ran |
+| `bench.py` | Study 1 items (a function names a project function in code that ran) and scoring |
+| `resolve.py` | the AI resolver prompt, the fixed sample (seed in `results/resolve/*.sample.json`), the runs |
+| `ml.py` | the learned combiner: logistic regression written out, grouped cross-validation |
+| `agent.py` | Study 2: same-name rename tasks, their validation, the agent and its three contexts |
+| `studies.py` | what the pages show, aggregated from the files above |
+
+The rest of this README describes the **pilot study** that came first: renames of
+functions with unique names, where a regex would also have worked. Its pages are
+kept under Method → Earlier pilot.
 
 ---
 
-## The experiment
+## Pilot study: the experiment
 
 | | |
 |---|---|
@@ -25,7 +62,7 @@ here. Running the experiment needs Python 3.11+, git and pytest, and nothing els
 | **Held equal** | Prompt template, slicer, excerpt window, token budget, model, effort. `tests/test_harness.py` checks on every task that the two prompts differ only in the caller list and the excerpts those callers pull in. |
 | **Slicer** | The retrieval unit is a caller *function*, as in code-graph RAG. For each caller the model sees ±2 lines around every line of that function's own body that names the target, plus, for a runtime-only edge, the line the tracer saw make the call. |
 | **Oracle** | Apply the edits, run the full suite. A task passes only if the same number of tests pass as on the untouched checkout and no new test fails. |
-| **Models** | `oracle` (the ceiling: a perfect editor limited to what the context shows) and `claude:<model-id>`. Every response is recorded, so `replay:` re-scores a run offline. |
+| **Models** | `oracle` (the ceiling: a perfect editor limited to what the context shows), `groq:<model-id>` (open-weight models on Groq; the first LLM run is `groq:openai/gpt-oss-20b`) and `claude:<model-id>`. Every response is recorded, so `replay:` re-scores a run offline. |
 
 ### Two arms of tasks
 
@@ -73,6 +110,7 @@ Half of the calls static analysis misses in click land on methods that share a n
 
 ---
 
+
 ## Quick start (any laptop)
 
 ```bash
@@ -89,8 +127,9 @@ to run on any other.
 
 ```bash
 python3 tw.py run toolz --model oracle
+python3 tw.py run click --model groq:openai/gpt-oss-20b
 python3 tw.py run click --model claude:claude-opus-5-5 --effort medium
-python3 tw.py report results/click.claude_claude-opus-5-5.jsonl
+python3 tw.py report results/click.groq_openai_gpt-oss-20b.jsonl
 ```
 
 Runs append to `results/<repo>.<model>.jsonl`, one row per task × arm, and resume
@@ -100,15 +139,49 @@ full test outcome, and the served-by model. Claude requests opt into server-side
 refusal fallback (`fallbacks: "default"`). If a fallback model ever answers, it
 shows in `model_meta.served_by` and can be excluded.
 
+Groq runs use only the standard library and read `GROQ_API_KEY` from the
+environment or from a `.env` file next to `tw.py` (gitignored). Requests ask
+for strict JSON-schema output at temperature 0 and seed 0, with `--effort` passed
+as gpt-oss's reasoning effort. The user prompt is the same bytes every model
+gets. When Groq cannot parse an answer, the request is sent again, up to three
+tries in all (`model_meta.attempts`). After that the run is scored a fail. Groq
+rate limits (HTTP 429) are waited out and never scored. Each row also records
+the model's reasoning text. When an edit leaves a file Python cannot parse, the row
+records the error under `apply.syntax_error`.
+
 `python3 tw.py prompt <task> static|fused` prints the exact prompt an arm receives.
 
-### The results page
+### The live demo and the results pages
 
 ```bash
 python3 tw.py ui        # http://127.0.0.1:8765/  (stdlib server, works offline)
 ```
 
-Three views, all read from `bundles/` and `results/`:
+The page opens on **Live demo**. It tells one task as a story in plain words,
+so a viewer who does not read Python can follow it. The function is used in
+N places in the code, and each run shows the editor some of them. The editor
+renames what it sees, then the project's tests judge the result. Each step runs
+on the real code when you press Next:
+
+1. **Read the code.** The callers PyCG and Pyright found, drawn as a small call graph. They were computed beforehand, from the bundle. A row of squares shows how many of the N places this gives the editor.
+2. **Run the tests.** The project's whole test suite runs with a tracer
+   (`live/tw_live.py`, a pytest plugin on Python 3.12's `sys.monitoring`). Each
+   caller appears on the graph the moment a test calls the function. On click
+   this takes about 5 s, and it finds the same hidden callers as the recorded
+   trace (checked in `tests/`).
+3. **Rename.** The rename script, or gpt-oss-20b live through Groq, edits both runs. Each place square turns solid when that place is renamed, or red when it still has the old name.
+4. **Check with the tests.** Each run's edits go onto the checkout and the full suite runs, with its progress shown as it goes, ending in Pass or Fail.
+
+Above the task, a scoreboard shows one square per task for each run, filled
+from the recorded results (1 and 9 of 17). Squares run live today get a ring.
+**Run all 17 live** repeats steps 3 and 4 for every task. The code itself is
+behind **Show the code**. Live verdicts are kept only in the browser tab's
+session storage. The stages stream from `GET /api/live?stage=trace|edit|test&id=...`
+as server-sent events, one run at a time.
+
+The other three views read from `bundles/` and `results/`. When more than one model
+has results, a switch in the header picks the editor; an LLM is shown first,
+with the oracle's numbers quoted as its ceiling.
 
 - **Report:** the CONSORT allocation and the outcome tables.
 - **Tasks:** a filterable roster of every task.
@@ -121,7 +194,8 @@ Opening a task shows its two arms side by side:
 - the lines naming the function that each arm never saw;
 - each arm's edits, its test-suite verdict, and its exact prompt.
 
-**Re-run both arms now** re-applies the oracle and runs the suite live. The live
+**Re-run both arms now** re-applies the oracle (never an LLM) and runs the suite live.
+Do not use it while `tw.py run` is going on the same repo: the two share one checkout. The live
 result is added under the recorded one; it never replaces it. Task views need
 `tw.py fetch <repo>` first, and the report does not.
 
@@ -218,7 +292,8 @@ and whether the gap between the arms survives the model's own errors.
 - **Context-limited editing.** Models may only edit lines they were shown. This is deliberate: it attributes outcomes to the context rather than to guessing, and the instruction is identical in both arms.
 - **Token estimate.** The budget uses characters ÷ 4, not a tokenizer. The same estimate applies to both arms, so it cannot favour one. It only decides when an excerpt list is truncated, and every truncation is recorded per row.
 - **Provenance.** click and toolz static graphs were extracted on the arm64 manager host (TraceWeave-Core `MANIFEST` §1 treats those as development output, not corpus records). Both repos are pure Python, so no architecture-dependent wheels enter the graph. They should still be regenerated on the amd64 execution host before anything is published. `graph.json` records host and tool pins.
-- **Model-generated code is executed.** The suite runs on edited source. Edits are whole-line replacements, confined to the checkout and checked before writing, but run this somewhere disposable if that matters.
+- **Model-generated code is executed.** The suite runs on edited source. Edits replace text on one existing line, confined to the checkout and checked before writing, but run this somewhere disposable if that matters.
+- **The first LLM run is a pilot, not a result.** gpt-oss-20b's first 78 rows (`results/pilot/`) used whole-line edits, and 33 of their 50 failures were files broken by indentation. The prompt now asks for `{path, line, old, new}` edits, and those rows are left out of every report.
 
 ---
 
@@ -260,8 +335,9 @@ python3 tw.py fetch <repo> && python3 tw.py tasks <repo> --validate
 | `tw.py` | CLI: fetch, tasks, run, report, show, prompt |
 | `graph.py` | bundle loading, the three caller sets, task selection |
 | `context.py` | the slicer and the prompt, with the one place the arms differ |
-| `models.py` | `oracle`, `claude:`, `replay:` |
+| `models.py` | `oracle`, `groq:`, `claude:`, `replay:` |
 | `sandbox.py` | pinned checkout, reset, edit application, the test-suite oracle |
 | `build_bundle.py` | TraceWeave-Core outputs → `bundles/<repo>/graph.json` |
-| `server.py`, `ui/` | `tw.py ui`: the results page and its JSON API (stdlib only, fonts self-hosted) |
+| `server.py`, `ui/` | `tw.py ui`: the live demo, the results pages and their JSON/SSE API (stdlib only, fonts self-hosted) |
+| `live/tw_live.py` | pytest plugin for the live demo: streamed progress, and who calls one function (`sys.monitoring`) |
 | `tests/test_harness.py` | prompt invariance across arms, task arms, edit safety, verdict, the sign test |

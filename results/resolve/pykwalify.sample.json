@@ -1,0 +1,33 @@
+{
+ "repo": "pykwalify",
+ "seed": 20261016,
+ "pool": 56,
+ "callers": [
+  "pykwalify/__init__.py::init_logging",
+  "pykwalify/core.py::<module>",
+  "pykwalify/core.py::Core._load_extensions",
+  "pykwalify/core.py::Core._validate",
+  "pykwalify/core.py::Core._validate_mapping",
+  "pykwalify/core.py::Core._validate_range",
+  "pykwalify/core.py::Core._validate_scalar_timestamp",
+  "pykwalify/core.py::Core._validate_sequence",
+  "pykwalify/errors.py::CoreError.__init__",
+  "pykwalify/errors.py::RuleError.__init__",
+  "pykwalify/errors.py::SchemaConflict.__init__",
+  "pykwalify/errors.py::SchemaError.__init__",
+  "pykwalify/rule.py::<module>",
+  "pykwalify/rule.py::Rule.check_conflicts",
+  "pykwalify/rule.py::Rule.init_allow_empty_map",
+  "pykwalify/rule.py::Rule.init_assert_value",
+  "pykwalify/rule.py::Rule.init_enum_value",
+  "pykwalify/rule.py::Rule.init_format_value",
+  "pykwalify/rule.py::Rule.init_length_value",
+  "pykwalify/rule.py::Rule.init_nullable_value",
+  "pykwalify/rule.py::Rule.init_pattern_value",
+  "pykwalify/rule.py::Rule.init_sequence_value",
+  "pykwalify/types.py::<module>",
+  "pykwalify/types.py::is_builtin_type",
+  "pykwalify/types.py::is_correct_type"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

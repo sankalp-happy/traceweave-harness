@@ -1,0 +1,24 @@
+{
+ "repo": "throttled",
+ "seed": 20261016,
+ "pool": 16,
+ "callers": [
+  "throttled.py::_ensure_msr_module",
+  "throttled.py::_format",
+  "throttled.py::_power_thread",
+  "throttled.py::_read_mchbar_dword",
+  "throttled.py::calc_reg_values",
+  "throttled.py::check_kernel",
+  "throttled.py::fatal",
+  "throttled.py::get_reset_thermal_status",
+  "throttled.py::handle_sleep_prepare",
+  "throttled.py::load_config",
+  "throttled.py::log",
+  "throttled.py::monitor",
+  "throttled.py::power_thread",
+  "throttled.py::read_mchbar_base",
+  "throttled.py::readmsr",
+  "throttled.py::set_icc_max"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

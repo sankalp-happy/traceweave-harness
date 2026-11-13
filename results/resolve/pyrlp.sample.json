@@ -1,0 +1,33 @@
+{
+ "repo": "pyrlp",
+ "seed": 20261016,
+ "pool": 25,
+ "callers": [
+  "rlp/__init__.py::<module>",
+  "rlp/codec.py::<module>",
+  "rlp/codec.py::decode",
+  "rlp/codec.py::encode",
+  "rlp/codec.py::infer_sedes",
+  "rlp/lazy.py::<module>",
+  "rlp/lazy.py::LazyList.next",
+  "rlp/lazy.py::peek",
+  "rlp/sedes/__init__.py::<module>",
+  "rlp/sedes/binary.py::Binary.deserialize",
+  "rlp/sedes/binary.py::Binary.serialize",
+  "rlp/sedes/lists.py::CountableList.deserialize",
+  "rlp/sedes/lists.py::CountableList.serialize",
+  "rlp/sedes/lists.py::List.deserialize",
+  "rlp/sedes/lists.py::List.serialize",
+  "rlp/sedes/lists.py::is_sequence",
+  "rlp/sedes/raw.py::serializable",
+  "rlp/sedes/serializable.py::<module>",
+  "rlp/sedes/serializable.py::BaseSerializable.copy",
+  "rlp/sedes/serializable.py::BaseSerializable.deserialize",
+  "rlp/sedes/serializable.py::BaseSerializable.serialize",
+  "rlp/sedes/serializable.py::Changeset",
+  "rlp/sedes/serializable.py::_mk_field_property",
+  "rlp/sedes/serializable.py::make_immutable",
+  "rlp/sedes/text.py::Text.serialize"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}

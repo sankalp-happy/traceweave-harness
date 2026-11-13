@@ -1,0 +1,33 @@
+{
+ "repo": "tensortrade-ng",
+ "seed": 20261016,
+ "pool": 267,
+ "callers": [
+  "src/tensortrade/__init__.py::<module>",
+  "src/tensortrade/env/environment.py::TradingEnv._get_obs",
+  "src/tensortrade/env/observers/simple.py::SimpleObserver.observation_space",
+  "src/tensortrade/env/utils/feed_controller.py::FeedController.create_portfolio_streams",
+  "src/tensortrade/feed/api/float/operations.py::abs",
+  "src/tensortrade/feed/api/float/window/ewm.py::ExponentialWeightedMovingAverage.reset",
+  "src/tensortrade/feed/api/float/window/expanding.py::Expanding.max",
+  "src/tensortrade/feed/api/float/window/expanding.py::Expanding.median",
+  "src/tensortrade/feed/api/float/window/rolling.py::Rolling.std",
+  "src/tensortrade/feed/api/generic/reduce.py::Reduce.sum",
+  "src/tensortrade/feed/api/generic/warmup.py::<module>",
+  "src/tensortrade/feed/core/base.py::IterableStream.reset",
+  "src/tensortrade/feed/core/base.py::Stream.reset",
+  "src/tensortrade/feed/core/feed.py::DataFeed.next",
+  "src/tensortrade/feed/core/feed.py::PushFeed.__init__",
+  "src/tensortrade/oms/exchanges/exchange.py::Exchange.__call__",
+  "src/tensortrade/oms/exchanges/exchange.py::Exchange.quote_price",
+  "src/tensortrade/oms/instruments/exchange_pair.py::ExchangePair.price",
+  "src/tensortrade/oms/instruments/quantity.py::Quantity.__init__",
+  "src/tensortrade/oms/orders/broker.py::Broker.cancel",
+  "src/tensortrade/oms/orders/order.py::Order.quote_instrument",
+  "src/tensortrade/oms/wallets/__init__.py::<module>",
+  "src/tensortrade/oms/wallets/ledger.py::Ledger.commit",
+  "src/tensortrade/oms/wallets/portfolio.py::Portfolio.remove",
+  "src/tensortrade/pipeline/transformers/lagging.py::LaggingTransformer.transform"
+ ],
+ "rule": "callers with >=1 hard item (shared name, bare reference, or static analysis wrong), prompt <= 3500 tokens, random sample with the seed above"
+}
